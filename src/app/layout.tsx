@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Oswald } from "next/font/google";
+import "./sass/all.scss";
+import NavBar from "./components/navbar/nav";
+import Hero from "./components/hero/hero";
+import SmoothScroll from "./components/scroll/smoothScroll";
+const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={oswald.className}>
+        <SmoothScroll>
+          <NavBar />
+          <Hero />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
