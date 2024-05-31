@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import style from "./hero.module.scss";
-import { easeIn, easeOut, motion } from "framer-motion";
+import { delay, easeOut, motion } from "framer-motion";
+import { useState } from "react";
+import LoaderSite from "../loader/loader";
 
 function Hero() {
   const container = {
@@ -9,6 +11,7 @@ function Hero() {
     show: {
       opacity: 1,
       transition: {
+        delayChildren: 1,
         staggerChildren: 0.5,
       },
     },
@@ -25,6 +28,9 @@ function Hero() {
       },
     },
   };
+
+  const [loading, setLoading] = useState(true);
+
   return (
     <section className={style.hero}>
       <Image
@@ -32,7 +38,9 @@ function Hero() {
         src={"/image/mainImage.jpg"}
         layout="fill"
         alt="Immagine Principale HomePage"
+        onLoadingComplete={() => setLoading(false)}
       />
+      {loading && <LoaderSite />}
       <div className={style.hero__text}>
         <motion.ul variants={container} initial="hidden" animate="show">
           <motion.li variants={item}>
