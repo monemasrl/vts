@@ -1,21 +1,25 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import style from "./form.module.scss";
 type Props = {};
 
 function SuccessMessage() {
-  return (
-    <div className={style.success}>
-      <h3>Messaggio inviato</h3>
-      <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-    </div>
-  );
+  const searchParams = useSearchParams();
+  const success = searchParams.get("success");
+  if (success) {
+    return (
+      <div className={style.success}>
+        <h3>Messaggio inviato</h3>
+        <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
 function Form({}: Props) {
-  const searchParams = useSearchParams();
-  const success = searchParams.get("success");
   const [ragioneSociale, setRagioneSociale] = useState<string>("");
   const [errorRagioneSociale, setErrorRagioneSociale] = useState<string>("");
   const [mail, setMail] = useState<string>("");
@@ -78,7 +82,9 @@ function Form({}: Props) {
       action="informazioni/?success=true"
       data-netlify-honeypot="mail-confirm"
     >
-      {success && <SuccessMessage />}
+      <Suspense>
+        <SuccessMessage />
+      </Suspense>
       {errorRagioneSociale && (
         <p className={style.error}>{errorRagioneSociale}</p>
       )}
