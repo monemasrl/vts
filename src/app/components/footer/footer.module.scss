@@ -1,0 +1,23 @@
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: $blue;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 2rem;
+  justify-items: center;
+  align-items: end;
+  font-size: 19px;
+  gap: 2rem;
+  font-weight: 200;
+  &__first {
+    grid-column: 2/3;
+    img {
+      margin-bottom: 1rem;
+    }
+  }
+  &__fourth {
+    justify-self: center;
+  }
+}

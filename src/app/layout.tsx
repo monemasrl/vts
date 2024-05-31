@@ -4,6 +4,7 @@ import "./sass/all.scss";
 import NavBar from "./components/navbar/nav";
 import Hero from "./components/hero/hero";
 import SmoothScroll from "./components/scroll/smoothScroll";
+import Footer from "./components/footer/footer";
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
           <NavBar />
           <Hero />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>

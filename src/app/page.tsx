@@ -4,7 +4,6 @@ import style from "./home.module.scss";
 import { motion } from "framer-motion";
 import { MdOutlineChevronRight } from "react-icons/md";
 import Form from "./components/form/form";
-
 const secondSectionHomeData = {
   title:
     "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
@@ -126,6 +125,7 @@ export default function Home() {
           width={300}
           height={300}
           alt="divider"
+          unoptimized
         />
       </motion.div>
       <motion.section
