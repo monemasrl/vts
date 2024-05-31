@@ -73,7 +73,7 @@ export default function Home() {
 
   setTimeout(() => {
     setSplash(false);
-  }, 2000);
+  }, 1500);
 
   return (
     <AnimatePresence>
