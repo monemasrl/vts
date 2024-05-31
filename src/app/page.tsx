@@ -73,7 +73,7 @@ export default function Home() {
 
   setTimeout(() => {
     setSplash(false);
-  }, 1500);
+  }, 1000);
 
   return (
     <AnimatePresence>
@@ -257,7 +257,11 @@ export default function Home() {
               <motion.div
                 className={style.thirdSectionHome__wrapper__image}
                 initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1 },
+                }}
               >
                 <Image
                   src={"/image/lavora.png"}
@@ -270,7 +274,12 @@ export default function Home() {
                 className={style.thirdSectionHome__wrapper__image__back}
               ></div>
             </div>
-            <div className={style.thirdSectionHome__background}></div>
+            <motion.div
+              className={style.thirdSectionHome__background}
+              initial={{ x: -1000 }}
+              whileInView={{ x: 0, transition: { duration: 2 } }}
+              viewport={{ once: true }}
+            ></motion.div>
           </motion.section>
           <section className={style.fourthSectionHome}>
             <div className={style.fourthSectionHome__wrapper}>
