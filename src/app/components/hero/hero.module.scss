@@ -21,10 +21,14 @@
     ul {
       display: flex;
       gap: 1rem;
+
       li {
         font-size: 4rem;
         display: flex;
         align-items: center;
+        @media #{$large} {
+          font-size: 3rem;
+        }
       }
     }
   }
