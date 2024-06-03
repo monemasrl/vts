@@ -44,6 +44,7 @@ function Hero() {
         layout="fill"
         alt="Immagine Principale HomePage"
         onLoadingComplete={() => setLoading(false)}
+        priority
       />
       {loading && <LoaderSite />}
       <div className={style.hero__text}>
