@@ -94,6 +94,7 @@ export default function Home() {
               className={style.FirstSectionHome__text}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+              viewport={{ once: true }}
             >
               <h1>
                 <Image
@@ -139,6 +140,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            viewport={{ once: true }}
           >
             <Image
               className={style.dividerHome}
@@ -153,6 +155,7 @@ export default function Home() {
             className={style.secondSectionHome}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            viewport={{ once: true }}
           >
             <h2>
               <Image
@@ -227,12 +230,14 @@ export default function Home() {
             className={style.thirdSectionHome}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            viewport={{ once: true }}
           >
             <div className={style.thirdSectionHome__wrapper}>
               <motion.div
                 className={style.thirdSectionHome__wrapper__text}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+                viewport={{ once: true }}
               >
                 <h2>
                   {" "}
@@ -265,6 +270,7 @@ export default function Home() {
                   x: 0,
                   transition: { duration: 1 },
                 }}
+                viewport={{ once: true }}
               >
                 <Image
                   src={"/image/lavora.png"}
@@ -279,12 +285,25 @@ export default function Home() {
             </div>
             <motion.div
               className={style.thirdSectionHome__background}
-              initial={{ x: -500 }}
-              whileInView={{ x: 0, transition: { duration: 2 } }}
+              initial={{ x: -500, opacity: 0 }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: { duration: 1, delay: 0.5 },
+              }}
               viewport={{ once: true }}
             ></motion.div>
           </motion.section>
-          <section className={style.fourthSectionHome}>
+          <motion.section
+            className={style.fourthSectionHome}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, delay: 0.5 },
+            }}
+            viewport={{ once: true }}
+          >
             <div className={style.fourthSectionHome__wrapper}>
               <Image
                 src={"/image/contatti.jpg"}
@@ -319,7 +338,7 @@ export default function Home() {
                 <Form />{" "}
               </div>
             </div>
-          </section>
+          </motion.section>
         </main>
       )}
     </AnimatePresence>

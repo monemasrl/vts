@@ -5,6 +5,7 @@ import style from "./nav.module.scss";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const data = {
   nav: [
@@ -18,28 +19,51 @@ const data = {
     },
     {
       title: "Lavora Con Noi",
-      url: "/Lavora-Con-Noi",
+      url: "/lavora_con_noi",
     },
   ],
 };
 
 function NavBar() {
+  const pathN = usePathname();
+
   const [mobile, setMobile] = useState(false);
 
+  function isHome() {
+    if (pathN === "/") {
+      return true;
+    }
+    return false;
+  }
   return (
-    <header className={style.header}>
+    <header
+      className={`${style.header} ${isHome() ? style.header__home : null}`}
+    >
       <nav className={style.mainNavBar}>
         <div className={style.mainNavBar__logo}>
           <a href="/">
-            <Image
-              src="/image/logo-white.svg"
-              width={121}
-              height={94}
-              alt="logo"
-            />
+            {isHome() ? (
+              <Image
+                src="/image/logo-white.svg"
+                width={121}
+                height={94}
+                alt="logo"
+              />
+            ) : (
+              <Image
+                src="/image/logo-black.svg"
+                width={121}
+                height={94}
+                alt="logo"
+              />
+            )}
           </a>
         </div>
-        <div className={style.mainNavBar__navBlock}>
+        <div
+          className={`${style.mainNavBar__navBlock} ${
+            isHome() ? style.mainNavBar__home : style.mainNavBar__inner
+          }`}
+        >
           <div className={style.mainNavBar__navBlock__topData}>
             Via della Stazione 27, Barga - 0583 711372 - info@vtservices.it
           </div>

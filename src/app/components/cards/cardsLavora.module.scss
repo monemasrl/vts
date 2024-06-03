@@ -1,0 +1,17 @@
+.cardsLavora {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  a {
+    color: black;
+    h3 {
+      text-transform: uppercase;
+      text-align: center;
+      border: 1px solid $grey;
+      padding: 1rem;
+      font-weight: 400;
+      font-size: 1.7rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

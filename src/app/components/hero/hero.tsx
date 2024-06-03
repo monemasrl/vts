@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
 import style from "./hero.module.scss";
-import { delay, easeOut, motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 import { useState } from "react";
 import LoaderSite from "../loader/loader";
+import { usePathname } from "next/navigation";
 
 function Hero() {
+  const isHome = usePathname() === "/";
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -30,7 +33,9 @@ function Hero() {
   };
 
   const [loading, setLoading] = useState(true);
-
+  if (!isHome) {
+    return null;
+  }
   return (
     <section className={style.hero}>
       <Image

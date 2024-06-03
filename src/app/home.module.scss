@@ -95,6 +95,7 @@
   &__specs {
     display: grid;
     grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr);
+    margin-top: 3rem;
     @media #{$landscape} {
       grid-template-columns: 1fr;
     }

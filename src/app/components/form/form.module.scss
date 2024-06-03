@@ -38,11 +38,23 @@ form.form {
     border-radius: 0;
     border: none;
     padding: 1rem 2rem;
-    float: right;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
     cursor: pointer;
+  }
+  p {
+    margin: 0.5rem 0;
   }
   .error {
     font-size: 0.9rem;
-    color: red;
+    color: rgb(255, 255, 255);
+  }
+}
+.form__lavora {
+  select.candidatura {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
   }
 }

@@ -1,7 +1,9 @@
 .header {
   position: relative;
-  background: linear-gradient(rgb(10, 43, 82) 7%, rgb(50 92 175 / 0%) 100%);
   padding: 0 1rem;
+  &__home {
+    background: linear-gradient(rgb(10, 43, 82) 7%, rgb(50 92 175 / 0%) 100%);
+  }
 }
 .mainNavBar {
   display: flex;
@@ -14,12 +16,29 @@
   gap: 2rem;
   padding-top: 2rem;
   padding-bottom: 5rem;
+  &__home {
+    ul li a {
+      color: white;
+    }
+  }
+  &__inner {
+    hr {
+      background-color: $navyBlue;
+    }
+    ul li a {
+      color: $navyBlue;
+    }
+    .mainNavBar__navBlock__topData {
+      color: $navyBlue;
+    }
+  }
 
   &__navBlock {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
     hr {
       width: 100%;
       border: rgba(255, 255, 255, 0.262) 1px solid;
@@ -34,7 +53,6 @@
       display: flex;
       gap: 2rem;
       a {
-        color: white;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 400;
