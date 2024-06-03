@@ -18,9 +18,10 @@ function LoaderSite() {
         }}
       >
         <Image
+          style={{ opacity: 0.3 }}
           src="/image/vts-icon.svg"
-          width={200}
-          height={200}
+          width={100}
+          height={100}
           alt="loader"
         />
       </motion.div>
