@@ -1,6 +1,9 @@
 .home {
   position: relative;
   margin-top: 90vh;
+  @media #{$phone} {
+    margin-top: 80vh;
+  }
 }
 .FirstSectionHome,
 .secondSectionHome,
@@ -15,6 +18,9 @@
   margin: 0 auto 10rem auto;
   position: relative;
   overflow: hidden;
+  @media #{$landscape} {
+    margin: 0 auto 3rem auto;
+  }
   &__image {
     position: absolute;
     z-index: -1;
@@ -29,17 +35,35 @@
     &__content {
       display: grid;
       grid-template-columns: minmax(300px, 582px) minmax(300px, 1fr);
+      @media #{$landscape} {
+        grid-template-columns: 1fr;
+      }
+
       p {
         text-align: right;
+        @media #{$landscape} {
+          text-align: left;
+        }
         img {
           margin-top: 1rem;
+          display: block;
+          margin-right: 0;
+          margin-left: auto;
+          @media #{$landscape} {
+            margin-right: auto;
+            margin-left: auto;
+          }
         }
       }
       ul {
         padding: 2rem 0rem 2rem 2rem;
+        @media #{$tablet} {
+          padding: 2rem 0 0 0;
+          text-align: center;
+        }
         li {
           font-weight: 700;
-          font-size: 30px;
+          font-size: 2rem;
           text-transform: uppercase;
           color: $blue;
         }
@@ -54,35 +78,51 @@
 }
 .secondSectionHome {
   max-width: 1411px;
-  margin: 0 auto 6rem auto;
+  margin: 0 auto 3rem auto;
   position: relative;
-  > h2 {
-    @media #{$laptop} {
-      text-align: center;
-    }
-  }
+
   &__mainText {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 86px;
     max-width: 1348px;
     margin: 0 auto;
+    @media #{$phone} {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
   }
   &__specs {
     display: grid;
     grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr);
+    @media #{$landscape} {
+      grid-template-columns: 1fr;
+    }
   }
   &__specs__singleSpec {
     display: grid;
     grid-template-columns: 90px 1fr;
     grid-gap: 1rem;
-    max-width: 1245px;
     margin: 2rem auto;
-    img {
-      grid-column: 1;
+    @media #{$landscape} {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      @media #{$landscape} {
+        text-align: center;
+      }
+      img {
+        grid-column: 1;
+      }
     }
     &__txt {
       max-width: 493px;
+      @media #{$landscape} {
+        width: 500px;
+      }
+      @media #{$tablet} {
+        width: 350px;
+      }
       h3 {
         font-size: 2rem;
         margin: 0 0 1rem 0;
@@ -114,12 +154,26 @@
     height: 87%;
     z-index: -1;
     background-color: $blue;
+    @media #{$landscape} {
+      height: 90%;
+    }
+    @media #{$phone} {
+      transform: translateX(0) !important;
+    }
   }
   &__wrapper {
     max-width: 1411px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
+    @media #{$landscape} {
+      align-items: center;
+    }
+    @media #{$tablet} {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
     &__text {
       max-width: 856px;
       margin: 3rem 0;
@@ -135,10 +189,13 @@
       }
       p {
         color: white;
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: 200;
         margin: 0;
-        line-height: 28px + (22px/2);
+        line-height: 1.75rem + (1.75rem/2);
+        @media #{$landscape} {
+          font-size: 1.5rem;
+        }
       }
     }
     &__image {
@@ -146,6 +203,13 @@
       top: -60px;
       width: 450px;
       flex-shrink: 0;
+      @media #{$landscape} {
+        width: 300px;
+        height: 300px;
+        top: 0;
+      }
+      @media #{$tablet} {
+      }
       img {
         position: absolute;
         width: 100%;
@@ -159,7 +223,7 @@
         position: relative;
         top: 0;
         width: 420px;
-        height: 420px;
+        height: 430px;
         background-color: white;
         z-index: 0;
         transform: skew(337deg, 0deg);
@@ -186,7 +250,9 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-gap: 2rem;
-
+      @media #{$tablet} {
+        grid-template-columns: repeat(2, 1fr);
+      }
       &__content {
         max-width: 560px;
         grid-column: span 2;

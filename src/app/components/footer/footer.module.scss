@@ -11,8 +11,18 @@
   font-size: 19px;
   gap: 2rem;
   font-weight: 200;
+  @media #{$landscape} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$phone} {
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+  }
   &__first {
     grid-column: 2/3;
+    @media #{$landscape} {
+      grid-column: 1/2;
+    }
     img {
       margin-bottom: 1rem;
     }

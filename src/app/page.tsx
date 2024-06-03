@@ -73,7 +73,7 @@ export default function Home() {
 
   setTimeout(() => {
     setSplash(false);
-  }, 1000);
+  }, 1300);
 
   return (
     <AnimatePresence>
@@ -189,6 +189,9 @@ export default function Home() {
                     className={style.secondSectionHome__specs__singleSpec}
                   >
                     <motion.div
+                      className={
+                        style.secondSectionHome__specs__singleSpec__img
+                      }
                       initial={{ opacity: 0, y: 100 }}
                       whileInView={{
                         opacity: 1,
@@ -276,7 +279,7 @@ export default function Home() {
             </div>
             <motion.div
               className={style.thirdSectionHome__background}
-              initial={{ x: -1000 }}
+              initial={{ x: -500 }}
               whileInView={{ x: 0, transition: { duration: 2 } }}
               viewport={{ once: true }}
             ></motion.div>

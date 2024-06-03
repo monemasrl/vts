@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./nav.module.scss";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
 const data = {
   nav: [
     {
@@ -17,7 +22,10 @@ const data = {
     },
   ],
 };
+
 function NavBar() {
+  const [mobile, setMobile] = useState(false);
+
   return (
     <header className={style.header}>
       <nav className={style.mainNavBar}>
@@ -44,6 +52,48 @@ function NavBar() {
             ))}
           </ul>
         </div>
+        <div className={style.burger} onClick={() => setMobile(true)}>
+          <RxHamburgerMenu />
+        </div>
+        <AnimatePresence>
+          {mobile && (
+            <motion.div
+              key="mobileMenu"
+              className={style.navMobile}
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div
+                className={style.navMobile__close}
+                onClick={() => setMobile(false)}
+              >
+                <RxCross2 />
+              </div>
+              <a href="/">
+                <Image
+                  src="/image/logo-white.svg"
+                  width={121}
+                  height={94}
+                  alt="logo"
+                />
+              </a>
+
+              <ul className={style.navMobile__nav}>
+                {data.nav.map((item, index) => (
+                  <li key={index}>
+                    <Link href={item.url}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
+              <hr style={{ width: "50%" }} />
+              <div className={style.navMobile__generic}>
+                Via della Stazione 27, Barga - 0583 711372 - info@vtservices.it
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
