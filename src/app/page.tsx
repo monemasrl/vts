@@ -7,6 +7,7 @@ import Form from "./components/form/form";
 import { useState } from "react";
 import Splash from "./components/splash/splash";
 import Link from "next/link";
+import TestForm from "./components/form/testform";
 const secondSectionHomeData = {
   title:
     "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
@@ -331,7 +332,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <Form />{" "}
+            <TestForm />
           </div>
         </div>
       </motion.section>

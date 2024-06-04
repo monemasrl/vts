@@ -54,21 +54,29 @@ function Form() {
     }
   }, [nome, mail, messaggio, cognome]);
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     const myForm = event.target;
     const formData = new FormData(myForm);
-    console.log(event);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then((payload) => {
-        console.log(payload);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        // Handle success (e.g., display a success message)
+        alert("Form submitted successfully");
         router.push("/success");
-      })
-      .catch((error) => alert(error));
+      } else {
+        // Handle error (e.g., display an error message)
+        alert("Form submission error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Form submission error");
+    }
   };
   return (
     <form
@@ -76,8 +84,6 @@ function Form() {
       name="contact"
       method="POST"
       onSubmit={handleSubmit}
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
