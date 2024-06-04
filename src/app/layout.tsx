@@ -6,6 +6,9 @@ import Hero from "./components/hero/hero";
 import SmoothScroll from "./components/scroll/smoothScroll";
 import Footer from "./components/footer/footer";
 import ScrollTop from "./components/scrollTop/scrollTop";
+import Head from "next/head";
+import { homePageJsonLD } from "./metadata";
+
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
 export const metadata: Metadata = {
@@ -38,9 +41,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <head>
+      <Head>
         <link rel="icon" href="/image/favicon.ico" />
-      </head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={homePageJsonLD()}
+          key="product-jsonld"
+        />
+      </Head>
       <body className={oswald.className}>
         <SmoothScroll>
           <NavBar />
