@@ -127,11 +127,12 @@ function Form() {
           required
         ></textarea>
       </p>
-      {errorNome && <p className={style.error}>{errorNome}</p>}
-      {errorCognome && <p className={style.error}>{errorCognome}</p>}
-      {errorMail && <p className={style.error}>{errorMail}</p>}
-
-      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+      <div style={{ height: "20px" }}>
+        {errorNome && <p className={style.error}>{errorNome}</p>}
+        {errorCognome && <p className={style.error}>{errorCognome}</p>}
+        {errorMail && <p className={style.error}>{errorMail}</p>}
+        {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+      </div>
       <p>
         <button disabled={submit ? false : true} type="submit">
           Invia
