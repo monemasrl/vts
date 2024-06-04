@@ -45,7 +45,7 @@ export default function RootLayout({
         <link rel="icon" href="/image/favicon.ico" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLD()) }}
+          dangerouslySetInnerHTML={homePageJsonLD()}
           key="product-jsonld"
         />
       </head>
