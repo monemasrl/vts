@@ -63,7 +63,10 @@ function Form() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => router.push("/success"))
+      .then((payload) => {
+        console.log(payload);
+        router.push("/success");
+      })
       .catch((error) => alert(error));
   };
   return (
@@ -71,9 +74,7 @@ function Form() {
       className={`${style.form} ${style.form__lavora}`}
       name="contact"
       method="POST"
-      data-netlify="true"
       onSubmit={handleSubmit}
-      data-netlify-honeypot="mail-confirm"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
