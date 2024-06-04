@@ -289,6 +289,7 @@ export default function Home() {
         ></motion.div>
       </motion.section>
       <motion.section
+        id="contatti"
         className={style.fourthSectionHome}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{

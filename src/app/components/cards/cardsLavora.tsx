@@ -14,6 +14,7 @@ function CardsLavora({ dataCards }: { dataCards: TdataCards[] }) {
       {dataCards.map((card, index) => (
         <li key={index}>
           <Image
+            className={style.cardsLavora__image}
             src={`/image/${card.image}.jpg`}
             width={535}
             height={231}

@@ -3,6 +3,9 @@
   padding: 0 1rem;
   &__home {
     background: linear-gradient(rgb(10, 43, 82) 7%, rgb(50 92 175 / 0%) 100%);
+    .mainNavBar {
+      padding-bottom: 5rem;
+    }
   }
 }
 .mainNavBar {
@@ -15,7 +18,7 @@
   align-items: center;
   gap: 2rem;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   &__home {
     ul li a {
       color: white;
@@ -72,6 +75,9 @@
 .burger {
   display: none;
   font-size: 1.5rem;
+  &__inner {
+    color: $navyBlue;
+  }
   @media #{$landscape} {
     display: block;
   }

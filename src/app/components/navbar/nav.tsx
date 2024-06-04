@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import style from "./nav.module.scss";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -15,7 +15,7 @@ const data = {
     },
     {
       title: "Contatti",
-      url: "/contatti",
+      url: "/#contatti",
     },
     {
       title: "Lavora Con Noi",
@@ -35,6 +35,11 @@ function NavBar() {
     }
     return false;
   }
+
+  useEffect(() => {
+    setMobile(false);
+  }, [pathN]);
+
   return (
     <header
       className={`${style.header} ${isHome() ? style.header__home : null}`}
@@ -71,12 +76,21 @@ function NavBar() {
           <ul className={style.mainNavBar__navBlock__nav}>
             {data.nav.map((item, index) => (
               <li key={index}>
-                <Link href={item.url}>{item.title}</Link>
+                {item.title === "contatti" ? (
+                  <a href={item.url}>{item.title}</a>
+                ) : (
+                  <Link href={item.url}>{item.title}</Link>
+                )}
               </li>
             ))}
           </ul>
         </div>
-        <div className={style.burger} onClick={() => setMobile(true)}>
+        <div
+          className={`${style.burger} ${
+            isHome() ? style.burger__home : style.burger__inner
+          }`}
+          onClick={() => setMobile(true)}
+        >
           <RxHamburgerMenu />
         </div>
         <AnimatePresence>

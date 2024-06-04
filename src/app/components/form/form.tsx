@@ -2,7 +2,6 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import style from "./form.module.scss";
-type Props = {};
 
 function SuccessMessage() {
   const searchParams = useSearchParams();
@@ -19,23 +18,27 @@ function SuccessMessage() {
   }
 }
 
-function Form({}: Props) {
-  const [ragioneSociale, setRagioneSociale] = useState<string>("");
-  const [errorRagioneSociale, setErrorRagioneSociale] = useState<string>("");
+function Form() {
+  const [nome, setNome] = useState<string>("");
+  const [errorNome, setErrorNome] = useState<string>("");
+  const [cognome, setCognome] = useState<string>("");
+  const [errorCognome, setErrorCognome] = useState<string>("");
   const [mail, setMail] = useState<string>("");
   const [errorMail, setErrorMail] = useState<string>("");
-  const [phone, setPhone] = useState<string>("");
-  const [errorPhone, setErrorPhone] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
-
   const [submit, setSubmit] = useState<boolean>(false);
 
   useEffect(() => {
-    if (ragioneSociale.length < 6 && ragioneSociale.length > 0) {
-      setErrorRagioneSociale("Inserire un nome di almeno 6 caratteri");
+    if (nome.length < 3 && nome.length > 0) {
+      setErrorNome("Inserire un nome di almeno 6 caratteri");
     } else {
-      setErrorRagioneSociale("");
+      setErrorNome("");
+    }
+    if (cognome.length < 3 && cognome.length > 0) {
+      setErrorCognome("Inserire un nome di almeno 3 caratteri");
+    } else {
+      setErrorCognome("");
     }
 
     if (mail.length < 6 && mail.length > 0) {
@@ -46,36 +49,29 @@ function Form({}: Props) {
       setErrorMail("");
     }
 
-    if (phone.length < 3 && phone.length > 0) {
-      setErrorPhone("Inserire un numero di telefono valido");
-    } else if (phone.length > 0 && isNaN(phone as any)) {
-      setErrorPhone("Inserire un numero di telefono valido");
-    } else {
-      setErrorPhone("");
-    }
     if (messaggio.length < 10 && messaggio.length > 0) {
       setErrorMessaggio("Inserire almeno 10 caratteri");
     } else {
       setErrorMessaggio("");
     }
-    console.log(errorPhone);
+
     //controllo sul submit del form netlify
     if (
-      ragioneSociale.length < 3 ||
+      nome.length < 3 ||
+      cognome.length < 3 ||
       mail.length < 3 ||
       !mail.includes("@") ||
-      phone.length < 3 ||
       messaggio.length < 10
     ) {
       setSubmit(false);
     } else {
       setSubmit(true);
     }
-  }, [ragioneSociale, mail, phone, messaggio]);
+  }, [nome, mail, messaggio, cognome]);
 
   return (
     <form
-      className={style.form}
+      className={`${style.form} ${style.form__lavora}`}
       name="contact"
       method="POST"
       data-netlify="true"
@@ -85,23 +81,31 @@ function Form({}: Props) {
       <Suspense>
         <SuccessMessage />
       </Suspense>
-      {errorRagioneSociale && (
-        <p className={style.error}>{errorRagioneSociale}</p>
-      )}
-      {errorMail && <p className={style.error}>{errorMail}</p>}
-      {errorPhone && <p className={style.error}>{errorPhone}</p>}
-      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+
       <input type="hidden" name="form-name" value="contact" />
       <p>
         {" "}
-        <label htmlFor="ragionesociale">Ragione Sociale:</label> <br />
+        <label htmlFor="ragionesociale">Nome:</label> <br />
         <input
           onChange={(e) => {
-            setRagioneSociale(e.target.value);
+            setNome(e.target.value);
           }}
           type="text"
-          name="ragionesociale"
-          id="ragionesociale"
+          name="nome"
+          id="nome"
+          required
+        />
+      </p>
+      <p>
+        {" "}
+        <label htmlFor="ragionesociale">Cognome:</label> <br />
+        <input
+          onChange={(e) => {
+            setCognome(e.target.value);
+          }}
+          type="text"
+          name="nome"
+          id="nome"
           required
         />
       </p>
@@ -115,16 +119,7 @@ function Form({}: Props) {
           required
         />
       </p>
-      <p>
-        <label htmlFor="phone">Telefono</label> <br />
-        <input
-          onChange={(e) => setPhone(e.target.value)}
-          type="tel"
-          name="phone"
-          id="phone"
-          required
-        />
-      </p>
+
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
         <textarea
@@ -136,6 +131,11 @@ function Form({}: Props) {
           required
         ></textarea>
       </p>
+      {errorNome && <p className={style.error}>{errorNome}</p>}
+      {errorCognome && <p className={style.error}>{errorCognome}</p>}
+      {errorMail && <p className={style.error}>{errorMail}</p>}
+
+      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
       <p>
         <button disabled={submit ? false : true} type="submit">
           Invia

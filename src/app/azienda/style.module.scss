@@ -1,0 +1,14 @@
+.firstSection {
+  &__image {
+    margin: 2rem 0;
+  }
+}
+.secondSection {
+  margin-bottom: 5rem;
+  ul {
+    li {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}

@@ -57,79 +57,90 @@ const dataAccordion = [
 
 function LavoraConNoi() {
   return (
-    <main className={"innerPage"}>
-      <h1>
+    <>
+      <div className={"mainImage"}>
         <Image
-          src={"/image/bullet.svg"}
-          width={40}
-          height={40}
-          alt="bullet image"
+          src="/image/lavora-con-noi.jpg"
+          layout="fill"
+          objectFit="cover"
+          alt="lavora con noi"
         />
-        Lavora con noi{" "}
-      </h1>
-      <section className={style.annunci}>
-        <CardsLavora dataCards={dataCards} />
-      </section>
-      <section className={style.warning}>
-        <div className={style.warning__head}>
+      </div>
+      <main className={"innerPage"}>
+        <h1>
           <Image
-            src="/image/warning.svg"
-            width={60}
-            height={60}
-            alt="warning"
+            src={"/image/bullet.svg"}
+            width={40}
+            height={40}
+            alt="bullet image"
           />
+          Lavora con noi{" "}
+        </h1>
+        <section className={style.annunci}>
+          <CardsLavora dataCards={dataCards} />
+        </section>
+        <section className={style.warning}>
+          <div className={style.warning__head}>
+            <Image
+              src="/image/warning.svg"
+              width={60}
+              height={60}
+              alt="warning"
+            />
+            <p>
+              Se non hai esperienza in questo settore e sei interessato
+              intraprendere questa attività, ti offriamo un periodo formativo,
+              requisiti minimi:
+            </p>
+          </div>
+          <div className={style.warning__content}>
+            <div>
+              <h3>CQV Engineer:</h3>
+              <ul>
+                <li>
+                  Laurea più attinente: Ingegneria Chimica Ingegneria
+                  Elettronica
+                </li>
+                <li>Ingegneria dell’Automazione</li>
+                <li>Ingegneria Informatica</li>
+                <li>Ingegneria delle Telecomunicazioni</li>
+                <li>Chimica e Tecnologie Farmaceutiche</li>
+              </ul>
+            </div>
+            <div>
+              <h3>CQV Technician</h3>
+              <ul>
+                <li>Istruzione superiore più attinente:</li>
+                <li>Diploma di Perito Elettronico e automazione</li>
+                <li>Diploma di Perito Chimico</li>
+                <li>Diploma di Perito Informatico</li>
+              </ul>
+            </div>
+          </div>
+          <div></div>
+        </section>
+        <section className={style.info}>
+          <h2>Che cos&apos;è il processo di convalida CQV?</h2>
           <p>
-            Se non hai esperienza in questo settore e sei interessato
-            intraprendere questa attività, ti offriamo un periodo formativo,
-            requisiti minimi:
+            Quando viene prodotto un farmaco o un prodotto medico, ci sono molti
+            rischi che ne derivano. Questo è il motivo per cui è fondamentale
+            che esistano processi per monitorare e valutare la sicurezza delle
+            apparecchiature utilizzate per sviluppare prodotti farmaceutici. Per
+            fare ciò, le aziende farmaceutiche seguono il processo CQV CQV è
+            l&apos;acronimo di Commissioning, Qualification and Validation. Si
+            tratta di un processo di test in più fasi che consente alle aziende
+            farmaceutiche di testare le proprie apparecchiature di produzione in
+            base agli standard, alle normative e ai requisiti del settore.
           </p>
-        </div>
-        <div className={style.warning__content}>
-          <div>
-            <h3>CQV Engineer:</h3>
-            <ul>
-              <li>
-                Laurea più attinente: Ingegneria Chimica Ingegneria Elettronica
-              </li>
-              <li>Ingegneria dell’Automazione</li>
-              <li>Ingegneria Informatica</li>
-              <li>Ingegneria delle Telecomunicazioni</li>
-              <li>Chimica e Tecnologie Farmaceutiche</li>
-            </ul>
-          </div>
-          <div>
-            <h3>CQV Technician</h3>
-            <ul>
-              <li>Istruzione superiore più attinente:</li>
-              <li>Diploma di Perito Elettronico e automazione</li>
-              <li>Diploma di Perito Chimico</li>
-              <li>Diploma di Perito Informatico</li>
-            </ul>
-          </div>
-        </div>
-        <div></div>
-      </section>
-      <section className={style.info}>
-        <h2>Che cos&apos;è il processo di convalida CQV?</h2>
-        <p>
-          Quando viene prodotto un farmaco o un prodotto medico, ci sono molti
-          rischi che ne derivano. Questo è il motivo per cui è fondamentale che
-          esistano processi per monitorare e valutare la sicurezza delle
-          apparecchiature utilizzate per sviluppare prodotti farmaceutici. Per
-          fare ciò, le aziende farmaceutiche seguono il processo CQV CQV è
-          l&apos;acronimo di Commissioning, Qualification and Validation. Si
-          tratta di un processo di test in più fasi che consente alle aziende
-          farmaceutiche di testare le proprie apparecchiature di produzione in
-          base agli standard, alle normative e ai requisiti del settore.
-        </p>
-        <Accordion data={dataAccordion} />
-      </section>
+          <Accordion data={dataAccordion} />
+        </section>
 
-      <section id="formCandidature" className={style.form}>
-        <h2>Rientri in un profilo che ricerchiamo? </h2>
-        <FormLavora candidature={dataCards} />
-      </section>
-    </main>
+        <section id="formCandidature" className={style.form}>
+          <h2>Rientri in un profilo che ricerchiamo? </h2>
+          <FormLavora candidature={dataCards} />
+        </section>
+      </main>
+    </>
   );
 }
 export default LavoraConNoi;

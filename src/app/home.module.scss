@@ -95,7 +95,9 @@
   &__specs {
     display: grid;
     grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr);
-    margin-top: 3rem;
+    max-width: 1180px;
+    margin: 5rem auto;
+    gap: 2rem;
     @media #{$landscape} {
       grid-template-columns: 1fr;
     }
@@ -104,9 +106,10 @@
     display: grid;
     grid-template-columns: 90px 1fr;
     grid-gap: 1rem;
-    margin: 2rem auto;
+    margin: 2rem 0;
     @media #{$landscape} {
       grid-template-columns: 1fr;
+      justify-items: center;
     }
     &__img {
       @media #{$landscape} {
@@ -118,6 +121,7 @@
     }
     &__txt {
       max-width: 493px;
+      width: 100%;
       @media #{$landscape} {
         width: 500px;
       }
@@ -245,6 +249,7 @@
     margin: 0 auto;
     img {
       z-index: -1;
+      object-fit: cover;
     }
     &__text {
       width: 100%;

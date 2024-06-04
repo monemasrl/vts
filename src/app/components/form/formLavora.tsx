@@ -30,8 +30,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const [errorCognome, setErrorCognome] = useState<string>("");
   const [mail, setMail] = useState<string>("");
   const [errorMail, setErrorMail] = useState<string>("");
-  const [phone, setPhone] = useState<string>("");
-  const [errorPhone, setErrorPhone] = useState<string>("");
+  const [candidatura, setCandidatura] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
@@ -56,38 +55,30 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setErrorMail("");
     }
 
-    if (phone.length < 3 && phone.length > 0) {
-      setErrorPhone("Inserire un numero di telefono valido");
-    } else if (phone.length > 0 && isNaN(phone as any)) {
-      setErrorPhone("Inserire un numero di telefono valido");
-    } else {
-      setErrorPhone("");
-    }
     if (messaggio.length < 10 && messaggio.length > 0) {
       setErrorMessaggio("Inserire almeno 10 caratteri");
     } else {
       setErrorMessaggio("");
     }
-    console.log(errorPhone);
+
     //controllo sul submit del form netlify
     if (
       nome.length < 3 ||
       cognome.length < 3 ||
       mail.length < 3 ||
       !mail.includes("@") ||
-      phone.length < 3 ||
       messaggio.length < 10
     ) {
       setSubmit(false);
     } else {
       setSubmit(true);
     }
-  }, [nome, mail, phone, messaggio, cognome]);
+  }, [nome, mail, messaggio, cognome]);
 
   return (
     <form
       className={`${style.form} ${style.form__lavora}`}
-      name="contact"
+      name="candidatura"
       method="POST"
       data-netlify="true"
       action="informazioni/?success=true"
@@ -97,7 +88,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
         <SuccessMessage />
       </Suspense>
 
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
         <label htmlFor="ragionesociale">Nome:</label> <br />
@@ -136,7 +127,10 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       </p>
       <p>
         <label htmlFor="candidatura">Candidatura</label> <br />
-        <select className={style.candidatura}>
+        <select
+          className={style.candidatura}
+          onChange={(e) => setCandidatura(e.target.value)}
+        >
           {candidature.map((item, index) => {
             return (
               <option key={index} value={item.titolo}>
@@ -160,7 +154,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       {errorNome && <p className={style.error}>{errorNome}</p>}
       {errorCognome && <p className={style.error}>{errorCognome}</p>}
       {errorMail && <p className={style.error}>{errorMail}</p>}
-      {errorPhone && <p className={style.error}>{errorPhone}</p>}
+
       {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
       <p>
         <button disabled={submit ? false : true} type="submit">
