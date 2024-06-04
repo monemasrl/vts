@@ -2,7 +2,11 @@
 import { useState, useEffect } from "react";
 import style from "./form.module.scss";
 import { useRouter } from "next/navigation";
-
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 function Form() {
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
@@ -56,23 +60,21 @@ function Form() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
+    const data = {
+      nome,
+      cognome,
+      mail,
+      messaggio,
+    };
+    console.log(data, "data");
     try {
-      const response = await fetch("/", {
+      await fetch("/", {
         method: "POST",
-        body: new URLSearchParams(formData as any).toString(),
-      });
-
-      if (response.ok) {
-        // Handle success (e.g., display a success message)
-        alert("Form submitted successfully");
-        router.push("/success");
-      } else {
-        // Handle error (e.g., display an error message)
-        alert("Form submission error");
-      }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data }),
+      })
+        .then(() => router.push("/success"))
+        .catch((error) => alert(error));
     } catch (error) {
       console.error("Form submission error:", error);
       alert("Form submission error");
