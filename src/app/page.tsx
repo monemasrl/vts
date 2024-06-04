@@ -7,6 +7,7 @@ import Form from "./components/form/form";
 import { useState } from "react";
 import Splash from "./components/splash/splash";
 import Link from "next/link";
+import TestForm from "./components/form/testForm";
 
 const secondSectionHomeData = {
   title:
@@ -332,7 +333,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <Form />
+            <TestForm />
           </div>
         </div>
       </motion.section>
