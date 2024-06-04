@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+
 import style from "./form.module.scss";
 
 type Tcandidature = {
@@ -9,8 +9,6 @@ type Tcandidature = {
 };
 
 function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
-  const searchParams = useSearchParams();
-  const success = searchParams.get("success");
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");

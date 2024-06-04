@@ -1,8 +1,6 @@
 "use client";
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import style from "./form.module.scss";
-import { motion } from "framer-motion";
 
 function Form() {
   const [nome, setNome] = useState<string>("");
