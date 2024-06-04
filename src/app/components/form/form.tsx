@@ -17,6 +17,8 @@ function Form() {
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
+  const [status, setStatus] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
@@ -58,34 +60,37 @@ function Form() {
     }
   }, [nome, mail, messaggio, cognome]);
 
-  const handleSubmit = async (event: any) => {
+  const handleFormSubmit = async (event: any) => {
     event.preventDefault();
-    const data = {
-      nome,
-      cognome,
-      mail,
-      messaggio,
-    };
-    console.log(data, "data");
     try {
-      await fetch("/", {
+      setStatus("pending");
+      setError(null);
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+      const res = await fetch("/__formcontatti.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...data }),
-      })
-        .then(() => router.push("/success"))
-        .catch((error) => alert(error));
-    } catch (error) {
-      console.error("Form submission error:", error);
-      alert("Form submission error");
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      if (res.status === 200) {
+        setStatus("ok");
+        router.push("/success");
+      } else {
+        setStatus("error");
+        setError(`${res.status} ${res.statusText}`);
+      }
+    } catch (e) {
+      setStatus("error");
+      setError(`${e}`);
     }
   };
+
   return (
     <form
       className={`${style.form} ${style.form__lavora}`}
-      name="contact"
+      name="contatti"
       method="POST"
-      onSubmit={handleSubmit}
+      onSubmit={handleFormSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
