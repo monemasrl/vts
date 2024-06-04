@@ -8,15 +8,6 @@ type Tcandidature = {
   image: string;
 };
 
-function SuccessMessage() {
-  return (
-    <div className={style.success}>
-      <h3>Messaggio inviato</h3>
-      <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-    </div>
-  );
-}
-
 function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const searchParams = useSearchParams();
   const success = searchParams.get("success");
@@ -77,11 +68,9 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       name="candidatura"
       method="POST"
       data-netlify="true"
-      action="informazioni/?success=true"
+      action="/success"
       data-netlify-honeypot="mail-confirm"
     >
-      {success && <SuccessMessage />}
-
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}

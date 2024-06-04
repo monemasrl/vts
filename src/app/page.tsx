@@ -125,7 +125,11 @@ export default function Home() {
             <ul>
               <li>1 sede Italia</li>
               <li>1 Subsidiary Svizzera</li>
-              <li>1 Subsidiary USA</li>
+              <li>
+                <Link style={{ color: "#485f7d" }} href="/vts_usa_inc">
+                  1 Subsidiary USA
+                </Link>
+              </li>
             </ul>
           </div>
         </motion.div>

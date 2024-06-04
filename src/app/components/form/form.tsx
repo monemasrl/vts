@@ -1,20 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import style from "./form.module.scss";
-
-function SuccessMessage() {
-  return (
-    <div className={style.success}>
-      <h3>Messaggio inviato</h3>
-      <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-    </div>
-  );
-}
+import { motion } from "framer-motion";
 
 function Form() {
-  const searchParams = useSearchParams();
-  const success = searchParams.get("success");
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");
@@ -71,10 +61,9 @@ function Form() {
       name="contact"
       method="POST"
       data-netlify="true"
-      action="informazioni/?success=true"
+      action="/success"
       data-netlify-honeypot="mail-confirm"
     >
-      {success && <SuccessMessage />}
       <input type="hidden" name="form-name" value="contact" />
       <p>
         {" "}

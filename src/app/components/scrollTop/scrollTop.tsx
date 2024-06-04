@@ -5,6 +5,7 @@ import { useScroll } from "framer-motion";
 
 function ScrollTop() {
   const { scrollY } = useScroll();
+  console.log(scrollY.get());
   return (
     <div className={style.scrollTop}>
       <RxArrowUp />
