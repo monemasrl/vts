@@ -4,7 +4,7 @@ import { RxArrowUp } from "react-icons/rx";
 import { useScroll } from "framer-motion";
 
 function ScrollTop() {
-  const [scrollY] = useScroll();
+  const { scrollY } = useScroll();
   return (
     <div className={style.scrollTop}>
       <RxArrowUp />
