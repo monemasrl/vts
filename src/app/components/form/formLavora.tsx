@@ -67,10 +67,11 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       method="POST"
       data-netlify="true"
       action="/success"
-      data-netlify-honeypot="bot-field"
+      data-netlify-honeypot="mail-confirm"
     >
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
+        {" "}
         <label htmlFor="ragionesociale">Nome:</label> <br />
         <input
           onChange={(e) => {
