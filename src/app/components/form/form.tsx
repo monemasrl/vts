@@ -58,6 +58,7 @@ function Form() {
     event.preventDefault();
     const myForm = event.target;
     const formData = new FormData(myForm);
+    console.log(event);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -75,6 +76,9 @@ function Form() {
       name="contact"
       method="POST"
       onSubmit={handleSubmit}
+      data-netlify="true"
+      action="/success"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
