@@ -35,10 +35,15 @@ p {
     padding: 0 1rem;
   }
 }
-button {
+button,
+.button {
+  a {
+    color: white;
+    text-decoration: none;
+  }
   margin: 2rem 0;
   background-color: $darkblue;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border: none;
   color: white;

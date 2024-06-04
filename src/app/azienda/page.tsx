@@ -1,9 +1,19 @@
 import Image from "next/image";
 import style from "./style.module.scss";
+import { aziendaPageJsonLD, aziendaMetadata } from "../metadata";
+import { Metadata } from "next";
+
+export const metadata: Metadata = aziendaMetadata;
 
 function Azienda() {
   return (
     <>
+      {" "}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={aziendaPageJsonLD()}
+        key="product-jsonld"
+      />
       <div className={"mainImage"}>
         <Image
           src="/image/nostra-azienda.jpg"

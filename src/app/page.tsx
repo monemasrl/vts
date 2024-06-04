@@ -6,6 +6,7 @@ import { MdOutlineChevronRight } from "react-icons/md";
 import Form from "./components/form/form";
 import { useState } from "react";
 import Splash from "./components/splash/splash";
+import Link from "next/link";
 const secondSectionHomeData = {
   title:
     "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
@@ -253,10 +254,14 @@ export default function Home() {
               dinamico e orientato al successo, candidati per una delle
               posizioni aperte{" "}
             </p>
-            <button>
-              <span>Vai alle candidature</span>
-              <MdOutlineChevronRight />
-            </button>
+
+            <Link href={"/lavora_con_noi"}>
+              {" "}
+              <div className="button">
+                <span>Vai alle candidature</span>
+                <MdOutlineChevronRight />{" "}
+              </div>
+            </Link>
           </motion.div>
           <motion.div
             className={style.thirdSectionHome__wrapper__image}
@@ -264,7 +269,7 @@ export default function Home() {
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { duration: 1 },
+              transition: { duration: 1, delay: 0.5 },
             }}
             viewport={{ once: true }}
           >
@@ -275,7 +280,7 @@ export default function Home() {
               alt="iso image"
             />
           </motion.div>
-          <div className={style.thirdSectionHome__wrapper__image__back}></div>
+          <div className={style.thirdSectionHome__wrapper__image__back} />
         </div>
         <motion.div
           className={style.thirdSectionHome__background}
