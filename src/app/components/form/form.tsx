@@ -91,7 +91,6 @@ function Form() {
         />
       </p>
       <p>
-        {" "}
         <label htmlFor="ragionesociale">Cognome:</label> <br />
         <input
           onChange={(e) => {
@@ -134,11 +133,6 @@ function Form() {
         <button disabled={submit ? false : true} type="submit">
           Invia
         </button>
-      </p>
-      <p hidden>
-        <label>
-          <input name="mail-confirm" />
-        </label>
       </p>
     </form>
   );

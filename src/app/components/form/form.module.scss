@@ -49,9 +49,8 @@ form.form {
     margin-left: auto;
     cursor: pointer;
     &:disabled {
-      background-color: $blue;
-      border: 1px solid $darkblue;
-      color: $darkblue;
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
   p {
