@@ -77,7 +77,6 @@ function Form() {
       method="POST"
       onSubmit={handleSubmit}
       data-netlify="true"
-      action="/success"
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
