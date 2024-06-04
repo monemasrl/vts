@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import style from "./form.module.scss";
+import { useRouter } from "next/navigation";
 
 function Form() {
   const [nome, setNome] = useState<string>("");
@@ -12,7 +13,7 @@ function Form() {
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
-
+  const router = useRouter();
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
       setErrorNome("Inserire un nome di almeno 6 caratteri");
@@ -53,13 +54,25 @@ function Form() {
     }
   }, [nome, mail, messaggio, cognome]);
 
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => router.push("/success"))
+      .catch((error) => alert(error));
+  };
   return (
     <form
       className={`${style.form} ${style.form__lavora}`}
       name="contact"
       method="POST"
       data-netlify="true"
-      action="/success"
+      onSubmit={handleSubmit}
       data-netlify-honeypot="mail-confirm"
     >
       <input type="hidden" name="form-name" value="contact" />
