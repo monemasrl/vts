@@ -17,7 +17,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(homePageJsonLD(), "test");
   return (
     <html lang="it">
       <head>
