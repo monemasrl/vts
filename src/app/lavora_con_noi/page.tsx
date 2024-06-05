@@ -3,10 +3,10 @@ import style from "./style.module.scss";
 import Image from "next/image";
 import CardsLavora from "../components/cards/cardsLavora";
 import Accordion from "../components/accordion/accordion";
-import FormLavora from "../components/form/formlavora";
+//import FormLavora from "../components/form/formlavora";
 import LoaderSite from "../components/loader/loader";
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const dataCards = [
   {
@@ -150,7 +150,7 @@ function LavoraConNoi() {
 
         <section id="formCandidature" className={style.form}>
           <h2>Rientri in un profilo che ricerchiamo? </h2>
-          <FormLavora candidature={dataCards} />
+          {/*           <FormLavora candidature={dataCards} /> */}
         </section>
       </motion.main>
     </>
