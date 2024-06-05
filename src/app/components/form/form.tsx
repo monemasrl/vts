@@ -2,7 +2,26 @@
 import { useState, useEffect } from "react";
 import style from "./form.module.scss";
 import { useRouter } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 
+function SuccessMessage({ status }: { status: string | null }) {
+  return (
+    <AnimatePresence>
+      {status === "ok" && (
+        <motion.div
+          className={style.success}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h3>Messaggio inviato</h3>
+          <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
 function Form() {
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
@@ -86,6 +105,7 @@ function Form() {
       name="contatti"
       onSubmit={handleFormSubmit}
     >
+      <SuccessMessage status={status} />
       <input type="hidden" name="form-name" value="contatti" />
       <p>
         {" "}

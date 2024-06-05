@@ -81,7 +81,6 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
       setSubmit(true);
     }
   }, [nome, mail, messaggio, cognome]);
-  const router = useRouter();
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -170,7 +169,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
         </select>
       </p>
       <p>
-        <label htmlFor="yourmessage">Messaggio:</label> <br />
+        <label htmlFor="yourmessage">Motiva la tua candidatura</label> <br />
         <textarea
           onChange={(e) => {
             setMessaggio(e.target.value);
