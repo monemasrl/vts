@@ -101,7 +101,6 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
     <form
       className={`${style.form} ${style.form__lavora}`}
       name="candidatura"
-      method="POST"
       onSubmit={handleFormSubmit}
     >
       {/* {status == "ok" && <SuccessMessage />} */}

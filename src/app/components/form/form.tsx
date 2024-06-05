@@ -85,7 +85,6 @@ function Form() {
     <form
       className={`${style.form} ${style.form__lavora}`}
       name="contatti"
-      method="POST"
       onSubmit={handleFormSubmit}
     >
       <input type="hidden" name="form-name" value="contatti" />
