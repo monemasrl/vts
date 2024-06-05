@@ -138,7 +138,7 @@ function LavoraConNoi() {
 
         <section id="formCandidature" className={style.form}>
           <h2>Rientri in un profilo che ricerchiamo? </h2>
-          <FormLavora />
+          <FormLavora candidature={dataCards} />
         </section>
       </main>
     </>
