@@ -86,7 +86,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       });
       if (res.status === 200) {
         setStatus("ok");
-        console.log("form inviato");
+        router.push("/success");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);
@@ -179,11 +179,6 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
         <button disabled={submit ? false : true} type="submit">
           Invia
         </button>
-      </p>
-      <p hidden>
-        <label>
-          <input name="mail-confirm" />
-        </label>
       </p>
     </form>
   );
