@@ -92,7 +92,7 @@ function Form() {
       method="POST"
       onSubmit={handleFormSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contatti" />
       <p>
         {" "}
         <label htmlFor="nome">Nome:</label> <br />

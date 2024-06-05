@@ -103,7 +103,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       method="POST"
       onSubmit={handleFormSubmit}
     >
-      {status == "ok" && <SuccessMessage />}
+      {/* {status == "ok" && <SuccessMessage />} */}
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
