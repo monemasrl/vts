@@ -143,7 +143,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       </p>
       <p>
         <label htmlFor="richiesta">Candidatura</label> <br />
-        <select
+        {/*       <select
           name="richiesta"
           id="richiesta"
           className={style.candidatura}
@@ -156,7 +156,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
               </option>
             );
           })}
-        </select>
+        </select> */}
       </p>
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
