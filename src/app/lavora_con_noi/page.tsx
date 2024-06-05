@@ -1,3 +1,4 @@
+"use client";
 import style from "./style.module.scss";
 import Image from "next/image";
 import CardsLavora from "../components/cards/cardsLavora";

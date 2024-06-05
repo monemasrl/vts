@@ -2,11 +2,7 @@
 import { useState, useEffect } from "react";
 import style from "./form.module.scss";
 import { useRouter } from "next/navigation";
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+
 function Form() {
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
