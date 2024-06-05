@@ -86,6 +86,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       });
       if (res.status === 200) {
         setStatus("ok");
+        console.log("form inviato");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);
