@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form name="candidatura" data-netlify="true" hidden data-netlify-honeypot="mail-confirm">
+        <input type="hidden" name="form-name" value="candidatura" />
+        <input type="text" name="nome" id="nome" required />
+        <input type="text" name="cognome" id="cognome" required />
+        <input type="email" name="email" id="youremail" required />
+        <select name="richiesta" id="richiesta" className={style.candidatura}>
+            <option value="candidatura">Candidatura</option>
+        </select>
+        <textarea name="message" id="yourmessage" required></textarea>
+        <input name="mail-confirm" />
+
+</body>
+
+</html>

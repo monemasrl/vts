@@ -79,7 +79,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setError(null);
       const myForm = event.target;
       const formData = new FormData(myForm);
-      const res = await fetch("/__formcontatti.html", {
+      const res = await fetch("/__formlavora.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
@@ -107,7 +107,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
-        <label htmlFor="ragionesociale">Nome:</label> <br />
+        <label htmlFor="nome">Nome:</label> <br />
         <input
           onChange={(e) => {
             setNome(e.target.value);
@@ -120,14 +120,14 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       </p>
       <p>
         {" "}
-        <label htmlFor="ragionesociale">Cognome:</label> <br />
+        <label htmlFor="cognome">Cognome:</label> <br />
         <input
           onChange={(e) => {
             setCognome(e.target.value);
           }}
           type="text"
-          name="nome"
-          id="nome"
+          name="cognome"
+          id="cognome"
           required
         />
       </p>
@@ -142,8 +142,10 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
         />
       </p>
       <p>
-        <label htmlFor="candidatura">Candidatura</label> <br />
+        <label htmlFor="richiesta">Candidatura</label> <br />
         <select
+          name="richiesta"
+          id="richiesta"
           className={style.candidatura}
           onChange={(e) => setCandidatura(e.target.value)}
         >
