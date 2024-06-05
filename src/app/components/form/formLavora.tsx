@@ -22,6 +22,15 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  function SuccessMessage() {
+    return (
+      <div className={style.success}>
+        <h3>Messaggio inviato</h3>
+        <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+      </div>
+    );
+  }
+
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
       setErrorNome("Inserire un nome di almeno 6 caratteri");
@@ -70,14 +79,13 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setError(null);
       const myForm = event.target;
       const formData = new FormData(myForm);
-      const res = await fetch("/__formlavora.html", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
       if (res.status === 200) {
         setStatus("ok");
-        router.push("/success");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);
@@ -95,6 +103,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       method="POST"
       onSubmit={handleFormSubmit}
     >
+      {status == "ok" && <SuccessMessage />}
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}

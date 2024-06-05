@@ -67,7 +67,7 @@ function Form() {
       setError(null);
       const myForm = event.target;
       const formData = new FormData(myForm);
-      const res = await fetch("/__formcontatti.html", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
@@ -114,7 +114,7 @@ function Form() {
           }}
           type="text"
           name="cognome"
-          id="cognome"
+          id=""
           required
         />
       </p>
