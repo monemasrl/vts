@@ -1,36 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import style from "./form.module.scss";
+import { useRouter } from "next/navigation";
 
-type Tcandidature = {
-  titolo: string;
-  image: string;
-};
-
-function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
+function Form() {
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");
   const [errorCognome, setErrorCognome] = useState<string>("");
   const [mail, setMail] = useState<string>("");
   const [errorMail, setErrorMail] = useState<string>("");
-  const [candidatura, setCandidatura] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  function SuccessMessage() {
-    return (
-      <div className={style.success}>
-        <h3>Messaggio inviato</h3>
-        <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-      </div>
-    );
-  }
-
+  const router = useRouter();
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
       setErrorNome("Inserire un nome di almeno 6 caratteri");
@@ -70,7 +55,6 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setSubmit(true);
     }
   }, [nome, mail, messaggio, cognome]);
-  const router = useRouter();
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -79,7 +63,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setError(null);
       const myForm = event.target;
       const formData = new FormData(myForm);
-      const res = await fetch("/formlavora.html", {
+      const res = await fetch("/__formlavora.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
@@ -103,7 +87,6 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       name="candidatura"
       onSubmit={handleFormSubmit}
     >
-      {/* {status == "ok" && <SuccessMessage />} */}
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
@@ -119,7 +102,6 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
         />
       </p>
       <p>
-        {" "}
         <label htmlFor="cognome">Cognome:</label> <br />
         <input
           onChange={(e) => {
@@ -127,7 +109,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
           }}
           type="text"
           name="cognome"
-          id="cognome"
+          id=""
           required
         />
       </p>
@@ -141,23 +123,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
           required
         />
       </p>
-      <p>
-        <label htmlFor="richiesta">Candidatura</label> <br />
-        {/*       <select
-          name="richiesta"
-          id="richiesta"
-          className={style.candidatura}
-          onChange={(e) => setCandidatura(e.target.value)}
-        >
-          {candidature.map((item, index) => {
-            return (
-              <option key={index} value={item.titolo}>
-                {item.titolo}
-              </option>
-            );
-          })}
-        </select> */}
-      </p>
+
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
         <textarea
@@ -169,11 +135,12 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
           required
         ></textarea>
       </p>
-      {errorNome && <p className={style.error}>{errorNome}</p>}
-      {errorCognome && <p className={style.error}>{errorCognome}</p>}
-      {errorMail && <p className={style.error}>{errorMail}</p>}
-
-      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+      <div style={{ height: "20px" }}>
+        {errorNome && <p className={style.error}>{errorNome}</p>}
+        {errorCognome && <p className={style.error}>{errorCognome}</p>}
+        {errorMail && <p className={style.error}>{errorMail}</p>}
+        {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
+      </div>
       <p>
         <button disabled={submit ? false : true} type="submit">
           Invia
@@ -183,4 +150,4 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   );
 }
 
-export default FormLavora;
+export default Form;
