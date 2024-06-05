@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import Image from "next/image";
 import CardsLavora from "../components/cards/cardsLavora";
 import Accordion from "../components/accordion/accordion";
-//import FormLavora from "../components/form/formlavora";
+import FormLavora from "../components/form/formlavora";
 import LoaderSite from "../components/loader/loader";
 import React from "react";
 import { motion } from "framer-motion";
