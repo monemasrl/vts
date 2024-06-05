@@ -1,24 +1,14 @@
 "use client";
 import Image from "next/image";
 import style from "./style.module.scss";
-import LoaderSite from "../components/loader/loader";
-import React from "react";
 import { motion } from "framer-motion";
+import ImagePreload from "../components/imagePreload/imagePreload";
 
 function VtsUsaPage() {
-  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <div className={"mainImage"}>
-        <Image
-          src="/image/usa_inc_main.jpg"
-          layout="fill"
-          objectFit="cover"
-          alt="Usa subsidiary main image"
-          quality={100}
-          onLoadingComplete={() => setLoading(false)}
-        />
-        <LoaderSite loading={loading} />
+        <ImagePreload src={"/image/usa_inc_main.jpg"} alt="azienda" full />
       </div>
       <motion.main
         className={"innerPage"}

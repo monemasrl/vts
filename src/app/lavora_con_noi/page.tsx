@@ -4,9 +4,8 @@ import Image from "next/image";
 import CardsLavora from "../components/cards/cardsLavora";
 import Accordion from "../components/accordion/accordion";
 import FormLavoraConNoi from "../components/form/formLavora";
-import LoaderSite from "../components/loader/loader";
-import React from "react";
 import { motion } from "framer-motion";
+import ImagePreload from "../components/imagePreload/imagePreload";
 
 const dataCards = [
   {
@@ -61,17 +60,13 @@ const dataAccordion = [
 ];
 
 function LavoraConNoi() {
-  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <div className={"mainImage"}>
-        <LoaderSite loading={loading} />
-        <Image
+        <ImagePreload
           src="/image/lavora-con-noi.jpg"
-          layout="fill"
-          objectFit="cover"
           alt="lavora con noi"
-          onLoadingComplete={() => setLoading(false)}
+          full={true}
         />
       </div>
       <motion.main
@@ -94,12 +89,13 @@ function LavoraConNoi() {
         </section>
         <section className={style.warning}>
           <div className={style.warning__head}>
+            {" "}
             <Image
               src="/image/warning.svg"
               width={60}
               height={60}
               alt="warning"
-            />
+            />{" "}
             <p>
               Se non hai esperienza in questo settore e sei interessato
               intraprendere questa attività, ti offriamo un periodo formativo,

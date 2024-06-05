@@ -1,24 +1,15 @@
 "use client";
 import Image from "next/image";
 import style from "./style.module.scss";
-import React from "react";
-import LoaderSite from "../components/loader/loader";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ImagePreload from "../components/imagePreload/imagePreload";
 
 function Azienda() {
-  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <div className={"mainImage"}>
-        <LoaderSite loading={loading} />
-        <Image
-          src="/image/nostra-azienda.jpg"
-          layout="fill"
-          objectFit="cover"
-          alt="lavora con noi"
-          onLoadingComplete={() => setLoading(false)}
-        />
+        <ImagePreload src={"/image/nostra-azienda.jpg"} alt="azienda" full />
       </div>
       <motion.main
         className={"innerPage"}
