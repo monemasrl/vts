@@ -87,7 +87,7 @@
     grid-gap: 86px;
     max-width: 1348px;
     margin: 0 auto;
-    @media #{$phone} {
+    @media #{$tablet} {
       grid-template-columns: 1fr;
       grid-gap: 1rem;
     }
@@ -100,6 +100,7 @@
     gap: 2rem;
     @media #{$landscape} {
       grid-template-columns: 1fr;
+      gap: 0rem;
     }
   }
   &__specs__singleSpec {
@@ -110,6 +111,7 @@
     @media #{$landscape} {
       grid-template-columns: 1fr;
       justify-items: center;
+      margin: 1rem 0;
     }
     &__img {
       @media #{$landscape} {

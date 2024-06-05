@@ -46,7 +46,7 @@ function NavBar() {
     >
       <nav className={style.mainNavBar}>
         <div className={style.mainNavBar__logo}>
-          <a href="/">
+          <Link href="/">
             {isHome() ? (
               <Image
                 src="/image/logo-white.svg"
@@ -62,7 +62,7 @@ function NavBar() {
                 alt="logo"
               />
             )}
-          </a>
+          </Link>
         </div>
         <div
           className={`${style.mainNavBar__navBlock} ${
@@ -70,12 +70,17 @@ function NavBar() {
           }`}
         >
           <div className={style.mainNavBar__navBlock__topData}>
-            Via della Stazione 27, Barga - 0583 711372 - info@vtservices.it
+            Via della Stazione 27, Barga -{" "}
+            <a href="tel:+390583711372">0583 711372</a> -{" "}
+            <a href="mailto:info@vtservices.it">info@vtservices.it</a>
           </div>
           <hr />
           <ul className={style.mainNavBar__navBlock__nav}>
             {data.nav.map((item, index) => (
-              <li key={index}>
+              <li
+                className={`${pathN.includes(item.url) && style.activeLink}`}
+                key={index}
+              >
                 {item.title === "contatti" ? (
                   <a href={item.url}>{item.title}</a>
                 ) : (
@@ -120,7 +125,12 @@ function NavBar() {
 
               <ul className={style.navMobile__nav}>
                 {data.nav.map((item, index) => (
-                  <li key={index}>
+                  <li
+                    className={`${
+                      pathN.includes(item.url) && style.activeLink
+                    }`}
+                    key={index}
+                  >
                     <Link href={item.url}>{item.title}</Link>
                   </li>
                 ))}

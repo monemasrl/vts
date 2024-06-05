@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import style from "./form.module.scss";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Tcandidature = {
   titolo: string;
@@ -22,12 +23,22 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  function SuccessMessage() {
+  function SuccessMessage({ status }: { status: string | null }) {
     return (
-      <div className={style.success}>
-        <h3>Messaggio inviato</h3>
-        <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-      </div>
+      <AnimatePresence>
+        {status === "ok" && (
+          <motion.div
+            className={style.success}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3>Messaggio inviato</h3>
+            <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     );
   }
 
@@ -86,7 +97,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       });
       if (res.status === 200) {
         setStatus("ok");
-        router.push("/success");
+        console.log("ok");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);
@@ -103,7 +114,7 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       name="candidatura"
       onSubmit={handleFormSubmit}
     >
-      {/* {status == "ok" && <SuccessMessage />} */}
+      <SuccessMessage status={status} />
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}

@@ -1,28 +1,31 @@
+"use client";
 import Image from "next/image";
 import style from "./style.module.scss";
-import { aziendaPageJsonLD, aziendaMetadata } from "../metadata";
-import { Metadata } from "next";
-
-export const metadata: Metadata = aziendaMetadata;
+import React from "react";
+import LoaderSite from "../components/loader/loader";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Azienda() {
+  const [loading, setLoading] = React.useState(true);
   return (
     <>
-      {" "}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={aziendaPageJsonLD()}
-        key="product-jsonld"
-      />
       <div className={"mainImage"}>
+        <LoaderSite loading={loading} />
         <Image
           src="/image/nostra-azienda.jpg"
           layout="fill"
           objectFit="cover"
           alt="lavora con noi"
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <main className={"innerPage"}>
+      <motion.main
+        className={"innerPage"}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <h1>
           <Image
             src={"/image/bullet.svg"}
@@ -57,15 +60,21 @@ function Azienda() {
           <h2>Le nostre sedi</h2>
           <ul>
             <li>
-              La sede operativa e gli uffici di VTS Srl si trovano in via della
-              Stazione 27 Mologno Barga LU.
+              <strong>
+                La sede operativa e gli uffici di VTS Srl si trovano in via
+                della Stazione 27 Mologno Barga LU.
+              </strong>
             </li>
             <li>Da alcuni anni VTS Srl ha aperto 2 subsidiaries:</li>
-            <li>VTS USA Inc. con sede ad Atlanta GA</li>
+            <li>
+              <Link href="/vts_usa_inc">
+                VTS USA Inc. con sede ad Atlanta GA
+              </Link>
+            </li>
             <li>VTS SWITZERLAND Sagl con sede a Lugano CH</li>
           </ul>
         </section>
-      </main>
+      </motion.main>
     </>
   );
 }

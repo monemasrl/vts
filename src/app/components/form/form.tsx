@@ -70,7 +70,6 @@ function Form() {
       });
       if (res.status === 200) {
         setStatus("ok");
-        router.push("/success");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);

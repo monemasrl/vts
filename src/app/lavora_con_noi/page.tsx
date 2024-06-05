@@ -3,7 +3,11 @@ import style from "./style.module.scss";
 import Image from "next/image";
 import CardsLavora from "../components/cards/cardsLavora";
 import Accordion from "../components/accordion/accordion";
-import FormLavora from "../components/form/formLavora";
+import FormLavora from "../components/form/formlavora";
+import LoaderSite from "../components/loader/loader";
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
 const dataCards = [
   {
     titolo: "CQV Technician (minimo 2 anni di esperienza)",
@@ -57,17 +61,25 @@ const dataAccordion = [
 ];
 
 function LavoraConNoi() {
+  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <div className={"mainImage"}>
+        <LoaderSite loading={loading} />
         <Image
           src="/image/lavora-con-noi.jpg"
           layout="fill"
           objectFit="cover"
           alt="lavora con noi"
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <main className={"innerPage"}>
+      <motion.main
+        className={"innerPage"}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <h1>
           <Image
             src={"/image/bullet.svg"}
@@ -140,7 +152,7 @@ function LavoraConNoi() {
           <h2>Rientri in un profilo che ricerchiamo? </h2>
           <FormLavora candidature={dataCards} />
         </section>
-      </main>
+      </motion.main>
     </>
   );
 }

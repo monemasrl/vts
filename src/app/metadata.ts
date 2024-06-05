@@ -64,6 +64,59 @@ function aziendaPageJsonLD() {
   `,
   };
 }
+function lavoraPageJsonLD() {
+  return {
+    __html: `[{"@context": "https://schema.org",
+      "@type": "jobPosting",
+      "title": "CQV Engineer",
+      "description": "CQV Engineer (minimo 5 anni di esperienza)",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "VTServices",
+        "sameAs": "${process.env.NEXT_PUBLIC_URL}"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": " via della Stazione 27 Mologno Barga",
+          "addressLocality": "Lucca",
+          "addressRegion": "Toscana",
+          "postalCode": "55051",
+          "addressCountry": "IT"
+        }
+      },
+      "experienceRequirements": "5 anni",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "jobPosting",
+      "title": "CQV Technician",
+      "description": "CQV Technician (minimo 2 anni di esperienza)",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "VTServices",
+        "sameAs": "${process.env.NEXT_PUBLIC_URL}"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": " via della Stazione 27 Mologno Barga",
+          "addressLocality": "Lucca",
+          "addressRegion": "Toscana",
+          "postalCode": "55051",
+          "addressCountry": "IT"
+        }
+      },
+      "experienceRequirements": "2 anni",
+    }
+  ]
+  `,
+  };
+}
 const aziendaMetadata = {
   title: "VTServices Azienda",
   description:
@@ -111,4 +164,26 @@ const homeMetadata = {
     ],
   },
 }
-export { homePageJsonLD, aziendaPageJsonLD, aziendaMetadata, homeMetadata }
+const lavoraMetadata = {
+  title: "VTServices lavora con noi",
+  description: "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+  keywords: "VTServices, Commissioning, qualification, validation, technical services lavora con noi",
+  openGraph: {
+    title: "VTServices lavora con noi",
+    description: "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+    type: "website",
+    locale: "it_IT",
+    url: " process.env.NEXT_PUBLIC_URL",
+    siteName: "VTServices",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_URL}/image/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "VTServices website",
+      },
+    ],
+  },
+}
+
+export { homePageJsonLD, aziendaPageJsonLD, lavoraPageJsonLD, aziendaMetadata, homeMetadata, lavoraMetadata }

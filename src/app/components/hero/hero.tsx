@@ -77,7 +77,7 @@ function Hero() {
           onLoadingComplete={() => setLoading(false)}
           priority
         />
-        {loading && <LoaderSite />}
+        {loading && <LoaderSite loading={loading} />}
       </div>
       <div className={style.hero__text}>
         <motion.ul variants={container} initial="hidden" animate="show">

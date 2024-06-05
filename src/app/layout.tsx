@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={oswald.className}>
         <SmoothScroll>
           <NavBar />
-          <Hero />
+
           {children}
           <Footer />
         </SmoothScroll>

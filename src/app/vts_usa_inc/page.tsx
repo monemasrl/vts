@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
 import style from "./style.module.scss";
+import LoaderSite from "../components/loader/loader";
+import React from "react";
+import { motion } from "framer-motion";
 
 function VtsUsaPage() {
+  const [loading, setLoading] = React.useState(true);
   return (
     <>
       <div className={"mainImage"}>
@@ -11,9 +16,16 @@ function VtsUsaPage() {
           objectFit="cover"
           alt="Usa subsidiary main image"
           quality={100}
+          onLoadingComplete={() => setLoading(false)}
         />
+        <LoaderSite loading={loading} />
       </div>
-      <main className={"innerPage"}>
+      <motion.main
+        className={"innerPage"}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <h1>
           <Image
             src={"/image/bullet.svg"}
@@ -47,7 +59,7 @@ function VtsUsaPage() {
             </li>
           </ul>
         </section>
-      </main>
+      </motion.main>
     </>
   );
 }
