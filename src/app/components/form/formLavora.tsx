@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { useRouter } from "next/navigation";
 import style from "./form.module.scss";
 
 type Tcandidature = {
@@ -19,6 +19,8 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
+  const [status, setStatus] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
@@ -59,15 +61,39 @@ function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
       setSubmit(true);
     }
   }, [nome, mail, messaggio, cognome]);
+  const router = useRouter();
+
+  const handleFormSubmit = async (event: any) => {
+    event.preventDefault();
+    try {
+      setStatus("pending");
+      setError(null);
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+      const res = await fetch("/__formlavora.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      if (res.status === 200) {
+        setStatus("ok");
+        router.push("/success");
+      } else {
+        setStatus("error");
+        setError(`${res.status} ${res.statusText}`);
+      }
+    } catch (e) {
+      setStatus("error");
+      setError(`${e}`);
+    }
+  };
 
   return (
     <form
       className={`${style.form} ${style.form__lavora}`}
       name="candidatura"
       method="POST"
-      data-netlify="true"
-      action="/success"
-      data-netlify-honeypot="mail-confirm"
+      onSubmit={handleFormSubmit}
     >
       <input type="hidden" name="form-name" value="candidatura" />
       <p>

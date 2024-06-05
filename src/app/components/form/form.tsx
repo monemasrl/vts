@@ -95,7 +95,7 @@ function Form() {
       <input type="hidden" name="form-name" value="contact" />
       <p>
         {" "}
-        <label htmlFor="ragionesociale">Nome:</label> <br />
+        <label htmlFor="nome">Nome:</label> <br />
         <input
           onChange={(e) => {
             setNome(e.target.value);
@@ -107,14 +107,14 @@ function Form() {
         />
       </p>
       <p>
-        <label htmlFor="ragionesociale">Cognome:</label> <br />
+        <label htmlFor="cognome">Cognome:</label> <br />
         <input
           onChange={(e) => {
             setCognome(e.target.value);
           }}
           type="text"
-          name="nome"
-          id="nome"
+          name="cognome"
+          id="cognome"
           required
         />
       </p>
