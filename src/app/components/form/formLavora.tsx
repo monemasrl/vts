@@ -1,21 +1,36 @@
 "use client";
 import { useState, useEffect } from "react";
-import style from "./form.module.scss";
 import { useRouter } from "next/navigation";
+import style from "./form.module.scss";
 
-function Form() {
+type Tcandidature = {
+  titolo: string;
+  image: string;
+};
+
+function FormLavora({ candidature }: { candidature: Tcandidature[] }) {
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");
   const [errorCognome, setErrorCognome] = useState<string>("");
   const [mail, setMail] = useState<string>("");
   const [errorMail, setErrorMail] = useState<string>("");
+  const [candidatura, setCandidatura] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
+
+  function SuccessMessage() {
+    return (
+      <div className={style.success}>
+        <h3>Messaggio inviato</h3>
+        <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+      </div>
+    );
+  }
+
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
       setErrorNome("Inserire un nome di almeno 6 caratteri");
@@ -55,6 +70,7 @@ function Form() {
       setSubmit(true);
     }
   }, [nome, mail, messaggio, cognome]);
+  const router = useRouter();
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -87,6 +103,7 @@ function Form() {
       name="candidatura"
       onSubmit={handleFormSubmit}
     >
+      {/* {status == "ok" && <SuccessMessage />} */}
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
@@ -102,6 +119,7 @@ function Form() {
         />
       </p>
       <p>
+        {" "}
         <label htmlFor="cognome">Cognome:</label> <br />
         <input
           onChange={(e) => {
@@ -109,7 +127,7 @@ function Form() {
           }}
           type="text"
           name="cognome"
-          id=""
+          id="cognome"
           required
         />
       </p>
@@ -123,7 +141,23 @@ function Form() {
           required
         />
       </p>
-
+      <p>
+        <label htmlFor="richiesta">Candidatura</label> <br />
+        <select
+          name="richiesta"
+          id="richiesta"
+          className={style.candidatura}
+          onChange={(e) => setCandidatura(e.target.value)}
+        >
+          {candidature.map((item, index) => {
+            return (
+              <option key={index} value={item.titolo}>
+                {item.titolo}
+              </option>
+            );
+          })}
+        </select>
+      </p>
       <p>
         <label htmlFor="yourmessage">Messaggio:</label> <br />
         <textarea
@@ -135,12 +169,11 @@ function Form() {
           required
         ></textarea>
       </p>
-      <div style={{ height: "20px" }}>
-        {errorNome && <p className={style.error}>{errorNome}</p>}
-        {errorCognome && <p className={style.error}>{errorCognome}</p>}
-        {errorMail && <p className={style.error}>{errorMail}</p>}
-        {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
-      </div>
+      {errorNome && <p className={style.error}>{errorNome}</p>}
+      {errorCognome && <p className={style.error}>{errorCognome}</p>}
+      {errorMail && <p className={style.error}>{errorMail}</p>}
+
+      {errorMessaggio && <p className={style.error}>{errorMessaggio}</p>}
       <p>
         <button disabled={submit ? false : true} type="submit">
           Invia
@@ -150,4 +183,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLavora;
