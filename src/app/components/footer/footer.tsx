@@ -1,5 +1,6 @@
 import Image from "next/image";
 import style from "./footer.module.scss";
+import Link from "next/link";
 function footer() {
   return (
     <footer className={style.footer}>
@@ -17,15 +18,25 @@ function footer() {
       <ul className={style.footer__second}>
         <li>VTS</li>
         <li>Via della Stazione 27, Barga</li>
-        <li>0583 711372</li>
-        <li>info@vtservices.it</li>
+        <li>
+          <a href="tel:+390583711372">0583 711372</a>
+        </li>
+        <li>
+          <a href="mailto:info@vtservices.it">info@vtservices.it</a>
+        </li>
         <li>Wholly owned subsidiary in USA</li>
         <li>2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346</li>
       </ul>
       <ul className={style.footer__third}>
-        <li>Azienda</li>
-        <li>Contatti</li>
-        <li>Lavora con noi</li>
+        <li>
+          <Link href="/azienda">Azienda</Link>
+        </li>
+        <li>
+          <Link href={"/#contatti"}>Contatti</Link>
+        </li>
+        <li>
+          <Link href={"/lavora_con_noi"}>Lavora con noi</Link>
+        </li>
         <li>Privacy Policy</li>
         <li>Cookie Policy</li>
       </ul>

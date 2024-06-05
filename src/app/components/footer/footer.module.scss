@@ -11,6 +11,11 @@
   font-size: 19px;
   gap: 2rem;
   font-weight: 200;
+  a,
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
   @media #{$landscape} {
     grid-template-columns: repeat(2, 1fr);
   }
