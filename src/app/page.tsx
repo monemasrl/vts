@@ -3,11 +3,11 @@ import Image from "next/image";
 import style from "./home.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdOutlineChevronRight } from "react-icons/md";
-import Form from "./components/form/form";
+import Form from "../components/form/form";
 import { useEffect, useState } from "react";
-import Splash from "./components/splash/splash";
+import Splash from "../components/splash/splash";
 import Link from "next/link";
-import Hero from "./components/hero/hero";
+import Hero from "../components/hero/hero";
 
 const secondSectionHomeData = {
   title:

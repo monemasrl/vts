@@ -3,7 +3,7 @@ import Image from "next/image";
 import style from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ImagePreload from "../components/imagePreload/imagePreload";
+import ImagePreload from "../../components/imagePreload/imagePreload";
 
 function Azienda() {
   return (

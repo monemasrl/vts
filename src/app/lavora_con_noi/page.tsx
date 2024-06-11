@@ -1,11 +1,11 @@
 "use client";
 import style from "./style.module.scss";
 import Image from "next/image";
-import CardsLavora from "../components/cards/cardsLavora";
-import Accordion from "../components/accordion/accordion";
-import FormLavoraConNoi from "../components/form/formLavora";
+import CardsLavora from "../../components/cards/cardsLavora";
+import Accordion from "../../components/accordion/accordion";
+import FormLavoraConNoi from "../../components/form/formLavora";
 import { motion } from "framer-motion";
-import ImagePreload from "../components/imagePreload/imagePreload";
+import ImagePreload from "../../components/imagePreload/imagePreload";
 
 const dataCards = [
   {

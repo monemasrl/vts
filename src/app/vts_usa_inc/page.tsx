@@ -2,7 +2,7 @@
 import Image from "next/image";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
-import ImagePreload from "../components/imagePreload/imagePreload";
+import ImagePreload from "../../components/imagePreload/imagePreload";
 
 function VtsUsaPage() {
   return (

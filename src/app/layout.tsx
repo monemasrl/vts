@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 import "./sass/all.scss";
-import NavBar from "./components/navbar/nav";
-import Hero from "./components/hero/hero";
-import SmoothScroll from "./components/scroll/smoothScroll";
-import Footer from "./components/footer/footer";
-import ScrollTop from "./components/scrollTop/scrollTop";
+import NavBar from "../components/navbar/nav";
+import Hero from "../components/hero/hero";
+import SmoothScroll from "../components/scroll/smoothScroll";
+import Footer from "../components/footer/footer";
+import ScrollTop from "../components/scrollTop/scrollTop";
 import { homePageJsonLD, homeMetadata } from "./metadata";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
