@@ -1,0 +1,186 @@
+{
+    "it": {
+        "sezione1": {
+            "titolo": "Da oltre 20 anni, un servizio di prim’ordine",
+            "testo": "Gestiamo le richieste con competenza, assicurando che la tua esperienza sia fluida e senza problemi. Siamo partner affidabili. Collaboriamo attivamente con i nostri clienti per capire le loro esigenze specifiche e offrire soluzioni personalizzate. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
+            "specs": [
+                {
+                    "titolo": "1 sede italia"
+                },
+                {
+                    "titolo": "1 SUBSIDIARY SVIZZERA"
+                },
+                {
+                    "titolo": "1 SUBSIDIARY USA"
+                }
+            ]
+        },
+        "sezione2": {
+            "titolo": "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
+            "testo1": "Consulenza specializzata per le attività di Commissioning, Qualifica e Validazioni di macchinari, apparecchiature, sistemi di controllo e automazione, sistemi informatici per la gestione di fabbrica, utilities, ambienti a contaminazione controllata per produzioni sterili. ",
+            "testo2": "Attività di monitoraggio dei locali a contaminazione controllata, taratura della strumentazione critica, consulenza sull’analisi dei rischi e procedure operative standard dell’industria farmaceutica, in accordo a quanto richiesto dalle normative che regolamentano le attività negli opifici di produzione. Noleggio di strumenti per la qualifica e taratura.",
+            "specs": [
+                {
+                    "title": "Ingegneria",
+                    "image": "ingegneria.svg",
+                    "list": [
+                        "Definizione dei requisiti utente (URS)",
+                        "Auditing e consulenze tecniche su impianti, processi, apparecchiature",
+                        "Servizi di revisione progettuale (value engineering, GMP review)",
+                        "traduzione di manualistica e documentazione tecnica"
+                    ]
+                },
+                {
+                    "title": "Consulenza e Gestione",
+                    "image": "consulenza.svg",
+                    "list": [
+                        "Project Management",
+                        "Consulenza tecnica specialistica",
+                        "Risoluzione di problemi impiantistici",
+                        "Pianificazione della manutenzione e calibrazione",
+                        "Audit a fornitori",
+                        "Audit Energetici"
+                    ]
+                },
+                {
+                    "title": "Commissioning Qualifica e Validazioni",
+                    "image": "commissioning.svg",
+                    "list": [
+                        "Preparazione di Validation Master Plan",
+                        "Esecuzione di Design Qualification (DQ)",
+                        "Esecuzione di analisi di rischio su impianti, processi e apparecchiature",
+                        "Coordinamento ed esecuzione di collaudi presso il fornitore (FAT) di sistemi, apparecchiature e impianti",
+                        " Assistenza a start-up di impianti, macchinari, servizi",
+                        "Commissioning di impianti, macchinari, servizi",
+                        "  Coordinamento ed esecuzione di collaudi presso il sito (SAT) di apparecchiature e impianti",
+                        "Calibrazione di strumentazione",
+                        "Attività di qualifica (IQ, OQ, PQ) di impianti e sistemi",
+                        "Attività di riqualifica e verifica periodica",
+                        "Supporto alla Convalida di Processo"
+                    ]
+                },
+                {
+                    "title": "Settori e Specializzazioni",
+                    "image": "settori.svg",
+                    "list": [
+                        "Impianti di processo “bulk”",
+                        "Catena del freddo (“Cold chain”)",
+                        "Line di lavorazione “Fill-finish”",
+                        "Sistemi di condizionamento (HVAC)",
+                        "Tecnologie di packaging",
+                        "Utilities critiche (PW, WFI, CS, ecc.)"
+                    ]
+                }
+            ]
+        },
+        "lavora": {
+            "titolo": "Lavora con noi",
+            "testo": "La nostra azienda è sempre alla ricerca di personale qualificato.<br />Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+            "button": "vai alle candidature"
+        },
+        "contattaci": {
+            "titolo": "contattaci",
+            "testo": "Se desideri ricevere ulteriori informazioni sui nostri servizi, se hai domande o richieste, compila il form",
+            "form": {
+                "nome": "Nome",
+                "cognome": "Cognome",
+                "email": "Email",
+                "telefono": "Telefono",
+                "messaggio": "Messaggio",
+                "invia": "Invia"
+            }
+        }
+    },
+    "en": {
+        "sezione1": {
+            "titolo": "EN Da oltre 20 anni, un servizio di prim’ordine",
+            "testo": "Gestiamo le richieste con competenza, assicurando che la tua esperienza sia fluida e senza problemi. Siamo partner affidabili. Collaboriamo attivamente con i nostri clienti per capire le loro esigenze specifiche e offrire soluzioni personalizzate. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
+            "specs": [
+                {
+                    "titolo": "1 sede italia"
+                },
+                {
+                    "titolo": "1 SUBSIDIARY SVIZZERA"
+                },
+                {
+                    "titolo": "1 SUBSIDIARY USA"
+                }
+            ]
+        },
+        "sezione2": {
+            "titolo": "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
+            "testo1": "Consulenza specializzata per le attività di Commissioning, Qualifica e Validazioni di macchinari, apparecchiature, sistemi di controllo e automazione, sistemi informatici per la gestione di fabbrica, utilities, ambienti a contaminazione controllata per produzioni sterili. ",
+            "testo2": "Attività di monitoraggio dei locali a contaminazione controllata, taratura della strumentazione critica, consulenza sull’analisi dei rischi e procedure operative standard dell’industria farmaceutica, in accordo a quanto richiesto dalle normative che regolamentano le attività negli opifici di produzione. Noleggio di strumenti per la qualifica e taratura.",
+            "specs": [
+                {
+                    "title": "Ingegneria",
+                    "image": "ingegneria.svg",
+                    "list": [
+                        "Definizione dei requisiti utente (URS)",
+                        "Auditing e consulenze tecniche su impianti, processi, apparecchiature",
+                        "Servizi di revisione progettuale (value engineering, GMP review)",
+                        "traduzione di manualistica e documentazione tecnica"
+                    ]
+                },
+                {
+                    "title": "Consulenza e Gestione",
+                    "image": "consulenza.svg",
+                    "list": [
+                        "Project Management",
+                        "Consulenza tecnica specialistica",
+                        "Risoluzione di problemi impiantistici",
+                        "Pianificazione della manutenzione e calibrazione",
+                        "Audit a fornitori",
+                        "Audit Energetici"
+                    ]
+                },
+                {
+                    "title": "Commissioning Qualifica e Validazioni",
+                    "image": "commissioning.svg",
+                    "list": [
+                        "Preparazione di Validation Master Plan",
+                        "Esecuzione di Design Qualification (DQ)",
+                        "Esecuzione di analisi di rischio su impianti, processi e apparecchiature",
+                        "Coordinamento ed esecuzione di collaudi presso il fornitore (FAT) di sistemi, apparecchiature e impianti",
+                        " Assistenza a start-up di impianti, macchinari, servizi",
+                        "Commissioning di impianti, macchinari, servizi",
+                        "  Coordinamento ed esecuzione di collaudi presso il sito (SAT) di apparecchiature e impianti",
+                        "Calibrazione di strumentazione",
+                        "Attività di qualifica (IQ, OQ, PQ) di impianti e sistemi",
+                        "Attività di riqualifica e verifica periodica",
+                        "Supporto alla Convalida di Processo"
+                    ]
+                },
+                {
+                    "title": "Settori e Specializzazioni",
+                    "image": "settori.svg",
+                    "list": [
+                        "Impianti di processo “bulk”",
+                        "Catena del freddo (“Cold chain”)",
+                        "Line di lavorazione “Fill-finish”",
+                        "Sistemi di condizionamento (HVAC)",
+                        "Tecnologie di packaging",
+                        "Utilities critiche (PW, WFI, CS, ecc.)"
+                    ]
+                }
+            ]
+        },
+        "lavora": {
+            "titolo": "Lavora con noi",
+            "testo": "La nostra azienda è sempre alla ricerca di personale qualificato.<br />Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+            "button": "vai alle candidature"
+        },
+        "contattaci": {
+            "titolo": "contattaci",
+            "testo": "Se desideri ricevere ulteriori informazioni sui nostri servizi, se hai domande o richieste, compila il form",
+            "form": {
+                "nome": "Nome",
+                "cognome": "Cognome",
+                "email": "Email",
+                "telefono": "Telefono",
+                "messaggio": "Messaggio",
+                "invia": "Invia"
+            }
+        }
+    }
+}

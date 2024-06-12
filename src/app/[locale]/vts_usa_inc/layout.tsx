@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import { aziendaMetadata, aziendaPageJsonLD } from "../metadata";
+import { aziendaMetadata, aziendaPageJsonLD } from "../../metadata";
 export const metadata: Metadata = aziendaMetadata;
 
 function Layout({ children }: { children: React.ReactNode }) {

@@ -1,13 +1,16 @@
 "use client";
+
 import Image from "next/image";
 import style from "./home.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdOutlineChevronRight } from "react-icons/md";
-import Form from "../components/form/form";
+import Form from "../../components/form/form";
 import { useEffect, useState } from "react";
-import Splash from "../components/splash/splash";
+import Splash from "../../components/splash/splash";
 import Link from "next/link";
-import Hero from "../components/hero/hero";
+import Hero from "../../components/hero/hero";
+import { useLocale } from "next-intl";
+import data from "../../../public/data/home.json";
 
 const secondSectionHomeData = {
   title:
@@ -73,11 +76,15 @@ const secondSectionHomeData = {
 
 export default function Home() {
   const [splash, setSplash] = useState(true);
+  console.log(data);
+  useEffect(() => {}, []);
 
   setTimeout(() => {
     setSplash(false);
   }, 1300);
+  const locale = useLocale();
 
+  const dataLocale = data[locale as keyof typeof data];
   return (
     <main>
       <AnimatePresence>
@@ -108,7 +115,7 @@ export default function Home() {
               height={40}
               alt="bullet image"
             />
-            Da oltre 20 anni, un servizio di prim’ordine
+            {dataLocale.sezione1.titolo}
           </h1>
           <div className={style.FirstSectionHome__text__content}>
             <p>

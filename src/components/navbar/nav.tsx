@@ -6,35 +6,37 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-
-const data = {
-  nav: [
-    {
-      title: "Azienda",
-      url: "/azienda",
-    },
-    {
-      title: "Contatti",
-      url: "/#contatti",
-    },
-    {
-      title: "Lavora Con Noi",
-      url: "/lavora_con_noi",
-    },
-  ],
-};
+import { useLocale, useTranslations } from "next-intl";
 
 function NavBar() {
   const pathN = usePathname();
-
+  const locale = useLocale();
   const [mobile, setMobile] = useState(false);
+  const t = useTranslations("Navigation");
 
   function isHome() {
-    if (pathN === "/") {
+    if (pathN === "/" + locale) {
       return true;
     }
     return false;
   }
+
+  const data = {
+    nav: [
+      {
+        title: "Azienda",
+        url: "/" + locale + t("azienda"),
+      },
+      {
+        title: "Contatti",
+        url: "/#contatti",
+      },
+      {
+        title: "Lavora Con Noi",
+        url: "/" + locale + t("lavora_con_noi"),
+      },
+    ],
+  };
 
   useEffect(() => {
     setMobile(false);

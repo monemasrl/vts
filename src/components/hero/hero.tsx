@@ -4,10 +4,13 @@ import style from "./hero.module.scss";
 import { easeOut, motion } from "framer-motion";
 import { useState } from "react";
 import LoaderSite from "../loader/loader";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 
 function Hero() {
-  const isHome = usePathname() === "/";
+  const router = useRouter();
+  console.log(router, "route");
+  const isHome = usePathname() === "/" + useLocale();
 
   const container = {
     hidden: { opacity: 0 },

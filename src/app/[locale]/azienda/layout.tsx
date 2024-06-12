@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import React from "react";
-import { lavoraMetadata, lavoraPageJsonLD } from "../metadata";
-export const metadata: Metadata = lavoraMetadata;
+import { aziendaMetadata, aziendaPageJsonLD } from "../../metadata";
+
+export const metadata: Metadata = aziendaMetadata;
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={lavoraPageJsonLD()}
+        dangerouslySetInnerHTML={aziendaPageJsonLD()}
         key="product-jsonld"
       />
       {children}
