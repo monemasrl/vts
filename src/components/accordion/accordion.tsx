@@ -5,8 +5,8 @@ import "./accordion.scss";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 type Tdata = {
-  title: string;
-  content: string;
+  titolo: string;
+  testo: string;
 };
 function Accordion({ data }: { data: Tdata[] }) {
   const [active, setActive] = useState<number>(0);
@@ -18,12 +18,12 @@ function Accordion({ data }: { data: Tdata[] }) {
           <li key={index}>
             <h3 className="accordion__title" onClick={() => setActive(index)}>
               {active === index ? <FiChevronUp /> : <FiChevronDown />}
-              {item.title}
+              {item.titolo}
             </h3>
             <motion.div
               className="accordion__content"
               style={{ overflow: "hidden" }}
-              dangerouslySetInnerHTML={{ __html: item.content }}
+              dangerouslySetInnerHTML={{ __html: item.testo }}
               initial={{ height: 0 }}
               animate={{ height: active === index ? "auto" : 0 }}
             />

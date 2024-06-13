@@ -1,8 +1,76 @@
 {
     "Navigation": {
-        "home": "/",
-        "azienda": "/azienda",
-        "lavora_con_noi": "/lavora_con_noi",
-        "contatti": "/#contatti"
+        "home": {
+            "titolo": "Home",
+            "url": "/"
+        },
+        "azienda": {
+            "titolo": "company",
+            "url": "/company"
+        },
+        "lavora_con_noi": {
+            "titolo": "work with us",
+            "url": "/work_with_us"
+        },
+        "contatti": {
+            "titolo": "contacts",
+            "url": "/#contatti"
+        }
+    },
+    "Footer": {
+        "col1": {
+            "piva": "Codice fiscale/Partita IVA: 02310660465",
+            "rea": "Numero REA: LU 215156 Camera di Commercio Industria Artigianato e Agricoltura di LUCCA",
+            "pec": "indirizzo PEC:",
+            "pecURL": "validationssrl@legalmail.it"
+        },
+        "col2": {
+            "indirizzo": "Via della Stazione 27, Barga",
+            "tel": "+390583711372",
+            "email": "info@vtservices.it",
+            "subsidiary": "Wholly owned subsidiary in USA",
+            "subsidiary_indirizzo": "2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346"
+        },
+        "col3": {
+            "privacy": "/privacy",
+            "cookie": "/cookie",
+            "credits": "Credits"
+        },
+        "col4": {
+            "social": {
+                "facebook": "https://www.facebook.com/vtservices.it",
+                "linkedin": "https://www.linkedin.com/company/vt-services-srl",
+                "twitter": "https://twitter.com/vtservices_it",
+                "youtube": "https://www.youtube.com/channel/UC"
+            }
+        }
+    },
+    "FormContatti": {
+        "nome": "Name",
+        "err_nome": "please enter at least 3 characters",
+        "cognome": "Last Name",
+        "err_cognome": "Please enter at least 3 characters",
+        "email": "Email address",
+        "err_email": "pleas enter a valid email address",
+        "messaggio": "Message",
+        "err_messaggio": "please enter at least 10 characters",
+        "success": "<h3>Message sent</h3><p>Thank you for contacting us</p>"
+    },
+    "FormLavora": {
+        "nome": "Name",
+        "err_nome": "please enter at least 3 characters",
+        "cognome": "Last Name",
+        "err_cognome": "Please enter at least 3 characters",
+        "email": "Email address",
+        "err_email": "pleas enter a valid email address",
+        "messaggio": "justify your application",
+        "candidatura": "Application",
+        "err_messaggio": "Inserire almeno 10 caratteri",
+        "success": "<h3>Application sent</h3><p>Thank you for contacting us</p>",
+        "annunci": {
+            "annuncio1": "CQV TECHNICIAN (MINIMUM 2 YEARS EXPERIENCE)",
+            "annuncio2": "CQV ENGINEER (MINIMUM 5 YEARS EXPERIENCE)",
+            "annuncio3": "senza esperienza"
+        }
     }
 }

@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 import ImagePreload from "../../../components/imagePreload/imagePreload";
 
 import { useLocale } from "next-intl";
-
+import data from "../../../../public/data/azienda.json";
 function Azienda() {
+  const locale = useLocale();
+  const dataLocale = data[locale as keyof typeof data];
   return (
     <>
       <div className={"mainImage"}>
@@ -26,7 +28,7 @@ function Azienda() {
             height={40}
             alt="bullet image"
           />
-          La nostra azienda{" "}
+          {dataLocale.titolo}
         </h1>
         <section className={style.firstSection}>
           <Image
@@ -36,35 +38,26 @@ function Azienda() {
             height={185}
             alt="bullet image"
           />
-          <p>
-            La società Validations and Technical Services s.r.l. (VTS Srl), con
-            sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita
-            nel gennaio 2013 acquisendo un ramo d’azienda da una società terza
-            che si occupava di “Commissioning Qualifica e Validazioni”. VTS Srl,
-            attualmente comprende un team di 30 persone tra Projet Manager, CQV
-            Engineer, e CQV Technician. Visto l’esponenziale richiesta delle
-            industrie farmaceutiche di questo tipo di consulenza (CQV), VTS è in
-            continua ricerca di personale, sia già qualificato che da
-            formare.esecutore di test in campo e Calibrazioni della
-            strumentazione critica.
-          </p>
+          <p>{dataLocale.testo}</p>
         </section>
         <section className={style.secondSection}>
-          <h2>Le nostre sedi</h2>
+          <h2>{dataLocale.sedi.titolo}</h2>
           <ul>
             <li>
-              <strong>
-                La sede operativa e gli uffici di VTS Srl si trovano in via
-                della Stazione 27 Mologno Barga LU.
-              </strong>
+              <strong>{dataLocale.sedi.subtitolo}</strong>
             </li>
-            <li>Da alcuni anni VTS Srl ha aperto 2 subsidiaries:</li>
-            <li>
-              <Link href="/vts_usa_inc">
-                VTS USA Inc. con sede ad Atlanta GA
-              </Link>
-            </li>
-            <li>VTS SWITZERLAND Sagl con sede a Lugano CH</li>
+            <li>{dataLocale.sedi.testo}</li>
+            {dataLocale.sedi.list.map((item, index) => {
+              if (!item.url) {
+                return <li key={index}>{item.titolo}</li>;
+              } else {
+                return (
+                  <li key={index}>
+                    <Link href={"/" + locale + item.url}>{item.titolo}</Link>
+                  </li>
+                );
+              }
+            })}
           </ul>
         </section>
       </motion.main>

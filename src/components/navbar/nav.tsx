@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-
+import Switcher from "../languageSwitcer/switcher";
 function NavBar() {
   const pathN = usePathname();
   const locale = useLocale();
@@ -24,16 +24,16 @@ function NavBar() {
   const data = {
     nav: [
       {
-        title: "Azienda",
-        url: "/" + locale + t("azienda"),
+        title: t("azienda.titolo"),
+        url: "/" + locale + t("azienda.url"),
       },
       {
-        title: "Contatti",
-        url: "/#contatti",
+        title: t("contatti.titolo"),
+        url: t("contatti.url"),
       },
       {
-        title: "Lavora Con Noi",
-        url: "/" + locale + t("lavora_con_noi"),
+        title: t("lavora_con_noi.titolo"),
+        url: "/" + locale + t("lavora_con_noi.url"),
       },
     ],
   };
@@ -90,6 +90,9 @@ function NavBar() {
                 )}
               </li>
             ))}
+            <li>
+              <Switcher />
+            </li>
           </ul>
         </div>
         <div

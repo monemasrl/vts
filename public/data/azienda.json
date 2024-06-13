@@ -1,0 +1,40 @@
+{
+    "it": {
+        "titolo": "la nostra azienda",
+        "testo": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”. VTS Srl, attualmente comprende un team di 30 persone tra Projet Manager, CQV Engineer, e CQV Technician. Visto l’esponenziale richiesta delle industrie farmaceutiche di questo tipo di consulenza (CQV), VTS è in continua ricerca di personale, sia già qualificato che da formare.esecutore di test in campo e Calibrazioni della strumentazione critica.",
+        "sedi": {
+            "titolo": "Le nostre sedi",
+            "subtitolo": "La sede operativa e gli uffici di VTS Srl si trovano in via della Stazione 27 Mologno Barga LU.",
+            "testo": "Da alcuni anni VTS Srl ha aperto 2 subsidiaries:",
+            "list": [
+                {
+                    "titolo": "VTS USA Inc. con sede ad Atlanta GA",
+                    "url": "/vts_usa_inc"
+                },
+                {
+                    "titolo": "VTS SWITZERLAND Sagl con sede a Lugano CH",
+                    "url": ""
+                }
+            ]
+        }
+    },
+    "en": {
+        "titolo": "la nostra azienda",
+        "testo": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”. VTS Srl, attualmente comprende un team di 30 persone tra Projet Manager, CQV Engineer, e CQV Technician. Visto l’esponenziale richiesta delle industrie farmaceutiche di questo tipo di consulenza (CQV), VTS è in continua ricerca di personale, sia già qualificato che da formare.esecutore di test in campo e Calibrazioni della strumentazione critica.",
+        "sedi": {
+            "titolo": "Le nostre sedi",
+            "subtitolo": "La sede operativa e gli uffici di VTS Srl si trovano in via della Stazione 27 Mologno Barga LU.",
+            "testo": "Da alcuni anni VTS Srl ha aperto 2 subsidiaries:",
+            "list": [
+                {
+                    "titolo": "VTS USA Inc. con sede ad Atlanta GA",
+                    "url": "/vts_usa_inc"
+                },
+                {
+                    "titolo": "VTS SWITZERLAND Sagl con sede a Lugano CH",
+                    "url": ""
+                }
+            ]
+        }
+    }
+}

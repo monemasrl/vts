@@ -5,13 +5,16 @@
             "testo": "Gestiamo le richieste con competenza, assicurando che la tua esperienza sia fluida e senza problemi. Siamo partner affidabili. Collaboriamo attivamente con i nostri clienti per capire le loro esigenze specifiche e offrire soluzioni personalizzate. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
             "specs": [
                 {
-                    "titolo": "1 sede italia"
+                    "titolo": "1 sede italia",
+                    "url": ""
                 },
                 {
-                    "titolo": "1 SUBSIDIARY SVIZZERA"
+                    "titolo": "1 SUBSIDIARY SVIZZERA",
+                    "url": ""
                 },
                 {
-                    "titolo": "1 SUBSIDIARY USA"
+                    "titolo": "1 SUBSIDIARY USA",
+                    "url": "/vts_usa_inc"
                 }
             ]
         },
@@ -93,93 +96,96 @@
     },
     "en": {
         "sezione1": {
-            "titolo": "EN Da oltre 20 anni, un servizio di prim’ordine",
-            "testo": "Gestiamo le richieste con competenza, assicurando che la tua esperienza sia fluida e senza problemi. Siamo partner affidabili. Collaboriamo attivamente con i nostri clienti per capire le loro esigenze specifiche e offrire soluzioni personalizzate. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
+            "titolo": "First-class service for over 20 years",
+            "testo": "We handle requests with expertise, ensuring that your experience is smooth and hassle-free. We are reliable partners. We actively collaborate with our clients to understand their specific needs and offer customized solutions. Our flexibility and willingness to adapt to customer demands is what makes us an excellence in our industry",
             "specs": [
                 {
-                    "titolo": "1 sede italia"
+                    "titolo": "1 ITALY OFFICE",
+                    "url": ""
                 },
                 {
-                    "titolo": "1 SUBSIDIARY SVIZZERA"
+                    "titolo": "1 SUBSIDIARY SWITZERLAND",
+                    "url": ""
                 },
                 {
-                    "titolo": "1 SUBSIDIARY USA"
+                    "titolo": "1 SUBSIDIARY USA",
+                    "url": "/vts_usa_inc"
                 }
             ]
         },
         "sezione2": {
-            "titolo": "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
-            "testo1": "Consulenza specializzata per le attività di Commissioning, Qualifica e Validazioni di macchinari, apparecchiature, sistemi di controllo e automazione, sistemi informatici per la gestione di fabbrica, utilities, ambienti a contaminazione controllata per produzioni sterili. ",
-            "testo2": "Attività di monitoraggio dei locali a contaminazione controllata, taratura della strumentazione critica, consulenza sull’analisi dei rischi e procedure operative standard dell’industria farmaceutica, in accordo a quanto richiesto dalle normative che regolamentano le attività negli opifici di produzione. Noleggio di strumenti per la qualifica e taratura.",
+            "titolo": "We offer Commissioning, Qualification and Validation consulting and services.",
+            "testo1": "Specialized consulting for Commissioning, Qualification and Validation activities for machinery,equipment, control and automation systems, factory management information systems, utilities,controlled contamination environments for sterile manufacturing.",
+            "testo2": "Monitoring activities of contamination-controlled rooms, calibration of critical instrumentation, consulting on risk analysis and standard operating procedures of the pharmaceutical industry, in accordance with the requirements of the regulations governing activities in production facilities. Rental of instruments for qualification and calibration.",
             "specs": [
                 {
-                    "title": "Ingegneria",
+                    "title": "Engineering",
                     "image": "ingegneria.svg",
                     "list": [
-                        "Definizione dei requisiti utente (URS)",
-                        "Auditing e consulenze tecniche su impianti, processi, apparecchiature",
-                        "Servizi di revisione progettuale (value engineering, GMP review)",
-                        "traduzione di manualistica e documentazione tecnica"
+                        "User Requirements Definition (URS)",
+                        "Auditing and technical consulting on plants, processes, equipment",
+                        "Design review services (value engineering, GMP review)",
+                        "Translation of manuals and technical documentation"
                     ]
                 },
                 {
-                    "title": "Consulenza e Gestione",
+                    "title": "Consulting and Management",
                     "image": "consulenza.svg",
                     "list": [
                         "Project Management",
-                        "Consulenza tecnica specialistica",
-                        "Risoluzione di problemi impiantistici",
-                        "Pianificazione della manutenzione e calibrazione",
-                        "Audit a fornitori",
-                        "Audit Energetici"
+                        "Specialized technical consulting",
+                        "Plant troubleshooting",
+                        "Maintenance and calibration planning",
+                        "Supplier audits",
+                        "Energy audits"
                     ]
                 },
                 {
-                    "title": "Commissioning Qualifica e Validazioni",
+                    "title": "Commissioning Qualification and Validation",
                     "image": "commissioning.svg",
                     "list": [
-                        "Preparazione di Validation Master Plan",
-                        "Esecuzione di Design Qualification (DQ)",
-                        "Esecuzione di analisi di rischio su impianti, processi e apparecchiature",
-                        "Coordinamento ed esecuzione di collaudi presso il fornitore (FAT) di sistemi, apparecchiature e impianti",
-                        " Assistenza a start-up di impianti, macchinari, servizi",
-                        "Commissioning di impianti, macchinari, servizi",
-                        "  Coordinamento ed esecuzione di collaudi presso il sito (SAT) di apparecchiature e impianti",
-                        "Calibrazione di strumentazione",
-                        "Attività di qualifica (IQ, OQ, PQ) di impianti e sistemi",
-                        "Attività di riqualifica e verifica periodica",
-                        "Supporto alla Convalida di Processo"
+                        "Preparation of Validation Master Plan",
+                        "Execution of Design Qualification (DQ)",
+                        "Performing risk analysis on systems, processes and equipment",
+                        "Coordination and execution of supplier (FAT) testing of systems, equipment, and facilities",
+                        "Assisting with start-up of plant, machinery, services",
+                        "Commissioning of plant, machinery, services",
+                        "Coordination and execution of on-site testing (SAT) of equipment and facilities",
+                        "Calibration of instrumentation",
+                        "Qualification activities (IQ, OQ, PQ) of equipment and systems",
+                        "Periodic requalification and verification activities",
+                        "Process Validation Support"
                     ]
                 },
                 {
-                    "title": "Settori e Specializzazioni",
+                    "title": "Sectors and Specializations",
                     "image": "settori.svg",
                     "list": [
-                        "Impianti di processo “bulk”",
-                        "Catena del freddo (“Cold chain”)",
-                        "Line di lavorazione “Fill-finish”",
-                        "Sistemi di condizionamento (HVAC)",
-                        "Tecnologie di packaging",
-                        "Utilities critiche (PW, WFI, CS, ecc.)"
+                        "Bulk process plants",
+                        "Cold chain",
+                        "&quot;Fill-finish&quot; processing lines",
+                        "Air-conditioning systems (HVAC)",
+                        "Packaging technologies",
+                        "Critical utilities (PW, WFI, CS, etc.)"
                     ]
                 }
             ]
         },
         "lavora": {
-            "titolo": "Lavora con noi",
-            "testo": "La nostra azienda è sempre alla ricerca di personale qualificato.<br />Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
-            "button": "vai alle candidature"
+            "titolo": "Work with us",
+            "testo": "Our company is always looking for qualified staff.<br />If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
+            "button": "GO TO APPLICATIONS"
         },
         "contattaci": {
-            "titolo": "contattaci",
-            "testo": "Se desideri ricevere ulteriori informazioni sui nostri servizi, se hai domande o richieste, compila il form",
+            "titolo": "Contact us",
+            "testo": "If you would like to receive more information about our services, if you have any questions or requests, please fill out the form",
             "form": {
-                "nome": "Nome",
-                "cognome": "Cognome",
-                "email": "Email",
+                "nome": "Name",
+                "cognome": "Last Name",
+                "email": "Email address",
                 "telefono": "Telefono",
-                "messaggio": "Messaggio",
-                "invia": "Invia"
+                "messaggio": "Message",
+                "invia": "Send"
             }
         }
     }

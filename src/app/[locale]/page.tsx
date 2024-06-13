@@ -9,70 +9,8 @@ import { useEffect, useState } from "react";
 import Splash from "../../components/splash/splash";
 import Link from "next/link";
 import Hero from "../../components/hero/hero";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import data from "../../../public/data/home.json";
-
-const secondSectionHomeData = {
-  title:
-    "Offriamo consulenza e servizi di Commissioning, Qualification and Validation",
-  text1:
-    "Consulenza specializzata per le attività di Commissioning, Qualifica e Validazioni di macchinari, apparecchiature, sistemi di controllo e automazione, sistemi informatici per la gestione di fabbrica, utilities, ambienti a contaminazione controllata per produzioni sterili.",
-  text2:
-    "Attività di monitoraggio dei locali a contaminazione controllata, taratura della strumentazione critica, consulenza sull’analisi dei rischi e procedure operative standard dell’industria farmaceutica, in accordo a quanto richiesto dalle normative che regolamentano le attività negli opifici di produzione. Noleggio di strumenti per la qualifica e taratura.",
-  specs: [
-    {
-      title: "Ingegneria",
-      image: "ingegneria.svg",
-      list: [
-        "Definizione dei requisiti utente (URS)",
-        "Auditing e consulenze tecniche su impianti, processi, apparecchiature",
-        "Servizi di revisione progettuale (value engineering, GMP review)",
-        "traduzione di manualistica e documentazione tecnica",
-      ],
-    },
-    {
-      title: "Consulenza e Gestione",
-      image: "consulenza.svg",
-      list: [
-        "Project Management",
-        "Consulenza tecnica specialistica",
-        "Risoluzione di problemi impiantistici",
-        "Pianificazione della manutenzione e calibrazione",
-        "Audit a fornitori",
-        "Audit Energetici",
-      ],
-    },
-    {
-      title: "Commissioning Qualifica e Validazioni",
-      image: "commissioning.svg",
-      list: [
-        "Preparazione di Validation Master Plan",
-        "Esecuzione di Design Qualification (DQ)",
-        "Esecuzione di analisi di rischio su impianti, processi e apparecchiature",
-        "Coordinamento ed esecuzione di collaudi presso il fornitore (FAT) di sistemi, apparecchiature e impianti",
-        " Assistenza a start-up di impianti, macchinari, servizi",
-        "Commissioning di impianti, macchinari, servizi",
-        "  Coordinamento ed esecuzione di collaudi presso il sito (SAT) di apparecchiature e impianti",
-        "Calibrazione di strumentazione",
-        "Attività di qualifica (IQ, OQ, PQ) di impianti e sistemi",
-        "Attività di riqualifica e verifica periodica",
-        "Supporto alla Convalida di Processo",
-      ],
-    },
-    {
-      title: "Settori e Specializzazioni",
-      image: "settori.svg",
-      list: [
-        "Impianti di processo “bulk”",
-        "Catena del freddo (“Cold chain”)",
-        "Line di lavorazione “Fill-finish”",
-        "Sistemi di condizionamento (HVAC)",
-        "Tecnologie di packaging",
-        "Utilities critiche (PW, WFI, CS, ecc.)",
-      ],
-    },
-  ],
-};
 
 export default function Home() {
   const [splash, setSplash] = useState(true);
@@ -83,7 +21,7 @@ export default function Home() {
     setSplash(false);
   }, 1300);
   const locale = useLocale();
-
+  const t = useTranslations("Navigation");
   const dataLocale = data[locale as keyof typeof data];
   return (
     <main>
@@ -119,12 +57,7 @@ export default function Home() {
           </h1>
           <div className={style.FirstSectionHome__text__content}>
             <p>
-              Gestiamo le richieste con competenza, assicurando che la tua
-              esperienza sia fluida e senza problemi. Siamo partner affidabili.
-              Collaboriamo attivamente con i nostri clienti per capire le loro
-              esigenze specifiche e offrire soluzioni personalizzate. La nostra
-              flessibilità e volontà di adattarci alle richieste dei clienti
-              sono ciò che ci rende un’eccellenza nel nostro settore.
+              {dataLocale.sezione1.testo}
               <Image
                 src={"/image/iso.jpg"}
                 width={300}
@@ -133,13 +66,18 @@ export default function Home() {
               />
             </p>
             <ul>
-              <li>1 sede Italia</li>
-              <li>1 Subsidiary Svizzera</li>
-              <li>
-                <Link style={{ color: "#485f7d" }} href="/vts_usa_inc">
-                  1 Subsidiary USA
-                </Link>
-              </li>
+              {dataLocale.sezione1.specs.map((item, index) => {
+                if (!item.url) {
+                  return <li key={index}>{item.titolo}</li>;
+                }
+                return (
+                  <li key={index}>
+                    <Link style={{ color: "#485f7d" }} href={locale + item.url}>
+                      {item.titolo}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </motion.div>
@@ -179,28 +117,14 @@ export default function Home() {
             height={40}
             alt="bullet image"
           />
-          Offriamo consulenza e servizi di Commissioning, Qualification and
-          Validation
+          {dataLocale.sezione2.titolo}
         </h2>
         <div className={style.secondSectionHome__mainText}>
-          <p>
-            Consulenza specializzata per le attività di Commissioning, Qualifica
-            e Validazioni di macchinari, apparecchiature, sistemi di controllo e
-            automazione, sistemi informatici per la gestione di fabbrica,
-            utilities, ambienti a contaminazione controllata per produzioni
-            sterili.
-          </p>
-          <p>
-            Attività di monitoraggio dei locali a contaminazione controllata,
-            taratura della strumentazione critica, consulenza sull’analisi dei
-            rischi e procedure operative standard dell’industria farmaceutica,
-            in accordo a quanto richiesto dalle normative che regolamentano le
-            attività negli opifici di produzione. Noleggio di strumenti per la
-            qualifica e taratura.
-          </p>
+          <p>{dataLocale.sezione2.testo1}</p>
+          <p>{dataLocale.sezione2.testo2}</p>
         </div>
         <div className={style.secondSectionHome__specs}>
-          {secondSectionHomeData.specs.map((item, index) => {
+          {dataLocale.sezione2.specs.map((item, index) => {
             return (
               <div
                 key={index}
@@ -259,20 +183,13 @@ export default function Home() {
                 height={40}
                 alt="bullet image"
               />
-              Lavora con noi
+              {dataLocale.lavora.titolo}
             </h2>
-            <p>
-              La nostra azienda è sempre alla ricerca di personale qualificato.
-              <br />
-              Se sei un professionista ambizioso e desideri unirti a un team
-              dinamico e orientato al successo, candidati per una delle
-              posizioni aperte{" "}
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: dataLocale.lavora.testo }} />
 
-            <Link href={"/lavora_con_noi"}>
-              {" "}
+            <Link href={locale + t("lavora_con_noi")}>
               <div className="button">
-                <span>Vai alle candidature</span>
+                <span>{dataLocale.lavora.button}</span>
                 <MdOutlineChevronRight />{" "}
               </div>
             </Link>
@@ -326,19 +243,15 @@ export default function Home() {
                 className={style.fourthSectionHome__wrapper__text__content__box}
               >
                 <h2>
-                  {" "}
                   <Image
                     src={"/image/bullet.svg"}
                     width={40}
                     height={40}
                     alt="bullet image"
                   />
-                  Contattaci
+                  {dataLocale.contattaci.titolo}
                 </h2>
-                <p>
-                  Se desideri ricevere ulteriori informazioni sui nostri
-                  servizi, se hai domande o richieste, compila il form
-                </p>
+                <p>{dataLocale.contattaci.testo}</p>
               </div>
             </div>
             <Form />

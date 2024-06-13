@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import style from "./form.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type Tcandidature = {
   titolo: string;
@@ -22,6 +23,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const t = useTranslations("FormLavora");
 
   function SuccessMessage({ status }: { status: string | null }) {
     return (
@@ -33,10 +35,8 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-          >
-            <h3>Messaggio inviato</h3>
-            <p>Risponderemo al messaggio nel più breve tempo possibile</p>
-          </motion.div>
+            dangerouslySetInnerHTML={{ __html: t("success") }}
+          />
         )}
       </AnimatePresence>
     );
@@ -44,26 +44,26 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
 
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
-      setErrorNome("Inserire un nome di almeno 6 caratteri");
+      setErrorNome(t("err_nome"));
     } else {
       setErrorNome("");
     }
     if (cognome.length < 3 && cognome.length > 0) {
-      setErrorCognome("Inserire un nome di almeno 3 caratteri");
+      setErrorCognome(t("err_cognome"));
     } else {
       setErrorCognome("");
     }
 
     if (mail.length < 6 && mail.length > 0) {
-      setErrorMail("Inserire un indirizzo mail valido");
+      setErrorMail(t("err_email"));
     } else if (mail.length > 0 && !mail.includes("@")) {
-      setErrorMail("Inserire un indirizzo mail valido");
+      setErrorMail(t("err_email"));
     } else {
       setErrorMail("");
     }
 
     if (messaggio.length < 10 && messaggio.length > 0) {
-      setErrorMessaggio("Inserire almeno 10 caratteri");
+      setErrorMessaggio(t("err_messaggio"));
     } else {
       setErrorMessaggio("");
     }
@@ -117,7 +117,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
       <input type="hidden" name="form-name" value="candidatura" />
       <p>
         {" "}
-        <label htmlFor="nome">Nome:</label> <br />
+        <label htmlFor="nome">{t("nome")}</label> <br />
         <input
           onChange={(e) => {
             setNome(e.target.value);
@@ -130,7 +130,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
       </p>
       <p>
         {" "}
-        <label htmlFor="cognome">Cognome:</label> <br />
+        <label htmlFor="cognome">{t("cognome")}</label> <br />
         <input
           onChange={(e) => {
             setCognome(e.target.value);
@@ -142,7 +142,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
         />
       </p>
       <p>
-        <label htmlFor="youremail">Indirizzo mail:</label> <br />
+        <label htmlFor="youremail">{t("email")}</label> <br />
         <input
           onChange={(e) => setMail(e.target.value)}
           type="email"
@@ -152,24 +152,20 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
         />
       </p>
       <p>
-        <label htmlFor="richiesta">Candidatura</label> <br />
+        <label htmlFor="richiesta">{t("candidatura")}</label> <br />
         <select
           name="richiesta"
           id="richiesta"
           className={style.candidatura}
           onChange={(e) => setCandidatura(e.target.value)}
         >
-          {candidature.map((item, index) => {
-            return (
-              <option key={index} value={item.titolo}>
-                {item.titolo}
-              </option>
-            );
-          })}
+          <option>{t("annunci.annuncio1")}</option>
+          <option>{t("annunci.annuncio2")}</option>
+          <option>{t("annunci.annuncio3")}</option>
         </select>
       </p>
       <p>
-        <label htmlFor="yourmessage">Motiva la tua candidatura</label> <br />
+        <label htmlFor="yourmessage">{t("messaggio")}</label> <br />
         <textarea
           onChange={(e) => {
             setMessaggio(e.target.value);

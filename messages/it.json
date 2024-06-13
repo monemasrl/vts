@@ -1,8 +1,76 @@
 {
     "Navigation": {
-        "home": "/",
-        "azienda": "/azienda",
-        "lavora_con_noi": "/lavora_con_noi",
-        "contatti": "/#contatti"
+        "home": {
+            "titolo": "Home",
+            "url": "/"
+        },
+        "azienda": {
+            "titolo": "azienda",
+            "url": "/azienda"
+        },
+        "lavora_con_noi": {
+            "titolo": "lavora con noi",
+            "url": "/lavora_con_noi"
+        },
+        "contatti": {
+            "titolo": "contatti",
+            "url": "/#contatti"
+        }
+    },
+    "Footer": {
+        "col1": {
+            "piva": "Codice fiscale/Partita IVA: 02310660465",
+            "rea": "Numero REA: LU 215156 Camera di Commercio Industria Artigianato e Agricoltura di LUCCA",
+            "pec": "indirizzo PEC:",
+            "pecURL": "validationssrl@legalmail.it"
+        },
+        "col2": {
+            "indirizzo": "Via della Stazione 27, Barga",
+            "tel": "+390583711372",
+            "email": "info@vtservices.it",
+            "subsidiary": "Wholly owned subsidiary in USA",
+            "subsidiary_indirizzo": "2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346"
+        },
+        "col3": {
+            "privacy": "/privacy",
+            "cookie": "/cookie",
+            "credits": "Credits"
+        },
+        "col4": {
+            "social": {
+                "facebook": "https://www.facebook.com/vtservices.it",
+                "linkedin": "https://www.linkedin.com/company/vt-services-srl",
+                "twitter": "https://twitter.com/vtservices_it",
+                "youtube": "https://www.youtube.com/channel/UC"
+            }
+        }
+    },
+    "FormContatti": {
+        "nome": "Nome",
+        "err_nome": "Inserire almeno 3 caratteri",
+        "cognome": "Cognome",
+        "err_cognome": "Inserire almeno 3 caratteri",
+        "email": "Email",
+        "err_email": "Inserire un indirizzo email valido",
+        "messaggio": "Messaggio",
+        "err_messaggio": "Inserire almeno 10 caratteri",
+        "success": "<h3>Messaggio inviato</h3><p>Risponderemo al messaggio nel più breve tempo possibile</p>"
+    },
+    "FormLavora": {
+        "nome": "Nome",
+        "err_nome": "Inserire almeno 3 caratteri",
+        "cognome": "Cognome",
+        "err_cognome": "Inserire almeno 3 caratteri",
+        "email": "Email",
+        "err_email": "Inserire un indirizzo email valido",
+        "messaggio": "Motiva la tua candidatura",
+        "candidatura": "Candidatura",
+        "err_messaggio": "Inserire almeno 10 caratteri",
+        "success": "<h3>Messaggio inviato</h3><p>Grazie per la tua candidatura</p>",
+        "annunci": {
+            "annuncio1": "CQV TECHNICIAN (MINIMO 2 ANNI DI ESPERIENZA)",
+            "annuncio2": "CQV ENGINEER (MINIMO 5 ANNI DI ESPERIENZA)",
+            "annuncio3": "senza esperienza"
+        }
     }
 }

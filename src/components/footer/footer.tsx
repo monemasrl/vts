@@ -1,42 +1,70 @@
+"use client";
 import Image from "next/image";
 import style from "./footer.module.scss";
 import Link from "next/link";
-function footer() {
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+
+function Footer() {
+  const pathN = usePathname();
+  const locale = useLocale();
+  const t = useTranslations("Footer");
+  const tnav = useTranslations("Navigation");
+  const navigation = {
+    nav: [
+      {
+        title: tnav("azienda.titolo"),
+        url: "/" + locale + tnav("azienda.url"),
+      },
+      {
+        title: tnav("contatti.titolo"),
+        url: tnav("azienda.url"),
+      },
+      {
+        title: tnav("lavora_con_noi.titolo"),
+        url: "/" + locale + tnav("lavora_con_noi.url"),
+      },
+    ],
+  };
+
   return (
     <footer className={style.footer}>
       <div className={style.footer__first}>
         <Image src="/image/vtslogo.jpg" width={180} height={96} alt="logo" />
         <ul>
-          <li>Codice fiscale/Partita IVA: 02310660465;</li>
+          <li>{t("col1.piva")}</li>
+          <li>{t("col1.rea")}</li>
           <li>
-            Numero REA: LU 215156 Camera di Commercio Industria Artigianato e
-            Agricoltura di LUCCA;
+            {t("col1.pec")}{" "}
+            <a href={"mailto:" + t("col1.pecURL")}>{t("col1.pecURL")}</a>
           </li>
-          <li>Indirizzo PEC: validationssrl@legalmail.it</li>
         </ul>
       </div>
       <ul className={style.footer__second}>
         <li>VTS</li>
-        <li>Via della Stazione 27, Barga</li>
+        <li> {t("col2.indirizzo")} </li>
         <li>
-          <a href="tel:+390583711372">0583 711372</a>
+          <a href={"tel:" + t("col2.tel")}>tel:{t("col2.tel")}</a>
         </li>
         <li>
-          <a href="mailto:info@vtservices.it">info@vtservices.it</a>
+          <a href={"mailto:" + t("col2.email")}>{t("col2.email")}</a>
         </li>
-        <li>Wholly owned subsidiary in USA</li>
-        <li>2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346</li>
+        <li>{t("col2.subsidiary")}</li>
+        <li>{t("col2.subsidiary_indirizzo")}</li>
       </ul>
       <ul className={style.footer__third}>
-        <li>
-          <Link href="/azienda">Azienda</Link>
-        </li>
-        <li>
-          <Link href={"/#contatti"}>Contatti</Link>
-        </li>
-        <li>
-          <Link href={"/lavora_con_noi"}>Lavora con noi</Link>
-        </li>
+        {navigation.nav.map((item, index) => (
+          <li
+            className={`${pathN.includes(item.url) && style.activeLink}`}
+            key={index}
+          >
+            {item.title === "contatti" ? (
+              <a href={item.url}>{item.title}</a>
+            ) : (
+              <Link href={item.url}>{item.title}</Link>
+            )}
+          </li>
+        ))}
         <li>Privacy Policy</li>
         <li>Cookie Policy</li>
       </ul>
@@ -52,4 +80,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

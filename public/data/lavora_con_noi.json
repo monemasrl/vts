@@ -1,0 +1,125 @@
+{
+    "it": {
+        "annunci": [
+            {
+                "titolo": "CQV TECHNICIAN (MINIMO 2 ANNI DI ESPERIENZA)",
+                "image": "tecnico",
+                "link": "formCandidature"
+            },
+            {
+                "titolo": "CQV ENGINEER (MINIMO 5 ANNI DI ESPERIENZA)",
+                "image": "ingegnere",
+                "link": "formCandidature"
+            }
+        ],
+        "sezione1": {
+            "titolo": "Lavora con noi",
+            "testo1": "Se non hai esperienza in questo settore e sei interessato intraprendere questa attività, ti offriamo un periodo formativo, requisiti minimi",
+            "left": {
+                "titolo": "CQV Engineer:",
+                "list": [
+                    "Laurea più attinente: Ingegneria Chimica Ingegneria Elettronica",
+                    "Ingegneria dell’Automazione",
+                    "Ingegneria Informatica",
+                    "Ingegneria delle Telecomunicazioni",
+                    "Chimica e Tecnologie Farmaceutiche"
+                ]
+            },
+            "right": {
+                "titolo": "CQV Technician:",
+                "list": [
+                    "Istruzione superiore più attinente:",
+                    "Diploma di Perito Elettronico e automazione",
+                    "Diploma di Perito Chimico",
+                    "Diploma di Perito Informatico"
+                ]
+            }
+        },
+        "sezione2": {
+            "titolo": "Che cos'è il processo di convalida CQV?",
+            "testo": "Quando viene prodotto un farmaco o un prodotto medico, ci sono molti rischi che ne derivano. Questo è il motivo per cui è fondamentale che esistano processi per monitorare e valutare la sicurezza delle apparecchiature utilizzate per sviluppare prodotti farmaceutici. Per fare ciò, le aziende farmaceutiche seguono il processo CQV CQV è l'acronimo di Commissioning, Qualification and Validation. Si tratta di un processo di test in più fasi che consente alle aziende farmaceutiche di testare le proprie apparecchiature di produzione in base agli standard, alle normative e ai requisiti del settore.",
+            "list": [
+                {
+                    "titolo": "Messa in servizio",
+                    "testo": "Questa parte del processo CQV garantisce che tutte le strutture e le attrezzature utilizzate nel processo di produzione siano progettate e installate come previsto. Questo per garantire la sicurezza del prodotto e la sicurezza di coloro che utilizzano l'apparecchiatura nella produzione. La fase di messa in servizio del processo CQV comporta molta documentazione e test. Se sei un ingegnere CQV, le tue principali responsabilità (in questa parte del processo CQV) saranno: Documentare eventuali problemi riscontrati con l'apparecchiatura e come risolverli. Eseguire i protocolli di regolazione desiderati per l'apparecchiatura specificata. Proteggere l'apparecchiatura prima di metterla in servizio."
+                },
+                {
+                    "titolo": "Qualifica",
+                    "testo": "<div>Il passo successivo sarà quello di qualificare l'attrezzatura per un uso sicuro. Ci sono tre passaggi di qualificazione che devono essere seguiti in questa parte del processo CQV.<ul><li><div class='title'>Fase 1: Qualifica dell'installazione (IQ)</div>Questa fase del processo garantisce che l'apparecchiatura sia installata correttamente. In sostanza, ripercorre ciò che è accaduto nella prima fase (messa in servizio) e garantisce che tutta la documentazione sia in ordine.</li><li><div class='title'>Fase 2: Qualifica operativa (OQ)</div>La qualifica operativa comporta la verifica che l'apparecchiatura funzioni come previsto. Ad esempio, ciò potrebbe comportare la verifica che l'apparecchiatura possa funzionare per una durata specificata senza influire su nient'altrointorno ad essa o senza malfunzionamenti.</li><li><div class='title'>  Fase 3: Qualificazione delle prestazioni (PQ)</div>Questo per garantire che l'apparecchiatura possa funzionare in modo efficiente e coerente nelle condizioni in cui funzionerà.</li></ul></div>"
+                },
+                {
+                    "titolo": "Convalida",
+                    "testo": "La fase di convalida del processo CQV prevede più revisioni. Si tratta di una parte continua del processo CQV che viene utilizzato per garantire una sicurezza sostenibile intorno all'apparecchiatura.Questo passaggio può comportare il monitoraggio dei dati, in quanto ciò aiuterà un ingegnere CQV a valutare l'efficienza dell'apparecchiatura. Potrebbero anche farlo campionando l'attrezzatura e il prodotto che produce, per assicurarsi che ogni prodotto soddisfi le specifiche richieste.<br/>La convalida è probabilmente la parte più integrante del processo CQV, in quanto la documentazione prodotta da questa fase può aiutarti a evitare problemi di conformità se il tuo prodotto viene ritenuto difettoso."
+                },
+                {
+                    "titolo": "Perchè lavorare in CQV?",
+                    "testo": "Il CQV è un settore molto interessante delle scienze della vita. In qualità di CQV, sarai in grado di migliorare le tue competenze e aumentare il tuo potenziale di guadagno. <br/>Se scegli di diventare Tecnico o ingegnere CQV, il tuo ruolo avrà un'ampia varietà di compiti, consentendoti di lavorare con una vasta gamma di tecnologie e prodotti. Il lato positivo è che è un settore molto interessante in cui iniziare la tua carriera! È estremamente specialistico e molto di nicchia."
+                }
+            ]
+        },
+        "contatti": {
+            "titolo": "Rientri in un profilo che ricerchiamo?"
+        }
+    },
+    "en": {
+        "annunci": [
+            {
+                "titolo": "CQV TECHNICIAN (MINIMUM 2 YEARS EXPERIENCE)",
+                "image": "tecnico",
+                "link": "formCandidature"
+            },
+            {
+                "titolo": "CQV ENGINEER (MINIMUM 5 YEARS EXPERIENCE)",
+                "image": "ingegnere",
+                "link": "formCandidature"
+            }
+        ],
+        "sezione1": {
+            "titolo": "Work with us",
+            "testo1": "If you have no experience in this field but you are interested in undertaking this activity, we offer a training period, minimum requirements:",
+            "left": {
+                "titolo": "CQV Engineer:",
+                "list": [
+                    "Most relevant degree: Chemical Engineering Electrical Engineering",
+                    "Automation Engineering",
+                    "Computer Engineering",
+                    "Telecommunications Engineering",
+                    "Pharmaceutical Chemistry and Technology"
+                ]
+            },
+            "right": {
+                "titolo": "CQV Technician:",
+                "list": [
+                    "Most relevant higher education: Diploma of Electronics and Automation Technician",
+                    "Chemical Technician Diploma",
+                    "Computer Technician Diploma"
+                ]
+            }
+        },
+        "sezione2": {
+            "titolo": "What is the CQV validation process?",
+            "testo": "When a drug or medical product is produced, there are many risks involved. This is why it is critical that processes exist to monitor and evaluate the safety of equipment used to develop pharmaceutical products. To do this, pharmaceutical companies follow the CQV process. CQV stands for Commissioning,Qualification and Validation. It is a multi-step testing process that allows pharmaceutical companies totest their manufacturing equipment according to industry standards, regulations and requirements.",
+            "list": [
+                {
+                    "titolo": "Commissioning.",
+                    "testo": "This part of the CQV process ensures that all facilities and equipment used in the production process are designed and installed as intended. This is to ensure the safety of the product and the safety of those using the equipment in production. The commissioning phase of the CQV process involves a lot of documentation and testing. If you are a CQV engineer, your main responsibilities (in this part of the CQV process) will be to: Document any problems encountered with the equipment and how to solve them. Perform the desired adjustment protocols for the specified equipment. Protect the equipment before putting it into service."
+                },
+                {
+                    "titolo": "Qualification",
+                    "testo": "<div>The next step is to qualify the equipment for safe use. There are three qualification steps that must be followed in this part of the CQV process.<ul><li><div class='title'>Step 1: Installation Qualification (IQ).</div>This step ensures that the equipment is installed correctly. It basically goes over what happened in the first phase (commissioning) and ensures that all documentation is in order.</li><li><div class='title'>Step 2: Operational Qualification (OQ).</div>Operational qualification involves verifying that the equipment is functioning as intended. For example, this could involve verifying that the equipment can operate for a specified duration without affecting anything else around it or without malfunctions.</li><li><div class='title'>  Step 3: Performance Qualification (PQ).</div>This is to ensure that the equipment can perform efficiently and consistently under the conditions under which it will operate.</li></ul></div>"
+                },
+                {
+                    "titolo": "Validation",
+                    "testo": "The validation phase of the CQV process involves multiple reviews. It is an ongoing part of the CQV process that is used to ensure sustainable safety around the equipment. This step may involve monitoring data, as this will help a CQV engineer assess the efficiency of the equipment. They might also do this by sampling the equipment and the product it produces to ensure that each product meets the required specifications. Validation is probably the most integral part of the CQV process, as the documentation produced by this step can help you avoid compliance problems if your product is found to be defective."
+                },
+                {
+                    "titolo": "Why working in CQV?",
+                    "testo": "CQV is a very interesting field in the life sciences. As a CQV, you will be able to improve your skills and increase your earning potential. If you choose to become a CQV Technician or Engineer, your role will have a wide variety of tasks, allowing you to work with a wide range of technologies and products. On the plus side, it is a very interesting field in which to start your career! It is extremely specialized and very niche."
+                }
+            ]
+        },
+        "contatti": {
+            "titolo": "Do you fit a profile we are looking for?"
+        }
+    }
+}

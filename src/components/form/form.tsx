@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import style from "./form.module.scss";
-import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 function SuccessMessage({ status }: { status: string | null }) {
+  const t = useTranslations("FormContatti");
   return (
     <AnimatePresence>
       {status === "ok" && (
@@ -15,14 +16,14 @@ function SuccessMessage({ status }: { status: string | null }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h3>Messaggio inviato</h3>
-          <p>Risponderemo al messaggio nel più breve tempo possibile</p>
+          <div dangerouslySetInnerHTML={{ __html: t("success") }} />
         </motion.div>
       )}
     </AnimatePresence>
   );
 }
 function Form() {
+  const t = useTranslations("FormContatti");
   const [nome, setNome] = useState<string>("");
   const [errorNome, setErrorNome] = useState<string>("");
   const [cognome, setCognome] = useState<string>("");
@@ -34,29 +35,29 @@ function Form() {
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
+
   useEffect(() => {
     if (nome.length < 3 && nome.length > 0) {
-      setErrorNome("Inserire un nome di almeno 6 caratteri");
+      setErrorNome(t("err_nome"));
     } else {
       setErrorNome("");
     }
     if (cognome.length < 3 && cognome.length > 0) {
-      setErrorCognome("Inserire un nome di almeno 3 caratteri");
+      setErrorCognome(t("err_cognome"));
     } else {
       setErrorCognome("");
     }
 
     if (mail.length < 6 && mail.length > 0) {
-      setErrorMail("Inserire un indirizzo mail valido");
+      setErrorMail(t("err_email"));
     } else if (mail.length > 0 && !mail.includes("@")) {
-      setErrorMail("Inserire un indirizzo mail valido");
+      setErrorMail(t("err_email"));
     } else {
       setErrorMail("");
     }
 
     if (messaggio.length < 10 && messaggio.length > 0) {
-      setErrorMessaggio("Inserire almeno 10 caratteri");
+      setErrorMessaggio(t("err_messaggio"));
     } else {
       setErrorMessaggio("");
     }
@@ -109,7 +110,7 @@ function Form() {
       <input type="hidden" name="form-name" value="contatti" />
       <p>
         {" "}
-        <label htmlFor="nome">Nome:</label> <br />
+        <label htmlFor="nome">{t("nome")}</label> <br />
         <input
           onChange={(e) => {
             setNome(e.target.value);
@@ -121,7 +122,7 @@ function Form() {
         />
       </p>
       <p>
-        <label htmlFor="cognome">Cognome:</label> <br />
+        <label htmlFor="cognome">{t("cognome")}</label> <br />
         <input
           onChange={(e) => {
             setCognome(e.target.value);
@@ -133,7 +134,7 @@ function Form() {
         />
       </p>
       <p>
-        <label htmlFor="youremail">Indirizzo mail:</label> <br />
+        <label htmlFor="youremail">{t("email")}</label> <br />
         <input
           onChange={(e) => setMail(e.target.value)}
           type="email"
@@ -144,7 +145,7 @@ function Form() {
       </p>
 
       <p>
-        <label htmlFor="yourmessage">Messaggio:</label> <br />
+        <label htmlFor="yourmessage">{t("messaggio")}</label> <br />
         <textarea
           onChange={(e) => {
             setMessaggio(e.target.value);

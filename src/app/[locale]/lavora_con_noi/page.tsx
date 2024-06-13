@@ -6,6 +6,8 @@ import Accordion from "../../../components/accordion/accordion";
 import FormLavoraConNoi from "../../../components/form/formLavora";
 import { motion } from "framer-motion";
 import ImagePreload from "../../../components/imagePreload/imagePreload";
+import { useLocale } from "next-intl";
+import data from "../../../../public/data/lavora_con_noi.json";
 
 const dataCards = [
   {
@@ -60,6 +62,10 @@ const dataAccordion = [
 ];
 
 function LavoraConNoi() {
+  const locale = useLocale();
+
+  const dataLocale = data[locale as keyof typeof data];
+
   return (
     <>
       <div className={"mainImage"}>
@@ -82,7 +88,7 @@ function LavoraConNoi() {
             height={40}
             alt="bullet image"
           />
-          Lavora con noi{" "}
+          {dataLocale.sezione1.titolo}
         </h1>
         <section className={style.annunci}>
           <CardsLavora dataCards={dataCards} />
@@ -96,56 +102,36 @@ function LavoraConNoi() {
               height={60}
               alt="warning"
             />{" "}
-            <p>
-              Se non hai esperienza in questo settore e sei interessato
-              intraprendere questa attività, ti offriamo un periodo formativo,
-              requisiti minimi:
-            </p>
+            <p>{dataLocale.sezione1.testo1}</p>
           </div>
           <div className={style.warning__content}>
             <div>
-              <h3>CQV Engineer:</h3>
+              <h3>{dataLocale.sezione1.left.titolo}</h3>
               <ul>
-                <li>
-                  Laurea più attinente: Ingegneria Chimica Ingegneria
-                  Elettronica
-                </li>
-                <li>Ingegneria dell’Automazione</li>
-                <li>Ingegneria Informatica</li>
-                <li>Ingegneria delle Telecomunicazioni</li>
-                <li>Chimica e Tecnologie Farmaceutiche</li>
+                {dataLocale.sezione1.left.list.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
             </div>
             <div>
-              <h3>CQV Technician</h3>
+              <h3>{dataLocale.sezione1.right.titolo}</h3>
               <ul>
-                <li>Istruzione superiore più attinente:</li>
-                <li>Diploma di Perito Elettronico e automazione</li>
-                <li>Diploma di Perito Chimico</li>
-                <li>Diploma di Perito Informatico</li>
+                {dataLocale.sezione1.right.list.map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </ul>
             </div>
           </div>
           <div></div>
         </section>
         <section className={style.info}>
-          <h2>Che cos&apos;è il processo di convalida CQV?</h2>
-          <p>
-            Quando viene prodotto un farmaco o un prodotto medico, ci sono molti
-            rischi che ne derivano. Questo è il motivo per cui è fondamentale
-            che esistano processi per monitorare e valutare la sicurezza delle
-            apparecchiature utilizzate per sviluppare prodotti farmaceutici. Per
-            fare ciò, le aziende farmaceutiche seguono il processo CQV CQV è
-            l&apos;acronimo di Commissioning, Qualification and Validation. Si
-            tratta di un processo di test in più fasi che consente alle aziende
-            farmaceutiche di testare le proprie apparecchiature di produzione in
-            base agli standard, alle normative e ai requisiti del settore.
-          </p>
-          <Accordion data={dataAccordion} />
+          <h2>{dataLocale.sezione2.titolo}</h2>
+          <p>{dataLocale.sezione2.testo}</p>
+          <Accordion data={dataLocale.sezione2.list} />
         </section>
 
         <section id="formCandidature" className={style.form}>
-          <h2>Rientri in un profilo che ricerchiamo? </h2>
+          <h2>{dataLocale.contatti.titolo}</h2>
           <FormLavoraConNoi candidature={dataCards} />
         </section>
       </motion.main>
