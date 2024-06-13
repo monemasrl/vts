@@ -19,19 +19,19 @@
         }
     },
     "en": {
-        "titolo": "la nostra azienda",
-        "testo": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”. VTS Srl, attualmente comprende un team di 30 persone tra Projet Manager, CQV Engineer, e CQV Technician. Visto l’esponenziale richiesta delle industrie farmaceutiche di questo tipo di consulenza (CQV), VTS è in continua ricerca di personale, sia già qualificato che da formare.esecutore di test in campo e Calibrazioni della strumentazione critica.",
+        "titolo": "Our company",
+        "testo": "Validations and Technical Services s.r.l. (VTS Srl), headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.&quot; VTS Srl, currently comprises a team of 30 people including Projet Managers, CQV Engineers, and CQV Technicians. Given the exponential demand from pharmaceutical industries for this type of consulting (CQV), VTS is continuously looking for personnel, both already qualified and to be trained.",
         "sedi": {
-            "titolo": "Le nostre sedi",
-            "subtitolo": "La sede operativa e gli uffici di VTS Srl si trovano in via della Stazione 27 Mologno Barga LU.",
-            "testo": "Da alcuni anni VTS Srl ha aperto 2 subsidiaries:",
+            "titolo": "Our locations",
+            "subtitolo": "The operational headquarters and offices of VTS Srl are located at 27 Via della Stazione, Mologno Barga LU.",
+            "testo": "In the past several years, VTS Srl has opened 2 subsidiaries:",
             "list": [
                 {
-                    "titolo": "VTS USA Inc. con sede ad Atlanta GA",
+                    "titolo": "VTS USA Inc. based in Atlanta GA.",
                     "url": "/vts_usa_inc"
                 },
                 {
-                    "titolo": "VTS SWITZERLAND Sagl con sede a Lugano CH",
+                    "titolo": "VTS USA Inc. based in Atlanta GA.",
                     "url": ""
                 }
             ]

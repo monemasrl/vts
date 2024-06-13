@@ -91,7 +91,7 @@ function NavBar() {
               </li>
             ))}
             <li>
-              <Switcher />
+              <Switcher isHome={isHome()} />
             </li>
           </ul>
         </div>

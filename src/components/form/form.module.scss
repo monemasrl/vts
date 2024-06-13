@@ -23,8 +23,10 @@ form.form {
   background-color: $blue;
   padding: 1rem 2rem;
   margin: 2rem 0;
-
   color: white;
+  @media #{$phone} {
+    padding: 0rem;
+  }
   input,
   textarea,
   textarea:focus-visible,

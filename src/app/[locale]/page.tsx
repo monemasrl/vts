@@ -187,7 +187,7 @@ export default function Home() {
             </h2>
             <p dangerouslySetInnerHTML={{ __html: dataLocale.lavora.testo }} />
 
-            <Link href={locale + t("lavora_con_noi")}>
+            <Link href={locale + t("lavora_con_noi.titolo")}>
               <div className="button">
                 <span>{dataLocale.lavora.button}</span>
                 <MdOutlineChevronRight />{" "}

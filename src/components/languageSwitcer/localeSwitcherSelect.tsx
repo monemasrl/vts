@@ -7,11 +7,13 @@ import style from "./switcher.module.scss";
 type Props = {
   children: ReactNode;
   defaultValue: string;
+  isHome: boolean;
 };
 
 export default function LocaleSwitcherSelect({
   children,
   defaultValue,
+  isHome,
 }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -34,7 +36,7 @@ export default function LocaleSwitcherSelect({
   return (
     <label>
       <select
-        className={style.switcher}
+        className={`${style.switcher} ${isHome ? style.switcher__home : null}`}
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}
