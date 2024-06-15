@@ -6,16 +6,10 @@ import { useRouter, usePathname } from "@/navigation";
 import { BiChevronDown } from "react-icons/bi";
 import style from "./switcher.module.scss";
 type Props = {
-  children: ReactNode;
-  defaultValue: string;
   isHome: boolean;
 };
 
-export default function LocaleSwitcherSelect({
-  children,
-  defaultValue,
-  isHome,
-}: Props) {
+export default function Switcher({ isHome }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -57,7 +51,6 @@ export default function LocaleSwitcherSelect({
         className={`${style.switcher} ${isHome ? style.switcher__home : null} ${
           isOpen ? style.switcher__open : null
         }`}
-        defaultValue={defaultValue}
       >
         {currentLocales.map((cur) => (
           <li

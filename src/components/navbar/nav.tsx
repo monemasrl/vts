@@ -7,7 +7,9 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+
 import Switcher from "../languageSwitcer/switcher";
+
 function NavBar() {
   const pathN = usePathname();
   const locale = useLocale();
