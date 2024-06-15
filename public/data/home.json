@@ -79,7 +79,8 @@
         "lavora": {
             "titolo": "Lavora con noi",
             "testo": "La nostra azienda è sempre alla ricerca di personale qualificato.<br />Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
-            "button": "vai alle candidature"
+            "button": "vai alle candidature",
+            "url": "/lavora_con_noi"
         },
         "contattaci": {
             "titolo": "contattaci",
@@ -174,7 +175,8 @@
         "lavora": {
             "titolo": "Work with us",
             "testo": "Our company is always looking for qualified staff.<br />If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
-            "button": "GO TO APPLICATIONS"
+            "button": "GO TO APPLICATIONS",
+            "url": "/work_with_us"
         },
         "contattaci": {
             "titolo": "Contact us",
