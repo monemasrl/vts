@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import { lavoraMetadata, lavoraPageJsonLD } from "../../metadata";
+
 export const metadata: Metadata = lavoraMetadata;
 
 function Layout({ children }: { children: React.ReactNode }) {

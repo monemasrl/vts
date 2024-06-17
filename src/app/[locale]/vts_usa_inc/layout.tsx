@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import React from "react";
 import meta from "../../../../public/data/meta-vts_usa_inc.json";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
