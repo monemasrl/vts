@@ -3,8 +3,11 @@ import Image from "next/image";
 import style from "./style.module.scss";
 import { motion } from "framer-motion";
 import ImagePreload from "../../../components/imagePreload/imagePreload";
-
+import { useLocale } from "next-intl";
+import data from "../../../../public/data/vts_usa_inc.json";
 function VtsUsaPage() {
+  const locale = useLocale();
+  const dataLocale = data[locale as keyof typeof data];
   return (
     <>
       <div className={"mainImage"}>
@@ -23,29 +26,20 @@ function VtsUsaPage() {
             height={40}
             alt="bullet image"
           />
-          VTS USA INC.
+          {dataLocale.titolo}
         </h1>
         <section className={style.firstSection}>
-          <p>
-            <strong>
-              VTS USA Inc. serves as the subsidiary of VTS Srl in the United
-              States.
-            </strong>
-            <br /> Established to cater to the growing demand for validation and
-            technical services in the American pharmaceutical industry, VTS USA
-            Inc.
-            <br /> operates with the same commitment to excellence and expertise
-            that characterizes its parent company. <br /> With a dedicated team
-            of professionals, VTS USA Inc. aims to provide top-notch consultancy
-            services and support to clients across the United States, ensuring
-            compliance and efficiency in their operations.{" "}
-          </p>
-          <h3>CONTACTS</h3>
+          <p dangerouslySetInnerHTML={{ __html: dataLocale.testo }} />
+
+          <h3>{dataLocale.contatti}</h3>
           <ul>
-            <li>8000 Avalon Blvd, Suite 100 and 200</li>
-            <li>Alpharetta 30009 Atlanta, GA</li>
+            <li>{dataLocale.address.address}</li>
+            <li>{dataLocale.address.state}</li>
+
             <li>
-              <a href="mailto:info@vtsus.com">Email: info@vtsus.com</a>
+              <a href={"mailto:" + dataLocale.address.mail}>
+                Email: {dataLocale.address.mail}
+              </a>
             </li>
           </ul>
         </section>

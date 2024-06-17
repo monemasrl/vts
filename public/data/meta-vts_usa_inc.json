@@ -1,0 +1,92 @@
+{
+    "it": {
+        "metaHtml": {
+            "title": "VTServices USA INC.",
+            "description": "VTS USA Inc. è la filiale di VTS Srl negli Stati Uniti. Fondata per soddisfare la crescente domanda di servizi tecnici e di convalida nell'industria farmaceutica americana, VTS USA Inc. opera con lo stesso impegno per l'eccellenza e la competenza che caratterizza la società madre.",
+            "keywords": "VTServices, usa, validation, technical services",
+            "openGraph": {
+                "title": "VTServices USA INC.",
+                "description": "VTS USA Inc. è la filiale di VTS Srl negli Stati Uniti. Fondata per soddisfare la crescente domanda di servizi tecnici e di convalida nell'industria farmaceutica americana, VTS USA Inc. opera con lo stesso impegno per l'eccellenza e la competenza che caratterizza la società madre.",
+                "type": "website",
+                "locale": "it_IT",
+                "url": "https://vtservices.it/",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://vtservices.it/image/4_3graph.jpg",
+                "https://vtservices.it/image/mainimage.jpg"
+            ],
+            "name": "VTServices",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
+                    "addressLocality": "Alpharetta",
+                    "addressRegion": "Atlanta",
+                    "postalCode": "30009",
+                    "addressCountry": "GA"
+                }
+            ],
+            "url": "https://vtservices.it",
+            "telephone": "+320583711372",
+            "email": "info@vtservices.it"
+        }
+    },
+    "en": {
+        "metaHtml": {
+            "title": "VTServices USA INC.",
+            "description": "VTS USA Inc. serves as the subsidiary of VTS Srl in the United States Established to cater to the growing demand for validation and technical services in the American pharmaceutical industry, VTS USA Inc.operates with the same commitment to excellence and expertise that characterizes its parent company.",
+            "keywords": "VTServices, usa, validation, technical services",
+            "openGraph": {
+                "title": "VTServices USA INC.",
+                "description": "VTS USA Inc. serves as the subsidiary of VTS Srl in the United States Established to cater to the growing demand for validation and technical services in the American pharmaceutical industry, VTS USA Inc.operates with the same commitment to excellence and expertise that characterizes its parent company.",
+                "type": "website",
+                "locale": "en_US",
+                "url": "https://vtservices.it/",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://vtservices.it/image/4_3graph.jpg",
+                "https://vtservices.it/image/mainimage.jpg"
+            ],
+            "name": "VTServices",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
+                    "addressLocality": "Alpharetta",
+                    "addressRegion": "Atlanta",
+                    "postalCode": "30009",
+                    "addressCountry": "GA"
+                }
+            ],
+            "url": "https://vtservices.it",
+            "telephone": "+320583711372",
+            "email": "info@vtservices.it"
+        }
+    }
+}

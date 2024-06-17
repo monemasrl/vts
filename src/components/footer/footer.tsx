@@ -69,7 +69,7 @@ function Footer() {
         <li>Cookie Policy</li>
       </ul>
       <div className={style.footer__fourth}>
-        <h3>seguici su:</h3>
+        <h3>{t("col4.seguici")}</h3>
         <div className={style.socialIcons}>
           <Image src="/image/what.svg" width={50} height={50} alt="logo" />
           <Image src="/image/link.svg" width={50} height={50} alt="logo" />

@@ -5,15 +5,15 @@
             "url": "/"
         },
         "azienda": {
-            "titolo": "azienda",
+            "titolo": "Azienda",
             "url": "/azienda"
         },
         "lavora_con_noi": {
-            "titolo": "lavora con noi",
+            "titolo": "Lavora con noi",
             "url": "/lavora_con_noi"
         },
         "contatti": {
-            "titolo": "contatti",
+            "titolo": "Contatti",
             "url": "/#contatti"
         }
     },
@@ -29,7 +29,7 @@
             "tel": "+390583711372",
             "email": "info@vtservices.it",
             "subsidiary": "Wholly owned subsidiary in USA",
-            "subsidiary_indirizzo": "2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346"
+            "subsidiary_indirizzo": "8000 Avalon Blvd, Suite 100 and 200, Alpharetta, GA 30009"
         },
         "col3": {
             "privacy": "/privacy",
@@ -37,6 +37,7 @@
             "credits": "Credits"
         },
         "col4": {
+            "seguici": "seguici:",
             "social": {
                 "facebook": "https://www.facebook.com/vtservices.it",
                 "linkedin": "https://www.linkedin.com/company/vt-services-srl",
@@ -54,7 +55,8 @@
         "err_email": "Inserire un indirizzo email valido",
         "messaggio": "Messaggio",
         "err_messaggio": "Inserire almeno 10 caratteri",
-        "success": "<h3>Messaggio inviato</h3><p>Risponderemo al messaggio nel più breve tempo possibile</p>"
+        "success": "<h3>Messaggio inviato</h3><p>Risponderemo al messaggio nel più breve tempo possibile</p>",
+        "invia": "Invia"
     },
     "FormLavora": {
         "nome": "Nome",
@@ -70,7 +72,8 @@
         "annunci": {
             "annuncio1": "CQV TECHNICIAN (MINIMO 2 ANNI DI ESPERIENZA)",
             "annuncio2": "CQV ENGINEER (MINIMO 5 ANNI DI ESPERIENZA)",
-            "annuncio3": "senza esperienza"
-        }
+            "annuncio3": "SENZA ESPERIENZA"
+        },
+        "invia": "Invia"
     }
 }

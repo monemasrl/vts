@@ -1,17 +1,21 @@
 import { Metadata } from "next";
 import React from "react";
-import { aziendaMetadata, aziendaPageJsonLD } from "../../metadata";
+import meta from "../../../../public/data/meta-azienda.json";
+import JsonldMetaData from "@/components/metaData/jsonldmetadata";
 
-export const metadata: Metadata = aziendaMetadata;
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const data = meta[locale as keyof typeof meta].metaHtml;
+  return data;
+}
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={aziendaPageJsonLD()}
-        key="product-jsonld"
-      />
+      <JsonldMetaData metadata={meta} />
       {children}
     </>
   );

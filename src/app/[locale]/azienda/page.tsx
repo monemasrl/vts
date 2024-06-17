@@ -4,9 +4,9 @@ import style from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import ImagePreload from "../../../components/imagePreload/imagePreload";
-
 import { useLocale } from "next-intl";
 import data from "../../../../public/data/azienda.json";
+
 function Azienda() {
   const locale = useLocale();
   const dataLocale = data[locale as keyof typeof data];

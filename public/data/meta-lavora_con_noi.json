@@ -1,0 +1,148 @@
+{
+    "it": {
+        "metaHtml": {
+            "title": "VTServices lavora con noi",
+            "description": "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+            "keywords": "VTServices, Commissioning, qualification, validation, technical services lavora con noi",
+            "openGraph": {
+                "title": "VTServices lavora con noi",
+                "description": "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
+                "type": "website",
+                "locale": "it_IT",
+                "url": "https://vtservices.it",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": [
+            {
+                "@context": "https://schema.org",
+                "@type": "jobPosting",
+                "title": "CQV Engineer",
+                "description": "CQV Engineer (minimo 5 anni di esperienza)",
+                "employmentType": "FULL_TIME",
+                "hiringOrganization": {
+                    "@type": "Organization",
+                    "name": "VTServices",
+                    "sameAs": "https://vtservices.it/"
+                },
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": " via della Stazione 27 Mologno Barga",
+                        "addressLocality": "Lucca",
+                        "addressRegion": "Toscana",
+                        "postalCode": "55051",
+                        "addressCountry": "IT"
+                    }
+                },
+                "experienceRequirements": "5 anni"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "jobPosting",
+                "title": "CQV Technician",
+                "description": "CQV Technician (minimo 2 anni di esperienza)",
+                "employmentType": "FULL_TIME",
+                "hiringOrganization": {
+                    "@type": "Organization",
+                    "name": "VTServices",
+                    "sameAs": "https://vtservices.it/"
+                },
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": " via della Stazione 27 Mologno Barga",
+                        "addressLocality": "Lucca",
+                        "addressRegion": "Toscana",
+                        "postalCode": "55051",
+                        "addressCountry": "IT"
+                    }
+                },
+                "experienceRequirements": "2 anni"
+            }
+        ]
+    },
+    "en": {
+        "metaHtml": {
+            "title": "VTServices work with us",
+            "description": "Our company is always looking for qualified staff.If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
+            "keywords": "VTServices, Commissioning, qualification, validation, technical services work with us",
+            "openGraph": {
+                "title": "VTServices work with us",
+                "description": "Our company is always looking for qualified staff.If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
+                "type": "website",
+                "locale": "en_US",
+                "url": "https://vtservices.it",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": [
+            {
+                "@context": "https://schema.org",
+                "@type": "jobPosting",
+                "title": "CQV Engineer",
+                "description": "CQV Engineer (minimum 5 years of experience)",
+                "employmentType": "FULL_TIME",
+                "hiringOrganization": {
+                    "@type": "Organization",
+                    "name": "VTServices",
+                    "sameAs": "https://vtservices.it/"
+                },
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": " via della Stazione 27 Mologno Barga",
+                        "addressLocality": "Lucca",
+                        "addressRegion": "Toscana",
+                        "postalCode": "55051",
+                        "addressCountry": "IT"
+                    }
+                },
+                "experienceRequirements": "5 years"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "jobPosting",
+                "title": "CQV Technician",
+                "description": "CQV Technician (minimum 2 years of experience)",
+                "employmentType": "FULL_TIME",
+                "hiringOrganization": {
+                    "@type": "Organization",
+                    "name": "VTServices",
+                    "sameAs": "https://vtservices.it/"
+                },
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": " via della Stazione 27 Mologno Barga",
+                        "addressLocality": "Lucca",
+                        "addressRegion": "Toscana",
+                        "postalCode": "55051",
+                        "addressCountry": "IT"
+                    }
+                },
+                "experienceRequirements": "2 years"
+            }
+        ]
+    }
+}

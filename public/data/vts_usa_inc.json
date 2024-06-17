@@ -1,0 +1,22 @@
+{
+    "it": {
+        "titolo": "VTS USA INC.",
+        "testo": "<strong>VTS USA Inc. è la filiale di VTS Srl negli Stati Uniti.</strong>Fondata per soddisfare la crescente domanda di servizi tecnici e di convalida nell'industria farmaceutica americana, VTS USA Inc. opera con lo stesso impegno per l'eccellenza e la competenza che caratterizza la società madre.Con un team dedicato di professionisti, VTS USA Inc. mira a fornire servizi di consulenza e supporto di alto livello ai clienti in tutti gli Stati Uniti, garantendo la conformità e l'efficienza delle loro operazioni.",
+        "contatti": "Contatti",
+        "address": {
+            "address": "8000 Avalon Blvd, Suite 100 and 200",
+            "state": "Alpharetta 30009 Atlanta, GA",
+            "mail": "Email: info@vtsus.com"
+        }
+    },
+    "en": {
+        "titolo": "VTS USA INC.",
+        "testo": "<strong>VTS USA Inc. serves as the subsidiary of VTS Srl in the United</strong> States Established to cater to the growing demand for validation and technical services in the American pharmaceutical industry, VTS USA Inc.operates with the same commitment to excellence and expertise that characterizes its parent company.<br />With a dedicated team of professionals, VTS USA Inc. aims to provide top-notch consultancy services and support to clients across the United States, ensuring compliance and efficiency in their operations.",
+        "contatti": "Contacts",
+        "address": {
+            "address": "8000 Avalon Blvd, Suite 100 and 200",
+            "state": "Alpharetta 30009 Atlanta, GA",
+            "mail": "Email: info@vtsus.com"
+        }
+    }
+}

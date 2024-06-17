@@ -1,0 +1,108 @@
+{
+    "it": {
+        "metaHtml": {
+            "title": "VTServices Azienda",
+            "description": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”",
+            "keywords": "VTServices, azienda, validation, technical services",
+            "openGraph": {
+                "title": "VTServices Azienda",
+                "description": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”",
+                "type": "website",
+                "locale": "it_IT",
+                "url": "https://vtservices.it",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://vtservices.it/image/4_3graph.jpg",
+                "https://vtservices.it/image/mainimage.jpg"
+            ],
+            "name": "VTServices",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": " via della Stazione 27 Mologno Barga",
+                    "addressLocality": "Lucca",
+                    "addressRegion": "Toscana",
+                    "postalCode": "55051",
+                    "addressCountry": "IT"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
+                    "addressLocality": "Alpharetta",
+                    "addressRegion": "Georgia",
+                    "postalCode": "30009",
+                    "addressCountry": "US"
+                }
+            ],
+            "url": "https://vtservices.it",
+            "telephone": "+320583711372",
+            "email": "info@vtservices.it"
+        }
+    },
+    "en": {
+        "metaHtml": {
+            "title": "VTServices Company",
+            "description": "Validations and Technical Services s.r.l. (VTS Srl), headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.”",
+            "keywords": "VTServices, company, validation, technical services",
+            "openGraph": {
+                "title": "VTServices Company",
+                "description": "Validations and Technical Services s.r.l. (VTS Srl), headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.”",
+                "type": "website",
+                "locale": "en_US",
+                "url": "https://vtservices.it",
+                "siteName": "VTServices",
+                "images": [
+                    {
+                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "VTServices website"
+                    }
+                ]
+            }
+        },
+        "jsonld": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": [
+                "https://vtservices.it/image/4_3graph.jpg",
+                "https://vtservices.it/image/mainimage.jpg"
+            ],
+            "name": "VTServices",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": " via della Stazione 27 Mologno Barga",
+                    "addressLocality": "Lucca",
+                    "addressRegion": "Toscana",
+                    "postalCode": "55051",
+                    "addressCountry": "IT"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "8000 Avalon Blvd, Suite 100 and 200",
+                    "addressLocality": "Alpharetta 30009 Atlanta",
+                    "addressRegion": "Georgia",
+                    "postalCode": "30009",
+                    "addressCountry": "US"
+                }
+            ],
+            "url": "https://vtservices.it",
+            "telephone": "+320583711372",
+            "email": "info@vtservices.it"
+        }
+    }
+}

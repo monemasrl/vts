@@ -14,7 +14,7 @@ import data from "../../../public/data/home.json";
 
 export default function Home() {
   const [splash, setSplash] = useState(true);
-  console.log(data);
+
   useEffect(() => {}, []);
 
   setTimeout(() => {

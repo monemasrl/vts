@@ -1,10 +1,11 @@
 "use client";
 import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
-import { ReactNode, useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "@/navigation";
 import { BiChevronDown } from "react-icons/bi";
 import style from "./switcher.module.scss";
+
 type Props = {
   isHome: boolean;
 };
@@ -20,15 +21,17 @@ export default function Switcher({ isHome }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleRouteChangeAndSwitcherClose(cur: string, locale: string) {
-    setNextLocale(cur);
+    if (cur !== locale) {
+      setNextLocale(cur);
+    }
     if (cur === locale) {
       setIsOpen((prev) => !prev);
     }
-    const newLocales = currentLocales.filter((loc) => locale !== loc);
   }
 
   useEffect(() => {
-    const newLocales = currentLocales.filter((loc) => locale !== loc);
+    console.log(currentLocales, "currentLocales");
+    const newLocales = currentLocales.filter((loc) => nextLocale !== loc);
     setCurrentLocales([nextLocale, ...newLocales]);
     router.replace(
       // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -37,6 +40,7 @@ export default function Switcher({ isHome }: Props) {
       { pathname, params },
       { locale: nextLocale }
     );
+
     return () => {
       setIsOpen(false);
     };
@@ -52,15 +56,17 @@ export default function Switcher({ isHome }: Props) {
           isOpen ? style.switcher__open : null
         }`}
       >
-        {currentLocales.map((cur) => (
-          <li
-            key={cur}
-            value={cur}
-            onClick={() => handleRouteChangeAndSwitcherClose(cur, locale)}
-          >
-            {cur}
-          </li>
-        ))}
+        {currentLocales.map((cur) => {
+          return (
+            <li
+              key={cur}
+              value={cur}
+              onClick={() => handleRouteChangeAndSwitcherClose(cur, locale)}
+            >
+              {cur}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

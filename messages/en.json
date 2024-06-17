@@ -5,15 +5,15 @@
             "url": "/"
         },
         "azienda": {
-            "titolo": "company",
+            "titolo": "Company",
             "url": "/company"
         },
         "lavora_con_noi": {
-            "titolo": "work with us",
+            "titolo": "Work with us",
             "url": "/work_with_us"
         },
         "contatti": {
-            "titolo": "contacts",
+            "titolo": "Contacts",
             "url": "/#contatti"
         }
     },
@@ -29,7 +29,7 @@
             "tel": "+390583711372",
             "email": "info@vtservices.it",
             "subsidiary": "Wholly owned subsidiary in USA",
-            "subsidiary_indirizzo": "2 Ravinia Drive, Ste. 1630 - Atlanta, GA 30346"
+            "subsidiary_indirizzo": "8000 Avalon Blvd, Suite 100 and 200"
         },
         "col3": {
             "privacy": "/privacy",
@@ -37,6 +37,7 @@
             "credits": "Credits"
         },
         "col4": {
+            "seguici": "Follow us:",
             "social": {
                 "facebook": "https://www.facebook.com/vtservices.it",
                 "linkedin": "https://www.linkedin.com/company/vt-services-srl",
@@ -54,7 +55,8 @@
         "err_email": "pleas enter a valid email address",
         "messaggio": "Message",
         "err_messaggio": "please enter at least 10 characters",
-        "success": "<h3>Message sent</h3><p>Thank you for contacting us</p>"
+        "success": "<h3>Message sent</h3><p>Thank you for contacting us</p>",
+        "invia": "Send"
     },
     "FormLavora": {
         "nome": "Name",
@@ -63,14 +65,15 @@
         "err_cognome": "Please enter at least 3 characters",
         "email": "Email address",
         "err_email": "pleas enter a valid email address",
-        "messaggio": "justify your application",
+        "messaggio": "Justify your application",
         "candidatura": "Application",
         "err_messaggio": "Inserire almeno 10 caratteri",
         "success": "<h3>Application sent</h3><p>Thank you for contacting us</p>",
         "annunci": {
             "annuncio1": "CQV TECHNICIAN (MINIMUM 2 YEARS EXPERIENCE)",
             "annuncio2": "CQV ENGINEER (MINIMUM 5 YEARS EXPERIENCE)",
-            "annuncio3": "senza esperienza"
-        }
+            "annuncio3": "NO EXPERIENCE"
+        },
+        "invia": "Send"
     }
 }

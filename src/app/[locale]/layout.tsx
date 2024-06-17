@@ -1,18 +1,25 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import type { Metadata } from "next";
+import { getMessages, getTranslations } from "next-intl/server";
 import { Oswald } from "next/font/google";
 import "../sass/all.scss";
 import NavBar from "../../components/navbar/nav";
-import Hero from "../../components/hero/hero";
 import SmoothScroll from "../../components/scroll/smoothScroll";
 import Footer from "../../components/footer/footer";
 import ScrollTop from "../../components/scrollTop/scrollTop";
-import { homePageJsonLD, homeMetadata } from "../metadata";
+import JsonldMetaData from "@/components/metaData/jsonldmetadata";
+import meta from "../../../public/data/meta-home.json";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
-export const metadata: Metadata = homeMetadata;
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const data = meta[locale as keyof typeof meta].metaHtml;
+
+  return data;
+}
 
 export default async function RootLayout({
   children,
@@ -24,14 +31,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="it">
+    <html lang={locale}>
       <head>
         <link rel="icon" href="/image/favicon.ico" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={homePageJsonLD()}
-          key="product-jsonld"
-        />
+        <JsonldMetaData metadata={meta} />
       </head>
       <body className={oswald.className}>
         <SmoothScroll>
