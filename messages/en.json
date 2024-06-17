@@ -19,9 +19,9 @@
     },
     "Footer": {
         "col1": {
-            "piva": "Codice fiscale/Partita IVA: 02310660465",
-            "rea": "Numero REA: LU 215156 Camera di Commercio Industria Artigianato e Agricoltura di LUCCA",
-            "pec": "indirizzo PEC:",
+            "piva": "Tax code/VAT number: 02310660465",
+            "rea": "REA number: LU 215156 Camera di Commercio Industria Artigianato e Agricoltura di LUCCA",
+            "pec": "PEC address:",
             "pecURL": "validationssrl@legalmail.it"
         },
         "col2": {
