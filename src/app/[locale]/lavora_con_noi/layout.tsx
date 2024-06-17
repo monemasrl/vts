@@ -1,16 +1,19 @@
-import { Metadata } from "next";
+import JsonldMetaData from "@/components/metaData/jsonldmetadata";
 import React from "react";
-
-export const metadata: Metadata = lavoraMetadata;
+import meta from "../../../../public/data/meta-lavora_con_noi.json";
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const data = meta[locale as keyof typeof meta].metaHtml;
+  return data;
+}
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={lavoraPageJsonLD()}
-        key="product-jsonld"
-      />
+      <JsonldMetaData metadata={meta} />
       {children}
     </>
   );
