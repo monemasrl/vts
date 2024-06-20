@@ -63,7 +63,7 @@ function Hero() {
           <source src="/video/vts.mp4" type="video/mp4" />
           <Image
             className={style.hero__image}
-            src={"/image/mainImage.jpg"}
+            src={"/image/mainimage.jpg"}
             layout="fill"
             alt="Immagine Principale HomePage"
             onLoadingComplete={() => setLoading(false)}
