@@ -74,6 +74,17 @@ button,
   height: 485px;
   overflow: hidden;
   position: relative;
+  @media #{$tablet} {
+    height: auto;
+  }
+  img {
+    object-fit: cover;
+
+    @media #{$tablet} {
+      object-fit: contain;
+      position: relative !important;
+    }
+  }
 }
 #contatti {
   scroll-behavior: smooth;
