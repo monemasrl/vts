@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "@/navigation";
 import { BiChevronDown } from "react-icons/bi";
+import { useMediaQuery } from "react-responsive";
 import "./switcher.scss";
 
 type Props = {
@@ -19,12 +20,16 @@ export default function Switcher({ isHome }: Props) {
   const [nextLocale, setNextLocale] = useState<string>(locale);
   const [currentLocales, setCurrentLocales] = useState<string[]>(locales);
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  function handleRouteChangeAndSwitcherClose(cur: string, locale: string) {
-    if (cur !== locale) {
-      setNextLocale(cur);
+  function handleRouteChangeAndSwitcherClose(
+    choseLang: string,
+    locale: string
+  ) {
+    if (choseLang !== locale) {
+      setNextLocale(choseLang);
     }
-    if (cur === locale) {
+    if (choseLang === locale) {
       setIsOpen((prev) => !prev);
     }
   }
@@ -47,6 +52,14 @@ export default function Switcher({ isHome }: Props) {
     };
   }, [nextLocale]);
 
+  function ifIsMobile() {
+    if (isMobile) {
+      console.log("isPhone");
+      return locales;
+    }
+    return currentLocales;
+  }
+
   return (
     <div className={"wrapperSwitcher"}>
       <div className={"icon"} onClick={() => setIsOpen((prev) => !prev)}>
@@ -57,7 +70,7 @@ export default function Switcher({ isHome }: Props) {
           isOpen ? "switcher__open" : null
         }`}
       >
-        {currentLocales.map((cur) => {
+        {ifIsMobile().map((cur) => {
           return (
             <li
               key={cur}

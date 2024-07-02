@@ -64,11 +64,10 @@
     color: white;
     @media #{$landscape} {
       left: 50%;
+      top: 65%;
       transform: translate(-50%, -50%);
     }
-    @media #{$phone} {
-      top: 65%;
-    }
+
     ul {
       display: flex;
       gap: 1rem;
