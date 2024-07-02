@@ -1,0 +1,20 @@
+.firstSection {
+  &__image {
+    margin: 2rem 0;
+  }
+}
+.secondSection {
+  margin-bottom: 5rem;
+  @media #{$landscape} {
+    padding-left: 1rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+  ul {
+    li {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}

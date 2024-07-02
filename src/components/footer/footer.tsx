@@ -4,7 +4,7 @@ import style from "./footer.module.scss";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-
+import { BsMailbox, BsPhone, BsPinMap } from "react-icons/bs";
 function Footer() {
   const pathN = usePathname();
   const locale = useLocale();
@@ -41,12 +41,18 @@ function Footer() {
         </ul>
       </div>
       <ul className={style.footer__second}>
-        <li>VTS</li>
-        <li> {t("col2.indirizzo")} </li>
         <li>
-          <a href={"tel:" + t("col2.tel")}>tel:{t("col2.tel")}</a>
+          VTS
+          <strong>VTS</strong>
         </li>
         <li>
+          <BsPinMap /> {t("col2.indirizzo")}{" "}
+        </li>
+        <li>
+          <BsPhone /> <a href={"tel:" + t("col2.tel")}>tel:{t("col2.tel")}</a>
+        </li>
+        <li>
+          <BsMailbox />{" "}
           <a href={"mailto:" + t("col2.email")}>{t("col2.email")}</a>
         </li>
         <li>{t("col2.subsidiary")}</li>
@@ -65,15 +71,25 @@ function Footer() {
             )}
           </li>
         ))}
-        <li>Privacy Policy</li>
-        <li>Cookie Policy</li>
+        <li>
+          <Link href={"/it/privacy"}>Privacy Policy</Link>
+        </li>
+        <li>
+          {" "}
+          <Link href={"/it/cookie"}>Cookie Policy</Link>
+        </li>
       </ul>
       <div className={style.footer__fourth}>
         <h3>{t("col4.seguici")}</h3>
         <div className={style.socialIcons}>
-          <Image src="/image/what.svg" width={50} height={50} alt="logo" />
-          <Image src="/image/link.svg" width={50} height={50} alt="logo" />
-          <Image src="/image/instagram.svg" width={50} height={50} alt="logo" />
+          <a
+            target="_blank"
+            href={
+              "https://www.linkedin.com/company/validationstechnicalservices/"
+            }
+          >
+            <Image src="/image/link.svg" width={50} height={50} alt="logo" />
+          </a>
         </div>
       </div>
     </footer>
