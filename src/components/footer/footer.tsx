@@ -42,7 +42,6 @@ function Footer() {
       </div>
       <ul className={style.footer__second}>
         <li>
-          VTS
           <strong>VTS</strong>
         </li>
         <li>

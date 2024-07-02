@@ -35,6 +35,9 @@
   }
   &__fourth {
     justify-self: center;
+    @media #{$landscape} {
+      justify-self: flex-start;
+    }
     h3 {
       margin-bottom: 0.5rem;
     }

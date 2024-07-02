@@ -7,6 +7,7 @@
   z-index: -1;
   @media #{$landscape} {
     height: 50vh;
+    margin-bottom: 2rem;
   }
   &__wrapperVideo {
     width: 100%;
@@ -64,6 +65,9 @@
     @media #{$landscape} {
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    @media #{$phone} {
+      top: 65%;
     }
     ul {
       display: flex;
