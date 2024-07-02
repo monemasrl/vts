@@ -131,6 +131,9 @@ function NavBar() {
               </a>
 
               <ul className={style.navMobile__nav}>
+                <li className={"navbar_mobile"}>
+                  <Switcher isHome={isHome()} />
+                </li>
                 {data.nav.map((item, index) => (
                   <li
                     className={`${

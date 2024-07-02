@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "@/navigation";
 import { BiChevronDown } from "react-icons/bi";
-import style from "./switcher.module.scss";
+import "./switcher.scss";
 
 type Props = {
   isHome: boolean;
@@ -48,13 +48,13 @@ export default function Switcher({ isHome }: Props) {
   }, [nextLocale]);
 
   return (
-    <div className={style.wrapperSwitcher}>
-      <div className={style.icon} onClick={() => setIsOpen((prev) => !prev)}>
+    <div className={"wrapperSwitcher"}>
+      <div className={"icon"} onClick={() => setIsOpen((prev) => !prev)}>
         <BiChevronDown />
       </div>
       <ul
-        className={`${style.switcher} ${isHome ? style.switcher__home : null} ${
-          isOpen ? style.switcher__open : null
+        className={`${"switcher"} ${isHome ? "switcher__home" : null} ${
+          isOpen ? "switcher__open" : null
         }`}
       >
         {currentLocales.map((cur) => {
@@ -63,6 +63,7 @@ export default function Switcher({ isHome }: Props) {
               key={cur}
               value={cur}
               onClick={() => handleRouteChangeAndSwitcherClose(cur, locale)}
+              className={cur === locale ? "active" : ""}
             >
               {cur}
             </li>
