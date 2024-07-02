@@ -73,8 +73,11 @@ form.form {
   .privacy {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
     input {
-      width: auto;
+      width: 20px;
+      height: 20px;
     }
   }
 }
