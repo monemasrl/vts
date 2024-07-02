@@ -20,6 +20,8 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
   const [candidatura, setCandidatura] = useState<string>("");
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
+  const [privacy, setPrivacy] = useState<boolean>(false);
+
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -74,13 +76,14 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
       cognome.length < 3 ||
       mail.length < 3 ||
       !mail.includes("@") ||
-      messaggio.length < 10
+      messaggio.length < 10 ||
+      !privacy
     ) {
       setSubmit(false);
     } else {
       setSubmit(true);
     }
-  }, [nome, mail, messaggio, cognome]);
+  }, [nome, mail, messaggio, cognome, privacy]);
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
@@ -174,6 +177,21 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
           id="yourmessage"
           required
         ></textarea>
+      </p>
+      <p className={style.privacy}>
+        <label htmlFor="privacy">
+          {t("privacy1")}{" "}
+          <a style={{ color: "white" }} href={t("privacy_url")}>
+            {t("privacy2")}
+          </a>{" "}
+        </label>
+        <input
+          onChange={(e) => setPrivacy(e.target.checked)}
+          id="privacy"
+          type="checkbox"
+          name="privacy"
+          required
+        />
       </p>
       {errorNome && <p className={style.error}>{errorNome}</p>}
       {errorCognome && <p className={style.error}>{errorCognome}</p>}

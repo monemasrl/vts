@@ -32,8 +32,8 @@
             "subsidiary_indirizzo": "8000 Avalon Blvd, Suite 100 and 200, Alpharetta, GA 30009"
         },
         "col3": {
-            "privacy": "/privacy",
-            "cookie": "/cookie",
+            "privacy": "/it/privacy",
+            "cookie": "/it/cookie",
             "credits": "Credits"
         },
         "col4": {
@@ -56,7 +56,11 @@
         "messaggio": "Messaggio",
         "err_messaggio": "Inserire almeno 10 caratteri",
         "success": "<h3>Messaggio inviato</h3><p>Risponderemo al messaggio nel più breve tempo possibile</p>",
-        "invia": "Invia"
+        "invia": "Invia",
+        "privacy1": "ho compreso e accettato i termini sulla",
+        "privacy2": "privacy policy",
+        "privacy_url": "/it/privacy",
+        "err_privacy": "Accettare i termini sulla privacy policy"
     },
     "FormLavora": {
         "nome": "Nome",
@@ -69,6 +73,11 @@
         "candidatura": "Candidatura",
         "err_messaggio": "Inserire almeno 10 caratteri",
         "success": "<h3>Messaggio inviato</h3><p>Grazie per la tua candidatura</p>",
+        "privacy": "Ho compreso e accettato i termini sulla <a href='/it/privacy'>privacy policy</a> ",
+        "privacy1": "ho compreso e accettato i termini sulla",
+        "privacy2": "privacy policy",
+        "privacy_url": "/it/privacy",
+        "err_privacy": "Accettare i termini sulla privacy policy",
         "annunci": {
             "annuncio1": "CQV TECHNICIAN (MINIMO 2 ANNI DI ESPERIENZA)",
             "annuncio2": "CQV ENGINEER (MINIMO 5 ANNI DI ESPERIENZA)",

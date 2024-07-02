@@ -16,7 +16,15 @@ export const pathnames: Pathnames<typeof locales> = {
     '/vts_usa_inc': {
         it: '/vts_usa_inc',
         en: '/vts_usa_inc'
-    }
+    },
+    '/cookie': {
+        it: '/cookie',
+        en: '/cookie'
+    },
+    '/privacy': {
+        it: '/privacy',
+        en: '/privacy'
+    },
 };
 
 export const localePrefix: LocalePrefix<typeof locales> = 'always';

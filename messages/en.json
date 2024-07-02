@@ -32,8 +32,8 @@
             "subsidiary_indirizzo": "8000 Avalon Blvd, Suite 100 and 200"
         },
         "col3": {
-            "privacy": "/privacy",
-            "cookie": "/cookie",
+            "privacy": "/en/privacy",
+            "cookie": "/en/cookie",
             "credits": "Credits"
         },
         "col4": {
@@ -56,6 +56,10 @@
         "messaggio": "Message",
         "err_messaggio": "please enter at least 10 characters",
         "success": "<h3>Message sent</h3><p>Thank you for contacting us</p>",
+        "privacy1": "accept the",
+        "privacy2": "privacy policy",
+        "privacy_url": "/en/privacy",
+        "err_privacy": "Please accept the privacy policy",
         "invia": "Send"
     },
     "FormLavora": {
@@ -69,6 +73,10 @@
         "candidatura": "Application",
         "err_messaggio": "Inserire almeno 10 caratteri",
         "success": "<h3>Application sent</h3><p>Thank you for contacting us</p>",
+        "privacy1": "accept the",
+        "privacy2": "privacy policy",
+        "privacy_url": "/en/privacy",
+        "err_privacy": "Please accept the privacy policy",
         "annunci": {
             "annuncio1": "CQV TECHNICIAN (MINIMUM 2 YEARS EXPERIENCE)",
             "annuncio2": "CQV ENGINEER (MINIMUM 5 YEARS EXPERIENCE)",

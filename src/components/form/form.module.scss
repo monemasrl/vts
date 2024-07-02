@@ -70,4 +70,11 @@ form.form {
     height: 40px;
     font-size: 1rem;
   }
+  .privacy {
+    display: flex;
+    justify-content: flex-start;
+    input {
+      width: auto;
+    }
+  }
 }
