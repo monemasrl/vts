@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 function SuccessMessage({ status }: { status: string | null }) {
   const t = useTranslations("FormContatti");
+  console.log("translation", t("success"));
   return (
     <AnimatePresence>
       {status === "ok" && (
@@ -33,7 +34,6 @@ function Form() {
   const [messaggio, setMessaggio] = useState<string>("");
   const [errorMessaggio, setErrorMessaggio] = useState<string>("");
   const [privacy, setPrivacy] = useState<boolean>(false);
-
   const [submit, setSubmit] = useState<boolean>(false);
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -81,6 +81,7 @@ function Form() {
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
+
     try {
       setStatus("pending");
       setError(null);
@@ -92,6 +93,11 @@ function Form() {
         body: new URLSearchParams(formData as any).toString(),
       });
       if (res.status === 200) {
+        setNome("");
+        setCognome("");
+        setMail("");
+        setMessaggio("");
+        setPrivacy(false);
         setStatus("ok");
       } else {
         setStatus("error");
@@ -118,6 +124,7 @@ function Form() {
           onChange={(e) => {
             setNome(e.target.value);
           }}
+          value={nome}
           type="text"
           name="nome"
           id="nome"
@@ -130,6 +137,7 @@ function Form() {
           onChange={(e) => {
             setCognome(e.target.value);
           }}
+          value={cognome}
           type="text"
           name="cognome"
           id=""
@@ -140,6 +148,7 @@ function Form() {
         <label htmlFor="youremail">{t("email")}</label> <br />
         <input
           onChange={(e) => setMail(e.target.value)}
+          value={mail}
           type="email"
           name="email"
           id="youremail"
@@ -154,6 +163,7 @@ function Form() {
             setMessaggio(e.target.value);
           }}
           name="message"
+          value={messaggio}
           id="yourmessage"
           required
         ></textarea>

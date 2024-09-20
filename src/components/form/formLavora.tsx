@@ -98,6 +98,11 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
         body: new URLSearchParams(formData as any).toString(),
       });
       if (res.status === 200) {
+        setNome("");
+        setCognome("");
+        setMail("");
+        setMessaggio("");
+        setPrivacy(false);
         setStatus("ok");
         console.log("ok");
       } else {
@@ -125,6 +130,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
           onChange={(e) => {
             setNome(e.target.value);
           }}
+          value={nome}
           type="text"
           name="nome"
           id="nome"
@@ -138,6 +144,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
           onChange={(e) => {
             setCognome(e.target.value);
           }}
+          value={cognome}
           type="text"
           name="cognome"
           id="cognome"
@@ -151,6 +158,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
           type="email"
           name="email"
           id="youremail"
+          value={mail}
           required
         />
       </p>
@@ -175,6 +183,7 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
           }}
           name="message"
           id="yourmessage"
+          value={messaggio}
           required
         ></textarea>
       </p>
