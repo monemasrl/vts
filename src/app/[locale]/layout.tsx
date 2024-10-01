@@ -11,7 +11,7 @@ import meta from "../../../public/data/meta-home.json";
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
-export async function generateMetadata({
+/* export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
@@ -21,7 +21,7 @@ export async function generateMetadata({
     return { status: 404 };
   }
   return data;
-}
+} */
 
 export default async function RootLayout({
   children,
