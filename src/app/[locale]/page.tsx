@@ -20,6 +20,7 @@ export default function Home({
   unstable_setRequestLocale(locale);
   const t = useTranslations("Navigation");
   const dataLocale = data[locale as keyof typeof data];
+
   return (
     <main>
       <Splash />
