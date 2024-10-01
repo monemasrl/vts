@@ -23,9 +23,7 @@ export default function Home({
   return (
     <main>
       <Splash />
-
       <Hero />
-
       <AnimatedSection className={style.FirstSectionHome}>
         <div className={style.FirstSectionHome__text}>
           <h1>
@@ -54,7 +52,10 @@ export default function Home({
                 }
                 return (
                   <li key={index}>
-                    <Link style={{ color: "#485f7d" }} href={locale + item.url}>
+                    <Link
+                      style={{ color: "#485f7d" }}
+                      href={"/" + locale + item.url}
+                    >
                       {item.titolo}
                     </Link>
                   </li>
@@ -144,7 +145,7 @@ export default function Home({
             </h2>
             <p dangerouslySetInnerHTML={{ __html: dataLocale.lavora.testo }} />
 
-            <Link href={locale + t("lavora_con_noi.url")}>
+            <Link href={"/" + locale + t("lavora_con_noi.url")}>
               <div className="button">
                 <span>{dataLocale.lavora.button}</span>
                 <MdOutlineChevronRight />{" "}
