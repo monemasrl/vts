@@ -17,31 +17,13 @@ export default function Home({
 }: {
   params: { locale: string };
 }) {
-  /*   const [splash, setSplash] = useState(true);
-
-  useEffect(() => {}, []);
-
-  setTimeout(() => {
-    setSplash(false);
-  }, 1300);
- */ unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
   const t = useTranslations("Navigation");
   const dataLocale = data[locale as keyof typeof data];
   return (
     <main>
-      {/*      <AnimatePresence>
-        {splash && (
-          <motion.div
-            key="splash"
-            initial={{ backgroundColor: "#283443", opacity: 1 }}
-            animate={{ backgroundColor: "#485f7d", opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Splash />
-          </motion.div>
-        )}
-      </AnimatePresence> */}
+      <Splash />
+
       <Hero />
 
       <AnimatedSection className={style.FirstSectionHome}>

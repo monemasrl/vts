@@ -20,7 +20,7 @@ export const ImagePreload = ({
   const [reveal, setReveal] = useState(false);
   const visibility = reveal ? "visible" : "hidden";
   const loader = reveal ? "none" : "inline-block";
-  console.log(full, "full");
+
   return (
     <div
       style={{

@@ -9,7 +9,7 @@ import { useLocale } from "next-intl";
 
 function Hero() {
   const router = useRouter();
-  console.log(router, "route");
+
   const isHome = usePathname() === "/" + useLocale();
 
   const container = {

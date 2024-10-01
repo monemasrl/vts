@@ -34,8 +34,6 @@ export default function Switcher({ isHome }: Props) {
     }
   }
 
-  console.log(currentLocales, "currentLocales");
-
   useEffect(() => {
     const newLocales = currentLocales.filter((loc) => nextLocale !== loc);
     setCurrentLocales([nextLocale, ...newLocales]);
@@ -54,7 +52,6 @@ export default function Switcher({ isHome }: Props) {
 
   function ifIsMobile() {
     if (isMobile) {
-      console.log("isPhone");
       return locales;
     }
     return currentLocales;

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 function SuccessMessage({ status }: { status: string | null }) {
   const t = useTranslations("FormContatti");
-  console.log("translation", t("success"));
+
   return (
     <AnimatePresence>
       {status === "ok" && (

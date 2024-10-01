@@ -104,7 +104,6 @@ function FormLavoraConNoi({ candidature }: { candidature: Tcandidature[] }) {
         setMessaggio("");
         setPrivacy(false);
         setStatus("ok");
-        console.log("ok");
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);

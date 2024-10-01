@@ -1,9 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Oswald } from "next/font/google";
 import "../sass/all.scss";
 import NavBar from "../../components/navbar/nav";
@@ -19,7 +15,7 @@ export function generateStaticParams() {
 }
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
-/* export async function generateMetadata({
+export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
@@ -29,7 +25,7 @@ const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
     return { status: 404 };
   }
   return data;
-} */
+}
 
 export default async function RootLayout({
   children,

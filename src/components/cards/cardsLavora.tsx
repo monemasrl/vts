@@ -12,7 +12,6 @@ type TdataCards = {
 };
 
 function CardsLavora({ dataCards }: { dataCards: TdataCards[] }) {
-  console.log(dataCards);
   return (
     <ul className={style.cardsLavora}>
       {dataCards.map((card, index) => (
