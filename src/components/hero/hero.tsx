@@ -74,7 +74,7 @@ function Hero() {
       <div className={style.hero__wrapperImg}>
         <Image
           className={style.hero__image}
-          src={"/image/mainImage.jpg"}
+          src={"/image/mainimage.jpg"}
           layout="fill"
           alt="Immagine Principale HomePage"
           onLoadingComplete={() => setLoading(false)}
