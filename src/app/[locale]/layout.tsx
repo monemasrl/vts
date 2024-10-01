@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
-export async function generateMetadata({
+/* export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
@@ -24,7 +24,7 @@ export async function generateMetadata({
   console.log(data);
 
   return data;
-}
+} */
 
 export default async function RootLayout({
   children,
