@@ -3,7 +3,7 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Oswald } from "next/font/google";
 import "../sass/all.scss";
 import NavBar from "../../components/navbar/nav";
-import SmoothScroll from "../../components/scroll/smoothScroll";
+
 import Footer from "../../components/footer/footer";
 import ScrollTop from "../../components/scrollTop/scrollTop";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
@@ -43,13 +43,12 @@ export default async function RootLayout({
         <JsonldMetaData metadata={meta} />
       </head>
       <body className={oswald.className}>
-        <SmoothScroll>
-          <NextIntlClientProvider messages={messages} locale={locale}>
-            <NavBar />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-        </SmoothScroll>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <NavBar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
+
         <ScrollTop />
       </body>
     </html>
