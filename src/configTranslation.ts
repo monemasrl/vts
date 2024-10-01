@@ -5,7 +5,26 @@ export const locales = ['it', 'en'] as const;
 
 export const pathnames: Pathnames<typeof locales> = {
     '/': '/',
-
+    '/azienda': {
+        it: '/azienda',
+        en: '/company'
+    },
+    '/lavora_con_noi': {
+        it: '/lavora_con_noi',
+        en: '/work_with_us'
+    },
+    '/vts_usa_inc': {
+        it: '/vts_usa_inc',
+        en: '/vts_usa_inc'
+    },
+    '/cookie': {
+        it: '/cookie',
+        en: '/cookie'
+    },
+    '/privacy': {
+        it: '/privacy',
+        en: '/privacy'
+    },
 };
 
 export const localePrefix: LocalePrefix<typeof locales> = 'always';
