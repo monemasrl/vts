@@ -15,19 +15,17 @@ export function generateStaticParams() {
 }
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 
-/* export async function generateMetadata({
+export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   const data = meta[locale as keyof typeof meta].metaHtml;
   console.log(data);
-  if (!data) {
-    return { status: 404 };
-  }
+
   return data;
 }
- */
+
 export default async function RootLayout({
   children,
   params: { locale },

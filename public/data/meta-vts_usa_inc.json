@@ -13,7 +13,7 @@
                 "siteName": "VTServices",
                 "images": [
                     {
-                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "url": "https://vtservices.it/image/opengraph-image.jpg",
                         "width": 1200,
                         "height": 630,
                         "alt": "VTServices website"
@@ -58,7 +58,7 @@
                 "siteName": "VTServices",
                 "images": [
                     {
-                        "url": "https://vtservices.it/image/og-image.jpg",
+                        "url": "https://vtservices.it/image/opengraph-image.jpg",
                         "width": 1200,
                         "height": 630,
                         "alt": "VTServices website"
