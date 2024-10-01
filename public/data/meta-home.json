@@ -25,8 +25,8 @@
             "@context": "https://schema.org",
             "@type": "Organization",
             "image": [
-                "https://vtservices.it//image/4_3graph.jpg",
-                "https://vtservices.it//image/mainimage.jpg"
+                "https://vtservices.it/image/4_3graph.jpg",
+                "https://vtservices.it/image/mainimage.jpg"
             ],
             "name": "VTServices",
             "address": [
