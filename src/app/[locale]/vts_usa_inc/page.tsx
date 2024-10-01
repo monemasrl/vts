@@ -1,24 +1,21 @@
-"use client";
 import Image from "next/image";
 import style from "./style.module.scss";
-import { motion } from "framer-motion";
+
 import ImagePreload from "../../../components/imagePreload/imagePreload";
-import { useLocale } from "next-intl";
+
 import data from "../../../../public/data/vts_usa_inc.json";
-function VtsUsaPage() {
-  const locale = useLocale();
+import { unstable_setRequestLocale } from "next-intl/server";
+import React from "react";
+function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
+
   const dataLocale = data[locale as keyof typeof data];
   return (
     <>
       <div className={"mainImage"}>
         <ImagePreload src={"/image/usa_inc_main.jpg"} alt="azienda" full />
       </div>
-      <motion.main
-        className={"innerPage"}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
+      <main className={"innerPage"}>
         <h1>
           <Image
             src={"/image/bullet.svg"}
@@ -43,7 +40,7 @@ function VtsUsaPage() {
             </li>
           </ul>
         </section>
-      </motion.main>
+      </main>
     </>
   );
 }

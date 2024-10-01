@@ -1,17 +1,15 @@
-"use client";
 import style from "./style.module.scss";
 import Image from "next/image";
 import CardsLavora from "../../../components/cards/cardsLavora";
 import Accordion from "../../../components/accordion/accordion";
 import FormLavoraConNoi from "../../../components/form/formLavora";
-import { motion } from "framer-motion";
 import ImagePreload from "../../../components/imagePreload/imagePreload";
-import { useLocale } from "next-intl";
 import data from "../../../../public/data/lavora_con_noi.json";
+import React from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-function LavoraConNoi() {
-  const locale = useLocale();
-
+function LavoraConNoi({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   const dataLocale = data[locale as keyof typeof data];
   const dataCards = dataLocale.annunci;
   return (
@@ -23,12 +21,7 @@ function LavoraConNoi() {
           full={true}
         />
       </div>
-      <motion.main
-        className={"innerPage"}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
+      <main className={"innerPage"}>
         <h1>
           <Image
             src={"/image/bullet.svg"}
@@ -82,7 +75,7 @@ function LavoraConNoi() {
           <h2>{dataLocale.contatti.titolo}</h2>
           <FormLavoraConNoi candidature={dataCards} />
         </section>
-      </motion.main>
+      </main>
     </>
   );
 }

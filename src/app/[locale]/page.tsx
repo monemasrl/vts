@@ -1,31 +1,35 @@
-"use client";
-
 import Image from "next/image";
 import style from "./home.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+
 import { MdOutlineChevronRight } from "react-icons/md";
 import Form from "../../components/form/form";
-import { useEffect, useState } from "react";
+
 import Splash from "../../components/splash/splash";
 import Link from "next/link";
 import Hero from "../../components/hero/hero";
 import { useLocale, useTranslations } from "next-intl";
 import data from "../../../public/data/home.json";
+import { unstable_setRequestLocale } from "next-intl/server";
+import AnimatedSection from "@/components/sections/animatedSection";
 
-export default function Home() {
-  const [splash, setSplash] = useState(true);
+export default function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  /*   const [splash, setSplash] = useState(true);
 
   useEffect(() => {}, []);
 
   setTimeout(() => {
     setSplash(false);
   }, 1300);
-  const locale = useLocale();
+ */ unstable_setRequestLocale(locale);
   const t = useTranslations("Navigation");
   const dataLocale = data[locale as keyof typeof data];
   return (
     <main>
-      <AnimatePresence>
+      {/*      <AnimatePresence>
         {splash && (
           <motion.div
             key="splash"
@@ -37,15 +41,11 @@ export default function Home() {
             <Splash />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Hero />
-      <section className={style.FirstSectionHome}>
-        <motion.div
-          className={style.FirstSectionHome__text}
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-          viewport={{ once: true }}
-        >
+
+      <AnimatedSection className={style.FirstSectionHome}>
+        <div className={style.FirstSectionHome__text}>
           <h1>
             <Image
               src={"/image/bullet.svg"}
@@ -80,7 +80,7 @@ export default function Home() {
               })}
             </ul>
           </div>
-        </motion.div>
+        </div>
         <div className={style.FirstSectionHome__image}>
           <Image
             src={"/image/vts.jpg"}
@@ -89,12 +89,9 @@ export default function Home() {
             alt="first section image"
           />
         </div>
-      </section>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-        viewport={{ once: true }}
-      >
+      </AnimatedSection>
+
+      <AnimatedSection>
         <Image
           className={style.dividerHome}
           src={"/image/dividerHome.jpg"}
@@ -103,13 +100,8 @@ export default function Home() {
           alt="divider"
           unoptimized
         />
-      </motion.div>
-      <motion.section
-        className={style.secondSectionHome}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-        viewport={{ once: true }}
-      >
+      </AnimatedSection>
+      <AnimatedSection className={style.secondSectionHome}>
         <h2>
           <Image
             src={"/image/bullet.svg"}
@@ -130,15 +122,8 @@ export default function Home() {
                 key={index}
                 className={style.secondSectionHome__specs__singleSpec}
               >
-                <motion.div
+                <div
                   className={style.secondSectionHome__specs__singleSpec__img}
-                  initial={{ opacity: 0, y: 100 }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 1 },
-                  }}
-                  viewport={{ once: true }}
                 >
                   <Image
                     src={`/image/${item.image}`}
@@ -146,7 +131,7 @@ export default function Home() {
                     height={120}
                     alt="iso image"
                   />
-                </motion.div>
+                </div>
                 <div
                   className={style.secondSectionHome__specs__singleSpec__txt}
                 >
@@ -161,20 +146,10 @@ export default function Home() {
             );
           })}
         </div>
-      </motion.section>
-      <motion.section
-        className={style.thirdSectionHome}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-        viewport={{ once: true }}
-      >
+      </AnimatedSection>
+      <AnimatedSection className={style.thirdSectionHome}>
         <div className={style.thirdSectionHome__wrapper}>
-          <motion.div
-            className={style.thirdSectionHome__wrapper__text}
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            viewport={{ once: true }}
-          >
+          <div className={style.thirdSectionHome__wrapper__text}>
             <h2>
               {" "}
               <Image
@@ -193,48 +168,20 @@ export default function Home() {
                 <MdOutlineChevronRight />{" "}
               </div>
             </Link>
-          </motion.div>
-          <motion.div
-            className={style.thirdSectionHome__wrapper__image}
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              transition: { duration: 1, delay: 0.5 },
-            }}
-            viewport={{ once: true }}
-          >
+          </div>
+          <div className={style.thirdSectionHome__wrapper__image}>
             <Image
               src={"/image/lavora.png"}
               width={467}
               height={479}
               alt="iso image"
             />
-          </motion.div>
+          </div>
           <div className={style.thirdSectionHome__wrapper__image__back} />
         </div>
-        <motion.div
-          className={style.thirdSectionHome__background}
-          initial={{ x: -500, opacity: 0 }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-            transition: { duration: 1, delay: 0.5 },
-          }}
-          viewport={{ once: true }}
-        ></motion.div>
-      </motion.section>
-      <motion.section
-        id="contatti"
-        className={style.fourthSectionHome}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 1, delay: 0.5 },
-        }}
-        viewport={{ once: true }}
-      >
+        <div className={style.thirdSectionHome__background}></div>
+      </AnimatedSection>
+      <AnimatedSection className={style.fourthSectionHome}>
         <div className={style.fourthSectionHome__wrapper}>
           <Image src={"/image/contatti.jpg"} layout="fill" alt={"iso image"} />
           <div className={style.fourthSectionHome__wrapper__text}>
@@ -257,7 +204,7 @@ export default function Home() {
             <Form />
           </div>
         </div>
-      </motion.section>
+      </AnimatedSection>
     </main>
   );
 }
