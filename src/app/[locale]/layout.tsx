@@ -17,7 +17,9 @@ export async function generateMetadata({
   params: { locale: string };
 }) {
   const data = meta[locale as keyof typeof meta].metaHtml;
-
+  if (!data) {
+    return { status: 404 };
+  }
   return data;
 }
 
