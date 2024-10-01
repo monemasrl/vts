@@ -31,7 +31,7 @@ function NavBar() {
       },
       {
         title: t("contatti.titolo"),
-        url: t("contatti.url"),
+        url: "/" + locale + "/" + t("contatti.url"),
       },
       {
         title: t("lavora_con_noi.titolo"),

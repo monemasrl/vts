@@ -18,7 +18,7 @@ function Footer() {
       },
       {
         title: tnav("contatti.titolo"),
-        url: tnav("azienda.url"),
+        url: "/" + locale + tnav("contatti.url"),
       },
       {
         title: tnav("lavora_con_noi.titolo"),
