@@ -1,15 +1,17 @@
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
 import React from "react";
 import meta from "../../../../public/data/meta-lavora_con_noi.json";
-/* export async function generateMetadata({
+export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
-  const data = meta[locale as keyof typeof meta].metaHtml;
-  return data;
+  if (locale === "it") {
+    return meta.it.metaHtml;
+  } else if (locale === "en") {
+    return meta.en.metaHtml;
+  }
 }
- */
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>

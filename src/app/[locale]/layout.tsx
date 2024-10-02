@@ -3,12 +3,12 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Oswald } from "next/font/google";
 import "../sass/all.scss";
 import NavBar from "../../components/navbar/nav";
-
 import Footer from "../../components/footer/footer";
 import ScrollTop from "../../components/scrollTop/scrollTop";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
 import meta from "../../../public/data/meta-home.json";
 import { locales } from "../../configTranslation";
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
