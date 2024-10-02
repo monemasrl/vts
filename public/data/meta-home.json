@@ -1,6 +1,6 @@
 {
     "it": {
-        "metaHtml": {
+        "meta": {
             "title": "VTServices website",
             "description": "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
             "keywords": "VTServices, Commissioning, qualification, validation, technical services",
@@ -8,7 +8,7 @@
                 "title": "VTServices website",
                 "description": "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
                 "type": "website",
-                "locale": "it_IT",
+                "locale": "it",
                 "url": "https://vtservices.it/",
                 "siteName": "VTServices",
                 "images": [
@@ -53,7 +53,7 @@
         }
     },
     "en": {
-        "metaHtml": {
+        "meta": {
             "title": "VTServices website",
             "description": "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
             "keywords": "VTServices, Commissioning, qualification, validation, technical services",
@@ -61,7 +61,7 @@
                 "title": "VTServices website",
                 "description": "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
                 "type": "website",
-                "locale": "en_US",
+                "locale": "en",
                 "url": "https://vtservices.it/",
                 "siteName": "VTServices",
                 "images": [
