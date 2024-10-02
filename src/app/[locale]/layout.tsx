@@ -139,7 +139,6 @@ export async function generateMetadata({
     title: mdata[locale as keyof typeof meta].metaHtml.title,
     description: mdata[locale as keyof typeof meta].metaHtml.description,
     keywords: mdata[locale as keyof typeof meta].metaHtml.keywords,
-    openGraph: mdata[locale as keyof typeof meta].metaHtml.openGraph,
   };
 }
 
