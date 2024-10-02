@@ -136,8 +136,7 @@ export async function generateMetadata({
   //const data = mdata[locale as keyof typeof meta].metaHtml;
 
   return {
-    // @ts-ignore: Unreachable code error
-    title: mdata[locale as keyof typeof mdata].metaHtml.title,
+    title: mdata[locale as keyof typeof mdata].meta.title,
   };
 }
 
