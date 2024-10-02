@@ -27,7 +27,7 @@ const mdata = {
         description:
           "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
         type: "website",
-        locale: "it_IT",
+        locale: "it",
         url: "https://vtservices.it/",
         siteName: "VTServices",
         images: [
@@ -83,7 +83,7 @@ const mdata = {
         description:
           "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
         type: "website",
-        locale: "en_US",
+        locale: "en",
         url: "https://vtservices.it/",
         siteName: "VTServices",
         images: [
@@ -136,7 +136,10 @@ export async function generateMetadata({
   //const data = mdata[locale as keyof typeof meta].metaHtml;
 
   return {
-    title: "VTServices website",
+    title: mdata[locale as keyof typeof meta].metaHtml.title,
+    description: mdata[locale as keyof typeof meta].metaHtml.description,
+    keywords: mdata[locale as keyof typeof meta].metaHtml.keywords,
+    openGraph: mdata[locale as keyof typeof meta].metaHtml.openGraph,
   };
 }
 
