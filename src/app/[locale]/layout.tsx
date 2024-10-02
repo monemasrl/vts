@@ -136,9 +136,7 @@ export async function generateMetadata({
   //const data = mdata[locale as keyof typeof meta].metaHtml;
 
   return {
-    title: mdata[locale as keyof typeof meta].metaHtml.title,
-    description: mdata[locale as keyof typeof meta].metaHtml.description,
-    keywords: mdata[locale as keyof typeof meta].metaHtml.keywords,
+    title: mdata[locale as keyof typeof mdata].metaHtml.title,
   };
 }
 
