@@ -9,7 +9,6 @@ import ScrollTop from "../../components/scrollTop/scrollTop";
 import JsonldMetaData from "@/components/metaData/jsonldmetadata";
 import meta from "../../../public/data/meta-home.json";
 import { locales } from "../../configTranslation";
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -128,16 +127,22 @@ const mdata = {
     },
   },
 };
+
 export async function generateMetadata({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   //const data = mdata[locale as keyof typeof meta].metaHtml;
-
-  return {
-    title: "vtServices",
-  };
+  if (locale === "it") {
+    return {
+      title: "vtServices",
+    };
+  } else if (locale === "en") {
+    return {
+      title: "vtServices",
+    };
+  }
 }
 
 export default async function RootLayout({
