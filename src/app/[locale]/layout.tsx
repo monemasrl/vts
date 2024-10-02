@@ -140,7 +140,6 @@ export async function generateMetadata({
   };
 }
 
-console.log(typeof mdata);
 export default async function RootLayout({
   children,
   params: { locale },
@@ -154,7 +153,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <head>
         <link rel="icon" href="/image/favicon.ico" />
-        <JsonldMetaData metadata={meta} />
+        {/* <JsonldMetaData metadata={meta} /> */}
       </head>
       <body className={oswald.className}>
         <NextIntlClientProvider messages={messages} locale={locale}>
