@@ -16,7 +16,7 @@ export function generateStaticParams() {
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "400", "700"] });
 const mdata = {
   it: {
-    metaHtml: {
+    meta: {
       title: "VTServices website",
       description:
         "Commissioning, qualification, validation. Da oltre 20 anni, un servizio di prim'ordine. La nostra flessibilità e volontà di adattarci alle richieste dei clienti sono ciò che ci rende un’eccellenza nel nostro settore.",
@@ -72,7 +72,7 @@ const mdata = {
     },
   },
   en: {
-    metaHtml: {
+    meta: {
       title: "VTServices website",
       description:
         "First-class service for over 20 years, our flexibility and willingness to adapt to customer requests are what make us an excellence in our sector.",
@@ -136,7 +136,8 @@ export async function generateMetadata({
   //const data = mdata[locale as keyof typeof meta].metaHtml;
 
   return {
-    title: "vtservices",
+    // @ts-ignore: Unreachable code error
+    title: mdata[locale as keyof typeof mdata].metaHtml.title,
   };
 }
 
