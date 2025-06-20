@@ -30,7 +30,7 @@ function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.footer__first}>
-        <Image src="/image/vtslogo.jpg" width={180} height={96} alt="logo" />
+        <Image src="/image/logofooter.png" width={180} height={96} alt="logo" />
         <ul>
           <li>{t("col1.piva")}</li>
           <li>{t("col1.rea")}</li>

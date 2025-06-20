@@ -13,6 +13,7 @@ export async function generateMetadata({
     return meta.en.metaHtml;
   }
 }
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>

@@ -74,7 +74,7 @@ export default function Home({
         </div>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection className={style.dividerHome}>
         <Image
           className={style.dividerHome}
           src={"/image/dividerHome.jpg"}
