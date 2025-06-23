@@ -42,7 +42,7 @@ function Footer() {
       </div>
       <ul className={style.footer__second}>
         <li>
-          <strong>VTS</strong>
+          <strong>VTS Validation & Technical Services</strong>
         </li>
         <li>
           <BsPinMap /> {t("col2.indirizzo")}{" "}
