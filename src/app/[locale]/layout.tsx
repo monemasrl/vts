@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Oswald } from "next/font/google";
+// @ts-ignore
 import "../sass/all.scss";
 import NavBar from "../../components/navbar/nav";
 import Footer from "../../components/footer/footer";

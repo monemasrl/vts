@@ -1,11 +1,11 @@
 {
     "it": {
         "metaHtml": {
-            "title": "VTServices Azienda",
+            "title": "VTServices: la nostra azienda",
             "description": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”",
             "keywords": "VTServices, azienda, validation, technical services",
             "openGraph": {
-                "title": "VTServices Azienda",
+                "title": "VTServices: la nostra azienda",
                 "description": "La società Validations and Technical Services s.r.l. (VTS Srl), con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”",
                 "type": "website",
                 "locale": "it_IT",
@@ -54,11 +54,11 @@
     },
     "en": {
         "metaHtml": {
-            "title": "VTServices Company",
+            "title": "VTServices: Our company",
             "description": "Validations and Technical Services s.r.l. (VTS Srl), headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.”",
             "keywords": "VTServices, company, validation, technical services",
             "openGraph": {
-                "title": "VTServices Company",
+                "title": "VTServices: Our company",
                 "description": "Validations and Technical Services s.r.l. (VTS Srl), headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.”",
                 "type": "website",
                 "locale": "en_US",

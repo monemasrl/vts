@@ -1,11 +1,11 @@
 {
     "it": {
         "metaHtml": {
-            "title": "VTServices lavora con noi",
+            "title": "VTServices: lavora con noi",
             "description": "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
             "keywords": "VTServices, Commissioning, qualification, validation, technical services lavora con noi",
             "openGraph": {
-                "title": "VTServices lavora con noi",
+                "title": "VTServices: lavora con noi",
                 "description": "La nostra azienda è sempre alla ricerca di personale qualificato. Se sei un professionista ambizioso e desideri unirti a un team dinamico e orientato al successo, candidati per una delle posizioni aperte",
                 "type": "website",
                 "locale": "it_IT",
@@ -74,11 +74,11 @@
     },
     "en": {
         "metaHtml": {
-            "title": "VTServices work with us",
+            "title": "VTServices: work with us",
             "description": "Our company is always looking for qualified staff.If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
             "keywords": "VTServices, Commissioning, qualification, validation, technical services work with us",
             "openGraph": {
-                "title": "VTServices work with us",
+                "title": "VTServices: work with us",
                 "description": "Our company is always looking for qualified staff.If you are an ambitious professional and would like to join a dynamic and success-oriented team, apply for one of the open positions",
                 "type": "website",
                 "locale": "en_US",
