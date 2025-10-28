@@ -28,8 +28,11 @@
             "indirizzo": "Via della Stazione 27, Barga",
             "tel": "+390583711372",
             "email": "info@vtservices.it",
-            "subsidiary": "Wholly owned subsidiary in USA",
-            "subsidiary_indirizzo": "8000 Avalon Blvd, Suite 100 and 200"
+            "subsidiary_label": "VTS USA Inc.",
+            "subsidiary": "8000 Avalon Blvd, Suite 100 and 200",
+            "subsidiary_indirizzo": "Alpharetta 30009 Atlanta, GA USA",
+            "subsidiary_phone": "Tel: +1 (678) 990-3971",
+            "subsidiary_email": "info@vtsus.com"
         },
         "col3": {
             "privacy": "/en/privacy",

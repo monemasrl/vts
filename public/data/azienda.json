@@ -1,37 +1,33 @@
 {
     "it": {
         "titolo": "la nostra azienda",
-        "testo": "La VTS Validation & Technical Services, con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”. VTS Validation & Technical Services, attualmente comprende un team di 30 persone tra Projet Manager, CQV Engineer, e CQV Technician. Visto l’esponenziale richiesta delle industrie farmaceutiche di questo tipo di consulenza (CQV), VTS Validation & Technical Services è in continua ricerca di personale, sia già qualificato che da formare.esecutore di test in campo e Calibrazioni della strumentazione critica.",
+        "testo": "La Validations and Technical Services S.r.l, con sede legale Castelvecchio Pascoli, Barga (LU), è stata costituita nel gennaio 2013 acquisendo un ramo d’azienda da una società terza che si occupava di “Commissioning Qualifica e Validazioni”. Validations and Technical Services S.r.l, attualmente comprende un team di 30 persone tra Projet Manager, CQV Engineer, e CQV Technician. Visto l’esponenziale richiesta delle industrie farmaceutiche di questo tipo di consulenza (CQV), Validations and Technical Services S.r.l è in continua ricerca di personale, sia già qualificato che da formare.esecutore di test in campo e Calibrazioni della strumentazione critica.",
         "sedi": {
             "titolo": "Le nostre sedi",
-            "subtitolo": "La sede operativa e gli uffici di VTS Validation & Technical Services si trovano in via della Stazione 27 Mologno Barga LU.",
-            "testo": "Da alcuni anni VTS Validation & Technical Services ha aperto 2 subsidiaries:",
+            "subtitolo": "La sede operativa e gli uffici di Validations and Technical Services S.r.l si trovano in via della Stazione 27 Mologno Barga LU.",
+            "testo": "Da alcuni anni Validations and Technical Services S.r.l ha aperto una sede negli Stati Uniti:",
             "list": [
                 {
-                    "titolo": "VTS Validation & Technical Services USA Inc. con sede ad Atlanta GA",
+                    "titolo": "Validations and Technical Services S.r.l USA Inc. con sede ad Atlanta GA",
                     "url": "/vts_usa_inc"
-                },
-                {
-                    "titolo": "VTS Validation & Technical Services SWITZERLAND Sagl con sede a Lugano CH",
-                    "url": ""
                 }
             ]
         }
     },
     "en": {
         "titolo": "Our company",
-        "testo": "Validations and Technical Services , headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.&quot; VTS Validation & Technical Services, currently comprises a team of 30 people including Projet Managers, CQV Engineers, and CQV Technicians. Given the exponential demand from pharmaceutical industries for this type of consulting (CQV), VTS Validation & Technical Services is continuously looking for personnel, both already qualified and to be trained.",
+        "testo": "Validations and Technical Services , headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.&quot; Validations and Technical Services S.r.l, currently comprises a team of 30 people including Projet Managers, CQV Engineers, and CQV Technicians. Given the exponential demand from pharmaceutical industries for this type of consulting (CQV), Validations and Technical Services S.r.l is continuously looking for personnel, both already qualified and to be trained.",
         "sedi": {
             "titolo": "Our locations",
-            "subtitolo": "The operational headquarters and offices of VTS Validation & Technical Services are located at 27 Via della Stazione, Mologno Barga LU.",
-            "testo": "In the past several years, VTS Validation & Technical Services Validation & Technical Services Srl has opened 2 subsidiaries:",
+            "subtitolo": "The operational headquarters and offices of Validations and Technical Services S.r.l are located at 27 Via della Stazione, Mologno Barga LU.",
+            "testo": "In the past several years, Validations and Technical Services S.r.l Validation & Technical Services Srl has opened a location in the United States:",
             "list": [
                 {
-                    "titolo": "VTS Validation & Technical Services USA Inc. based in Atlanta GA.",
+                    "titolo": "Validations and Technical Services S.r.l USA Inc. based in Atlanta GA.",
                     "url": "/vts_usa_inc"
                 },
                 {
-                    "titolo": "VTS Validation & Technical Services USA Inc. based in Atlanta GA.",
+                    "titolo": "Validations and Technical Services S.r.l USA Inc. based in Atlanta GA.",
                     "url": ""
                 }
             ]

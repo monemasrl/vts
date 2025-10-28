@@ -42,7 +42,7 @@ function Footer() {
       </div>
       <ul className={style.footer__second}>
         <li>
-          <strong>VTS Validation & Technical Services</strong>
+          <strong>Validations and Technical Services S.r.l</strong>
         </li>
         <li>
           <BsPinMap /> {t("col2.indirizzo")}{" "}
@@ -54,8 +54,32 @@ function Footer() {
           <BsMailbox />{" "}
           <a href={"mailto:" + t("col2.email")}>{t("col2.email")}</a>
         </li>
+        <li
+          style={{
+            borderTop: "1px dashed #ffffff69",
+            marginTop: "10px",
+            paddingTop: "10px",
+          }}
+        >
+          {" "}
+          <div>
+            <strong>USA</strong>
+          </div>
+        </li>
         <li>{t("col2.subsidiary")}</li>
         <li>{t("col2.subsidiary_indirizzo")}</li>
+        <li>
+          <BsPhone />{" "}
+          <a href={"tel:" + t("col2.subsidiary_phone")}>
+            {t("col2.subsidiary_phone")}
+          </a>{" "}
+        </li>
+        <li>
+          <BsMailbox />{" "}
+          <a href={"mailto:" + t("col2.subsidiary_email")}>
+            {t("col2.subsidiary_email")}
+          </a>
+        </li>
       </ul>
       <ul className={style.footer__third}>
         {navigation.nav.map((item, index) => (
