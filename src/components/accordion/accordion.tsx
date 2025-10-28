@@ -9,14 +9,21 @@ type Tdata = {
   testo: string;
 };
 function Accordion({ data }: { data: Tdata[] }) {
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = useState<number | undefined>(0);
 
   return (
     <ul className={"accordion"}>
       {data.map((item, index) => {
         return (
           <li key={index}>
-            <h3 className="accordion__title" onClick={() => setActive(index)}>
+            <h3
+              className="accordion__title"
+              onClick={() =>
+                setActive((prev) => {
+                  return prev === index ? undefined : index;
+                })
+              }
+            >
               {active === index ? <FiChevronUp /> : <FiChevronDown />}
               {item.titolo}
             </h3>

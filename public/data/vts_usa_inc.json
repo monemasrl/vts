@@ -1,8 +1,10 @@
 {
     "it": {
-        "titolo": "Validations and Technical Services S.r.l USA INC.",
-        "testo": "<strong>Validations and Technical Services S.r.l USA Inc.</strong> è la filiale americana di VTS Srl, nata per rispondere alla crescente esigenza di servizi tecnici e di convalida nell'industria farmaceutica degli Stati Uniti.</br> Con lo stesso impegno per l'eccellenza che caratterizza la società madre, Validations and Technical Services S.r.l USA Inc. si distingue per competenza e affidabilità nel settore. </br>Grazie a un team di professionisti altamente qualificati,Validations and Technical Services S.r.l USA Inc. offre servizi di consulenza e supporto di alto livello, garantendo conformità normativa ed efficienza operativa per i clienti in tutto il Paese.</br> La sua missione è quella di fornire soluzioni innovative e personalizzate, contribuendo al successo delle aziende farmaceutiche americane con un approccio strategico e orientato ai risultati.",
+        "titolo": "VTS USA INC.",
+        "testo": "<strong>VTS Validation & Technical Services USA Inc.</strong> è la filiale americana di VTS Srl, nata per rispondere alla crescente esigenza di servizi tecnici e di convalida nell'industria farmaceutica degli Stati Uniti.</br> Con lo stesso impegno per l'eccellenza che caratterizza la società madre, VTS Validation & Technical Services USA Inc. si distingue per competenza e affidabilità nel settore. </br>Grazie a un team di professionisti altamente qualificati,VTS Validation & Technical Services USA Inc. offre servizi di consulenza e supporto di alto livello, garantendo conformità normativa ed efficienza operativa per i clienti in tutto il Paese.</br> La sua missione è quella di fornire soluzioni innovative e personalizzate, contribuendo al successo delle aziende farmaceutiche americane con un approccio strategico e orientato ai risultati.",
+        "testo2": "",
         "contatti": "Contatti",
+        "accordion": [],
         "address": {
             "address": "8000 Avalon Blvd, Suite 100 and 200",
             "state": "Alpharetta 30009 Atlanta, GA",
@@ -10,9 +12,36 @@
         }
     },
     "en": {
-        "titolo": "Validations and Technical Services S.r.l USA INC.",
-        "testo": "<strong>Validations and Technical Services S.r.l USA Inc.</strong> is the American branch of Validations and Technical Services S.r.l Srl, established to meet the growing demand for technical and validation services in the U.S. pharmaceutical industry. </br>With the same commitment to excellence that distinguishes its parent company, VTS USA Inc. stands out for its expertise and reliability in the sector.</br>Thanks to a team of highly qualified professionals, Validations and Technical Services S.r.l USA Inc. offers top-tier consulting and support services, ensuring regulatory compliance and operational efficiency for clients across the country. </br>Its mission is to provide innovative and customized solutions, contributing to the success of American pharmaceutical companies with a strategic and results-oriented approach.",
-        "contatti": "Contacts",
+        "titolo": "VTS USA INC.",
+        "testo": "<strong>VTS USA Inc. is the U.S. branch of Validation &amp; Technical Services Srl</strong>, providing expert validation, calibration, and GMP consulting services to pharmaceutical and biotech companies. With the same commitment to excellence that distinguishes its parent company, VTS USA Inc ensures every system and process works reliably and meets FDA and GMP standards.",
+        "testo2": "No matter what service is requested, a technical validation representative will assist you from the beginning to the end of the job. Our area of expertise is vast; <strong>there is no opportunity too small or too large for our team.</strong>",
+        "contatti": "Contatti",
+        "accordion": [
+            {
+                "titolo": "Cold Storage & Freezer Validation",
+                "testo": "<p>VTS USA Inc.’s current core business is cold chain-related systems and process validation for companies involved in blood-derivatives production. Our services include:</p><ul><li>IQ (Installation Qualification): Ensures equipment is installed and configured correctly.</li><li>OQ (Operational Qualification): Verifies the unit operates within requested parameters, providing a detailed temperature profile that pinpoints any hot or cold spots.</li><li>PQ (Performance Qualification): Confirms consistent performance under routine conditions.</li></ul><p>All validations come with complete documentation and expert recommendations to improve reliability and efficiency.</p>"
+            },
+            {
+                "titolo": "Computer System Validation (CSV) & Data Integrity",
+                "testo": "<p>As digital platforms are becoming more essential to pharmaceutical entities, CSV and Data Integrity are crucial for the interest of quality control and regulatory compliance.</p> <p>At VTS USA Inc we assist our customers during planning, evaluation and execution of CSV activities strictly following ALCOA+ principles and GAMP 5 methodologies.</p>"
+            },
+            {
+                "titolo": "Calibration Services",
+                "testo": "<p>VTS USA Inc. also offers complete calibration solutions to ensure precise, traceable, and audit-ready measurements for all instruments.</p>"
+            },
+            {
+                "titolo": "GMP Consulting & Project Management",
+                "testo": "<p>In addition to our field services, VTS USA Inc. offers project management and GMP consulting services that can help you optimize your processes, schedule validations and calibrations, and more. </p><p>Our team of experts can provide you with guidance on compliance, validation, monitoring, and good manufacturing practices of cold storage and freezers, so your systems always function optimally and meet all regulatory requirements.</p>"
+            },
+            {
+                "titolo": "Technical Expertise",
+                "testo": "<ul><li>Risk assessments and FMEA</li><li>Validation Master Plans and Project Plans</li><li>IQ/OQ/PQ for equipment, utilities, and clean rooms</li><li>Process validation (shipping, cleaning, plasma freezing, cold chain)</li><li>FAT/SAT support and supplier test witnessing</li><li>Automation & control system validation (DCS, SCADA, PLC, BMS, LIMS, Custom Software)</li><li>Data integrity assessment &amp; implementation</li><li>Design Qualification and GMP design review</li><li>URS definition, SOP review, and supplier documentation evaluation</li><li>Calibration and environmental monitoring</li><li>Laboratory instrument maintenance and certificate management</li></ul>"
+            },
+            {
+                "titolo": "Why VTS USA Inc.?",
+                "testo": "<ul><li>Deep expertise in pharma and biotech validation</li><li>Fully compliant protocols aligned with FDA and GMP</li><li>End-to-end project support from assessment to qualification</li><li>Experienced engineers with hands-on regulatory knowledge</li><li>Commitment to precision, reliability, and operational excellence</li></ul>"
+            }
+        ],
         "address": {
             "address": "8000 Avalon Blvd, Suite 100 and 200",
             "state": "Alpharetta 30009 Atlanta, GA",

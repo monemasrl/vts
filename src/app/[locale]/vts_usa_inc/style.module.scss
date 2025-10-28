@@ -1,7 +1,7 @@
 .firstSection {
   margin-bottom: 5rem;
   p {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   h3 {
     font-size: 2rem;
@@ -13,8 +13,25 @@
   }
   ul {
     font-size: $size-p;
+    margin-bottom: 1rem;
     @media #{$landscape} {
       padding-left: 1rem;
+    }
+    li {
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 2rem;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    gap: 1rem;
+    > p {
+      flex: 1;
     }
   }
 }

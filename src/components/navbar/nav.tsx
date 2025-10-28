@@ -30,6 +30,10 @@ function NavBar() {
         url: "/" + locale + t("azienda.url"),
       },
       {
+        title: t("vts_usa.titolo"),
+        url: "/" + locale + t("vts_usa.url"),
+      },
+      {
         title: t("contatti.titolo"),
         url: "/" + locale + "/" + t("contatti.url"),
       },

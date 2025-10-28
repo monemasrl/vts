@@ -2,10 +2,11 @@ import Image from "next/image";
 import style from "./style.module.scss";
 
 import ImagePreload from "../../../components/imagePreload/imagePreload";
-
+import Slider from "../../../components/sliders/sliderTimer";
 import data from "../../../../public/data/vts_usa_inc.json";
 import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
+import Accordion from "../../../components/accordion/accordion";
 function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
 
@@ -27,18 +28,10 @@ function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
         </h1>
         <section className={style.firstSection}>
           <p dangerouslySetInnerHTML={{ __html: dataLocale.testo }} />
+          <Slider />
+          <Accordion data={dataLocale.accordion} />
 
-          <h3>{dataLocale.contatti}</h3>
-          <ul>
-            <li>{dataLocale.address.address}</li>
-            <li>{dataLocale.address.state}</li>
-
-            <li>
-              <a href={"mailto:" + dataLocale.address.mail}>
-                Email: {dataLocale.address.mail}
-              </a>
-            </li>
-          </ul>
+          <p dangerouslySetInnerHTML={{ __html: dataLocale.testo2 }} />
         </section>
       </main>
     </>

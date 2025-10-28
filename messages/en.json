@@ -8,6 +8,10 @@
             "titolo": "Company",
             "url": "/company"
         },
+        "vts_usa": {
+            "titolo": "VTS USA Inc.",
+            "url": "/vts_usa_inc"
+        },
         "lavora_con_noi": {
             "titolo": "Work with us",
             "url": "/work_with_us"
