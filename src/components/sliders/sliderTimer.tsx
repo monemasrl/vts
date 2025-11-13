@@ -27,11 +27,11 @@ export default function Slider() {
           src={"/image/usa_inc_main.jpg"}
           alt="Slide 1"
           width={1920}
-          height={400}
+          height={500}
         />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src="/image/two.jpg" alt="Slide 2" width={1920} height={400} />
+        <Image src="/image/two.jpg" alt="Slide 2" width={1920} height={500} />
       </SwiperSlide>
     </Swiper>
   );
