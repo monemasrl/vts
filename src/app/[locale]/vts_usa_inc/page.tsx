@@ -14,7 +14,7 @@ function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
   return (
     <>
       <div className={"mainImage"}>
-        <ImagePreload src={"/image/usa_inc_main.jpg"} alt="azienda" full />
+        <Slider />
       </div>
       <main className={"innerPage"}>
         <h1>
@@ -28,7 +28,7 @@ function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
         </h1>
         <section className={style.firstSection}>
           <p dangerouslySetInnerHTML={{ __html: dataLocale.testo }} />
-          <Slider />
+
           <Accordion data={dataLocale.accordion} />
 
           <p dangerouslySetInnerHTML={{ __html: dataLocale.testo2 }} />

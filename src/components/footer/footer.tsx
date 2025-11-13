@@ -54,16 +54,12 @@ function Footer() {
           <BsMailbox />{" "}
           <a href={"mailto:" + t("col2.email")}>{t("col2.email")}</a>
         </li>
-        <li
-          style={{
-            borderTop: "1px dashed #ffffff69",
-            marginTop: "10px",
-            paddingTop: "10px",
-          }}
-        >
+      </ul>
+      <ul>
+        <li>
           {" "}
           <div>
-            <strong>USA</strong>
+            <strong>{t("col2.subsidiary_label")}</strong>
           </div>
         </li>
         <li>{t("col2.subsidiary")}</li>
