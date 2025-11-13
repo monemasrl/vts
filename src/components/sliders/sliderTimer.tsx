@@ -10,6 +10,8 @@ import "swiper/css";
 // @ts-ignore - suppress "Cannot find module or type declarations" for this CSS import
 import "swiper/css/pagination";
 // @ts-ignore - suppress "Cannot find module or type declarations" for this CSS import
+import "swiper/css/navigation";
+// @ts-ignore - suppress "Cannot find module or type declarations" for this CSS import
 import "./sliderTimer.scss";
 
 export default function Slider() {
@@ -18,7 +20,8 @@ export default function Slider() {
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      modules={[Pagination]}
+      navigation={true}
+      modules={[Pagination, Navigation]}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >

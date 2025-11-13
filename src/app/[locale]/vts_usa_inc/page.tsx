@@ -13,9 +13,6 @@ function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
   const dataLocale = data[locale as keyof typeof data];
   return (
     <>
-      <div className={"mainImage"}>
-        <Slider />
-      </div>
       <main className={"innerPage"}>
         <h1>
           <Image
@@ -28,7 +25,7 @@ function VtsUsaPage({ params: { locale } }: { params: { locale: string } }) {
         </h1>
         <section className={style.firstSection}>
           <p dangerouslySetInnerHTML={{ __html: dataLocale.testo }} />
-
+          <Slider />
           <Accordion data={dataLocale.accordion} />
 
           <p dangerouslySetInnerHTML={{ __html: dataLocale.testo2 }} />
