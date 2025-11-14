@@ -1,10 +1,35 @@
 {
     "it": {
         "titolo": "VTS USA INC.",
-        "testo": "<strong>VTS Validation & Technical Services USA Inc.</strong> è la filiale americana di VTS Srl, nata per rispondere alla crescente esigenza di servizi tecnici e di convalida nell'industria farmaceutica degli Stati Uniti.</br> Con lo stesso impegno per l'eccellenza che caratterizza la società madre, VTS Validation & Technical Services USA Inc. si distingue per competenza e affidabilità nel settore. </br>Grazie a un team di professionisti altamente qualificati,VTS Validation & Technical Services USA Inc. offre servizi di consulenza e supporto di alto livello, garantendo conformità normativa ed efficienza operativa per i clienti in tutto il Paese.</br> La sua missione è quella di fornire soluzioni innovative e personalizzate, contribuendo al successo delle aziende farmaceutiche americane con un approccio strategico e orientato ai risultati.",
-        "testo2": "",
+        "testo": "<strong>VTS USA Inc. è la filiale statunitense di Validation &amp; Technical Services Srl,</strong> che fornisce servizi di validazione, calibrazione e consulenza GMP alle aziende farmaceutiche e biotecnologiche. Con lo stesso impegno verso l&#39;eccellenza che contraddistingue la sua società madre, VTS USA Inc garantisce che ogni sistema e processo funzioni in modo affidabile e soddisfi gli standard FDA e GMP.",
+        "testo2": "Indipendentemente dal servizio richiesto, un rappresentante tecnico addetto alla convalida vi assisterà dall&#39;inizio alla fine del lavoro. La nostra area di competenza è vasta; non esistono opportunità troppo piccole o troppo grandi per il nostro team.",
         "contatti": "Contatti",
-        "accordion": [],
+        "accordion": [
+            {
+                "titolo": "Convalida di celle frigorifere e congelatori",
+                "testo": "<p>L&#39;attuale attività principale di VTS USA Inc. è la convalida di sistemi e processi relativi alla catena del freddo per aziende coinvolte nella produzione di derivati del sangue. I nostri servizi includono:</p><ul><li>IQ (Qualificazione dell&#39;installazione): garantisce che le apparecchiature siano installate e configurate correttamente.</li><li>OQ (Qualificazione operativa): verifica che l&#39;unità funzioni entro i parametri richiesti, fornendo un profilo dettagliato della temperatura che individua eventuali punti caldi o freddi.</li><li>PQ (Qualificazione delle prestazioni): conferma prestazioni costanti in condizioni di routine.</li></ul><p>Tutte le validazioni sono accompagnate da una documentazione completa e da raccomandazioni di esperti per migliorare l&#39;affidabilità e l&#39;efficienza.</p>"
+            },
+            {
+                "titolo": "Convalida dei sistemi informatici (CSV) e integrità dei dati",
+                "testo": "<p>Poiché le piattaforme digitali stanno diventando sempre più essenziali per le aziende farmaceutiche, la CSV e l&#39;integrità dei dati sono fondamentali per il controllo della qualità e la conformità normativa.</p> <p>Noi di VTS USA Inc assistiamo i nostri clienti durante la pianificazione, la valutazione e l&#39;esecuzione delle attività CSV seguendo rigorosamente i principi ALCOA+ e le metodologie GAMP 5.</p>"
+            },
+            {
+                "titolo": "Servizi di calibrazione",
+                "testo": "<p>VTS USA Inc. offre anche soluzioni complete di calibrazione per garantire misurazioni precise, tracciabili e pronte per la verifica di tutti gli strumenti.</p>"
+            },
+            {
+                "titolo": "Consulenza GMP e gestione dei progetti",
+                "testo": "<p>Oltre ai nostri servizi sul campo, VTS USA Inc. offre servizi di gestione dei progetti e consulenza GMP che possono aiutarti a ottimizzare i tuoi processi, programmare convalide e calibrazioni e molto altro ancora.</p><p>Il nostro team di esperti può fornirti assistenza in materia di conformità, convalida, monitoraggio e buone pratiche di fabbricazione di celle frigorifere e congelatori, affinché i tuoi sistemi funzionino sempre in modo ottimale e soddisfino tutti i requisiti normativi.</p>"
+            },
+            {
+                "titolo": "Competenze tecniche",
+                "testo": "<ul><li>Valutazioni dei rischi e FMEA</li><li>Piani generali di convalida e piani di progetto</li><li>IQ/OQ/PQ per attrezzature, servizi e camere bianche</li><li>Convalida dei processi (spedizione, pulizia, congelamento del plasma, catena del freddo)</li><li>Supporto FAT/SAT e testimonianza dei test dei fornitori</li><li>Convalida dei sistemi di automazione e controllo (DCS, SCADA, PLC, BMS, LIMS, software personalizzato)</li><li>Valutazione e implementazione dell&#39;integrità dei dati</li><li>Qualificazione del progetto e revisione del progetto GMP</li><li>Definizione URS, revisione SOP e valutazione della documentazione dei fornitori</li><li>Calibrazione e monitoraggio ambientale</li><li>Manutenzione degli strumenti di laboratorio e gestione dei certificati</li></ul>"
+            },
+            {
+                "titolo": "Perché scegliere VTS USA Inc.?",
+                "testo": "<ul><li>Profonda esperienza nella convalida farmaceutica e biotecnologica</li><li>Protocolli pienamente conformi alle normative FDA e GMP</li><li>Supporto completo al progetto, dalla valutazione alla qualificazione</li><li>Ingegneri esperti con conoscenze pratiche in materia di normative</li><li>Impegno per la precisione, l&#39;affidabilità e l&#39;eccellenza operativa</li></ul>"
+            }
+        ],
         "address": {
             "address": "8000 Avalon Blvd, Suite 100 and 200",
             "state": "Alpharetta 30009 Atlanta, GA",
