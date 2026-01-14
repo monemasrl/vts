@@ -16,19 +16,15 @@
     },
     "en": {
         "titolo": "Our company",
-        "testo": "Validations and Technical Services , headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with &quot;Commissioning Qualification and Validations.&quot; Validations and Technical Services S.r.l, currently comprises a team of 30 people including Projet Managers, CQV Engineers, and CQV Technicians. Given the exponential demand from pharmaceutical industries for this type of consulting (CQV), Validations and Technical Services S.r.l is continuously looking for personnel, both already qualified and to be trained.",
+        "testo": "Validations and Technical Services , headquartered in Castelvecchio Pascoli, Barga (LU), was established in January 2013 by acquiring a business unit from a third-party company that dealt with \"Commissioning Qualification and Validations.\" Validations and Technical Services S.r.l, currently comprises a team of 30 people including Project Managers, CQV Engineers, and CQV Technicians. Given the exponential demand from pharmaceutical industries for this type of consulting (CQV), Validations and Technical Services S.r.l is continuously looking for personnel, both already qualified and to be trained.",
         "sedi": {
             "titolo": "Our locations",
             "subtitolo": "The operational headquarters and offices of Validations and Technical Services S.r.l are located at 27 Via della Stazione, Mologno Barga LU.",
-            "testo": "In the past several years, Validations and Technical Services S.r.l Validation & Technical Services Srl has opened a location in the United States:",
+            "testo": "In the past several years, Validations and Technical Services S.r.l has opened a location in the United States:",
             "list": [
                 {
                     "titolo": "Validations and Technical Services S.r.l USA Inc. based in Atlanta GA.",
                     "url": "/vts_usa_inc"
-                },
-                {
-                    "titolo": "Validations and Technical Services S.r.l USA Inc. based in Atlanta GA.",
-                    "url": ""
                 }
             ]
         }
